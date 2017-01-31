@@ -95,7 +95,6 @@ private void placeBricks() {
 			brick.setColor(Color.RED);
 			
 			double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
-			double leftY = BRICK_Y_OFFSET;
 			double intervalX = BRICK_WIDTH+BRICK_SEP;	
 			double intervalY = BRICK_HEIGHT+BRICK_SEP;
 			
