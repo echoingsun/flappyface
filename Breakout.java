@@ -64,7 +64,8 @@ public class Breakout extends GraphicsProgram {
 	private static final int NTURNS = 3;
 
 	
-	private RandomGenerator rgen = RandomGenerator.getInstance();
+	private RandomGenerator rg = new RandomGenerator();
+
 	
 	/*
 	 * Since the same ball and paddle is connected with several other methods,
