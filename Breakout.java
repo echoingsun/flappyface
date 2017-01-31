@@ -93,7 +93,7 @@ private GRect placePaddle() {
 	double y = getHeight() -PADDLE_Y_OFFSET;
 	paddle.setFilled(true);
 	paddle.setColor(Color.BLACK);
-	paddle.setLocation(x,y);
+	add(paddle,x,y);
 	return paddle;
 	
 }
