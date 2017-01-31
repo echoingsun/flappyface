@@ -87,12 +87,15 @@ private void placeBricks() {
 	 */
 	
 
-	for (int k = 0; k <2; k ++){
+	for (int k = 0; k <NBRICK_ROWS; k ++){
 		for (int i = 0; i < NBRICKS_PER_ROW; i++){
 			
 			GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 			brick.setFilled(true);
-			brick.setColor(Color.RED);
+			
+			// Set color.
+			Color c = rainbowColor(k,c);
+			
 			
 			double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
 			double intervalX = BRICK_WIDTH+BRICK_SEP;	
@@ -106,5 +109,32 @@ private void placeBricks() {
 
 	
 }
+
+
+private Color rainbowColor(int k, Color c) {
+	if (k % 14 == 1 || k % 14 ==2){
+		return Color.RED;
+	}
+	if (k % 14 == 3 || k % 14 ==4){
+		return Color.ORANGE;
+	}
+	if (k % 14 == 5 || k % 14 == 6){
+		return Color.YELLOW;
+	}
+	if (k % 14 == 7 || k % 14 == 8){
+		return Color.GREEN;
+	}
+	if (k % 14 == 9 || k % 14 == 10){
+		return Color.CYAN;
+	}
+	if (k % 14 == 11 || k % 14 == 12){
+		return Color.BLUE;
+	}
+	if (k % 14 == 13 || k % 14 == 0){
+		return Color.BLACK;
+	}
+}
+
+
 
 }
