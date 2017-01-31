@@ -69,7 +69,7 @@ public class Breakout extends GraphicsProgram {
 	 * Define a single brick as an instance variable so that it can be called repeatedly
 	 * by other methods.
 	 */
-	GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
+	
 	
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -92,6 +92,8 @@ private void placeBricks() {
 
 	
 	for (int i = 0; i < NBRICKS_PER_ROW; i++){
+		GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
+		
 		double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
 		int y = BRICK_Y_OFFSET;
 		int interval = BRICK_WIDTH+BRICK_SEP;
