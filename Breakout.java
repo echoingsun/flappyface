@@ -97,7 +97,7 @@ private void placeBricks() {
 		
 		brick.setFilled(true);
 		brick.setColor(Color.RED);
-		add (brick, leftX, y);
+		add (brick, leftX + (i-1) * (BRICK_WIDTH + BRICK_SEP), y);
 	}
 	
 	
