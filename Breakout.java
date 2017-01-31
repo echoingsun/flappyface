@@ -65,7 +65,6 @@ public class Breakout extends GraphicsProgram {
 
 	
 	private RandomGenerator rg = new RandomGenerator();
-
 	
 	/*
 	 * Since the same ball and paddle is connected with several other methods,
@@ -94,6 +93,13 @@ public class Breakout extends GraphicsProgram {
 
 private void play() {
 	waitForClick();
+	
+	double vx = rg.nextDouble(1.0,3.0);
+	if (rg.nextBoolean(0.5)){
+		vx= -vx;
+	}
+	double vy = rg.nextDouble (1.0, 3.0);
+	
 	
 	
 	
