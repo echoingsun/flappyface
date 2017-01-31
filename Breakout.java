@@ -81,10 +81,6 @@ public class Breakout extends GraphicsProgram {
 		
 		addMouseListeners();
 		placePaddle();
-		
-		// Place the paddle at its initial position.
-
-		
 		placeBricks();
 		
 		
