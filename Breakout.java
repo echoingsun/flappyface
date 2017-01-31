@@ -87,13 +87,19 @@ public class Breakout extends GraphicsProgram {
 		
 		addMouseListeners();
 		
+		play();
+		
 	}
+
+private void play() {
+	waitForClick();
+	
+}
 
 private void placePaddle() {
 	double x = (getWidth()-PADDLE_WIDTH) * 0.5;
 	double y = getHeight() -PADDLE_Y_OFFSET;
 	add(paddle,x,y);
-	
 }
 
 private GRect makePaddle() {
@@ -101,7 +107,6 @@ private GRect makePaddle() {
 	paddle.setFilled(true);
 	paddle.setColor(Color.BLACK);
 	return paddle;
-	
 }
 
 public void mouseMoved(MouseEvent e){
