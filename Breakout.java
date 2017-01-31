@@ -66,6 +66,10 @@ public class Breakout extends GraphicsProgram {
 	
 	RandomGenerator rg = new RandomGenerator();
 	
+	/*
+	 * Since the same ball is connected with several other methods,
+	 * it can be defined as instance variable.
+	 */
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 
 	
