@@ -65,10 +65,7 @@ public class Breakout extends GraphicsProgram {
 
 	
 	RandomGenerator rg = new RandomGenerator();
-	/*
-	 * Define a single brick as an instance variable so that it can be called repeatedly
-	 * by other methods.
-	 */
+
 	
 	
 /* Method: run() */
@@ -92,6 +89,7 @@ private void placeBricks() {
 
 	
 	for (int i = 0; i < NBRICKS_PER_ROW; i++){
+		
 		GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 		
 		double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
