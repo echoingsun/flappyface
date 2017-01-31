@@ -79,13 +79,14 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
+		addMouseListeners();
 		placePaddle();
 		
 		// Place the paddle at its initial position.
 
 		
 		placeBricks();
-		addMouseListeners();
+		
 		
 	}
 
