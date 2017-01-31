@@ -99,7 +99,7 @@ private void placeBricks() {
 			int intervalX = BRICK_WIDTH+BRICK_SEP;	
 			int intervalY = leftY+BRICK_HEIGHT+BRICK_SEP;
 			
-			add (brick, leftX + i * interval, k * y);
+			add (brick, leftX + i * intervalX, k * intervalY);
 		}
 		
 	}
