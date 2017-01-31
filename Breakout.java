@@ -91,7 +91,7 @@ private void placeBricks() {
 	
 
 	
-	for (int i = 0; i < NBRICKS_PER_ROW; i++){
+	for (int i = 1; i < NBRICKS_PER_ROW; i++){
 		double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
 		int y = BRICK_Y_OFFSET;
 		
