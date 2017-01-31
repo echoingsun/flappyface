@@ -92,7 +92,7 @@ private void placeBricks() {
 
 	
 	for (int i = 0; i < NBRICKS_PER_ROW; i++){
-		int leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
+		int leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1)) / 2;
 		int y = BRICK_Y_OFFSET;
 		int interval = BRICK_WIDTH+BRICK_SEP;
 		
