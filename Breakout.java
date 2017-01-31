@@ -115,26 +115,22 @@ private void placeBricks() {
 private Color rainbowColor(int k, Color c) {
 	if (k % 14 == 1 || k % 14 ==2){
 		return Color.RED;
-	}
-	if (k % 14 == 3 || k % 14 ==4){
+	} else	if (k % 14 == 3 || k % 14 ==4){
 		return Color.ORANGE;
-	}
-	if (k % 14 == 5 || k % 14 == 6){
+	} else 	if (k % 14 == 5 || k % 14 == 6){
 		return Color.YELLOW;
-	}
-	if (k % 14 == 7 || k % 14 == 8){
+	} else	if (k % 14 == 7 || k % 14 == 8){
 		return Color.GREEN;
-	}
-	if (k % 14 == 9 || k % 14 == 10){
+	} else 	if (k % 14 == 9 || k % 14 == 10){
 		return Color.CYAN;
-	}
-	if (k % 14 == 11 || k % 14 == 12){
+	} else	if (k % 14 == 11 || k % 14 == 12){
 		return Color.BLUE;
-	}
-	if (k % 14 == 13 || k % 14 == 0){
+	} else	if (k % 14 == 13 || k % 14 == 0){
 		return Color.BLACK;
+	} else {
+		return null;
 	}
-	return null;
+	
 }
 
 
