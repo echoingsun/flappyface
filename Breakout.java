@@ -133,6 +133,7 @@ private Color rainbowColor(int k, Color c) {
 	if (k % 14 == 13 || k % 14 == 0){
 		return Color.BLACK;
 	}
+	return null;
 }
 
 
