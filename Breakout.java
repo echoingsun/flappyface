@@ -107,7 +107,7 @@ private GRect makePaddle() {
 public void mouseMoved(MouseEvent e){
 	double x = e.getX()- PADDLE_WIDTH * 0.5;
 	double y = getHeight()-PADDLE_Y_OFFSET;
-	double xx =paddle.getX() + PADDLE_WIDTH;
+	double xx =e.getX() + PADDLE_WIDTH*0.5;
 	
 	if (x > 0 && xx < getWidth()){
 		paddle.setLocation(x,y);
