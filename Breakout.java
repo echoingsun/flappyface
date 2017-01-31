@@ -82,7 +82,7 @@ public class Breakout extends GraphicsProgram {
 private void placeBricks() {
 	/*
 	 * Draw a matrix (NBRICKS_PER_ROW * NBRICK_ROWS) of bricks with different colors. 
-	 * Each color goes by two rows.
+	 * Each color goes by two rows. Therefore:
 	 * One for loop should repeat (NBRICK_ROWS / 2) times.
 	 * One for loop should make the program draw two rows of the same color of bricks.
 	 */
