@@ -78,8 +78,11 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
+		// Make and place the paddle.
 		paddle = makePaddle();
 		placePaddle();
+		
+		// Draw the bricks.
 		placeBricks();
 		
 		addMouseListeners();
