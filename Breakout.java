@@ -96,6 +96,7 @@ private void placeBricks() {
 			// Set color.
 			Color c = null;
 			c = rainbowColor(k,c);
+			brick.setColor(c);
 			
 			
 			double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
