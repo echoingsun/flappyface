@@ -72,8 +72,7 @@ public class Breakout extends GraphicsProgram {
 	 */
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 	GRect paddle = null;
-			
-	
+
 	
 /* Method: run() */
 /** Runs the Breakout program. */
@@ -96,7 +95,6 @@ private void placePaddle() {
 
 private GRect makePaddle() {
 	GRect paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
-
 	paddle.setFilled(true);
 	paddle.setColor(Color.BLACK);
 	return paddle;
