@@ -93,16 +93,16 @@ private void placeBricks() {
 			GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 			brick.setFilled(true);
 			
-			// Set color.
+			// Check which line it is and set accordingly the color.
 			Color c = null;
 			c = rainbowColor(k,c);
 			brick.setColor(c);
-			
 			
 			double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
 			double intervalX = BRICK_WIDTH+BRICK_SEP;	
 			double intervalY = BRICK_HEIGHT+BRICK_SEP;
 			
+			// lay the bricks.
 			add (brick, leftX + i * intervalX, BRICK_Y_OFFSET + (k-1) * intervalY);
 		}
 		
