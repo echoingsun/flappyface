@@ -63,10 +63,29 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 
+	/*
+	 * Define a single brick as an instance variable so that it can be called repeatedly
+	 * by other methods.
+	 */
+	GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
+	
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
-		/* You fill this in, along with any subsidiary methods */
+		
+		placeBricks();
+		addMouseListeners();
+		
 	}
+
+
+private void placeBricks() {
+	/*
+	 * Draw a matrix of bricks with different colors. Each color goes by two rows.
+	 * Decom:
+	 * (1) 
+	 */
+	
+}
 
 }
