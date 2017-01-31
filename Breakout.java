@@ -87,7 +87,7 @@ private void placeBricks() {
 	 */
 	
 
-	for (int k = 1; k < = NBRICK_ROWS; k ++){
+	for (int k = 1; k <= NBRICK_ROWS; k ++){
 		for (int i = 0; i < NBRICKS_PER_ROW; i++){
 			
 			GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
