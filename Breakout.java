@@ -78,7 +78,11 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
+		// Place the paddle at its initial position.
+		paddle.setFilled(true);
+		paddle.setColor(Color.BLACK);
 		add (paddle, (getWidth()-PADDLE_WIDTH) * 0.5, getHeight() -PADDLE_Y_OFFSET);
+		
 		placeBricks();
 		addMouseListeners();
 		
