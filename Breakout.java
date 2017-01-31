@@ -79,7 +79,7 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
-		paddle = drawPaddle();
+		paddle = makePaddle();
 		placePaddle();
 		placeBricks();
 		
@@ -94,7 +94,7 @@ private void placePaddle() {
 	
 }
 
-private GRect drawPaddle() {
+private GRect makePaddle() {
 	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 
 	paddle.setFilled(true);
