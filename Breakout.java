@@ -107,7 +107,21 @@ private GRect makePaddle() {
 public void mouseMoved(MouseEvent e){
 	double x = e.getX()- PADDLE_WIDTH * 0.5;
 	double y = getHeight()-PADDLE_Y_OFFSET;
-	paddle.setLocation(x,y);
+	double xx =paddle.getX() + PADDLE_WIDTH;
+	
+	if (x > 0 && xx < getWidth()){
+		paddle.setLocation(x,y);
+	} else 	{
+		if (x<0){
+			paddle.setLocation(0,y);
+		} else if (xx > getWidth()){
+			paddle.setLocation(getWidth()-PADDLE_WIDTH,y);
+		}
+		
+		
+	}
+	
+	
 	
 }
 private void placeBricks() {
