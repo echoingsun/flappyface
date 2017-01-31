@@ -94,6 +94,8 @@ public class Breakout extends GraphicsProgram {
 private void play() {
 	waitForClick();
 	
+	
+	
 }
 
 private void placePaddle() {
@@ -103,7 +105,7 @@ private void placePaddle() {
 }
 
 private GRect makePaddle() {
-	GRect paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
+	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 	paddle.setFilled(true);
 	paddle.setColor(Color.BLACK);
 	return paddle;
