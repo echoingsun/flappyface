@@ -63,6 +63,8 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 
+	
+	RandomGenerator rg = new RandomGenerator();
 	/*
 	 * Define a single brick as an instance variable so that it can be called repeatedly
 	 * by other methods.
