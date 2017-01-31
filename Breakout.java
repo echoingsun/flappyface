@@ -71,8 +71,7 @@ public class Breakout extends GraphicsProgram {
 	 * they can be defined as instance variables.
 	 */
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
-	GRect 
-
+	
 	
 	
 /* Method: run() */
