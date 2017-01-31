@@ -71,19 +71,22 @@ public class Breakout extends GraphicsProgram {
 	 * they can be defined as instance variables.
 	 */
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
-	
+	GRect paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 	
 	
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
 		
+		add (paddle, (getWidth()-PADDLE_WIDTH) * 0.5, PADDLE_Y_OFFSET);
 		placeBricks();
 		addMouseListeners();
 		
 	}
 
-
+public void MouseMoved(){
+	
+}
 private void placeBricks() {
 	/*
 	 * Draw a matrix (NBRICKS_PER_ROW * NBRICK_ROWS) of bricks with different colors. 
@@ -117,7 +120,6 @@ private void placeBricks() {
 
 	
 }
-
 
 private Color rainbowColor(int k, Color c) {
 	if (k % 14 == 1 || k % 14 ==2){
