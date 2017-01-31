@@ -79,20 +79,23 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
-		paddle = placePaddle();
-		
-		double x = (getWidth()-PADDLE_WIDTH) * 0.5;
-		double y = getHeight() -PADDLE_Y_OFFSET;
-		paddle.setLocation(x,y);
+		paddle = drawPaddle();
+		placePaddle();
 		placeBricks();
 		
 		addMouseListeners();
 		
 	}
 
-private GRect placePaddle() {
-	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
+private void placePaddle() {
+	double x = (getWidth()-PADDLE_WIDTH) * 0.5;
+	double y = getHeight() -PADDLE_Y_OFFSET;
+	add(paddle,x,y);
 	
+}
+
+private GRect drawPaddle() {
+	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 
 	paddle.setFilled(true);
 	paddle.setColor(Color.BLACK);
