@@ -71,7 +71,7 @@ public class Breakout extends GraphicsProgram {
 	 * they can be defined as instance variables.
 	 */
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
-
+	GRect paddle = null;
 			
 	
 	
@@ -87,7 +87,7 @@ public class Breakout extends GraphicsProgram {
 	}
 
 private void placePaddle() {
-	GRect paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
+	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 	paddle.setFilled(true);
 	paddle.setColor(Color.BLACK);
 	add (paddle, (getWidth()-PADDLE_WIDTH) * 0.5, getHeight() -PADDLE_Y_OFFSET);
