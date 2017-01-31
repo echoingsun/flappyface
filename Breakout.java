@@ -117,13 +117,9 @@ public void mouseMoved(MouseEvent e){
 		} else if (xx > getWidth()){
 			paddle.setLocation(getWidth()-PADDLE_WIDTH,y);
 		}
-		
-		
 	}
-	
-	
-	
 }
+
 private void placeBricks() {
 	/*
 	 * Draw a matrix (NBRICKS_PER_ROW * NBRICK_ROWS) of bricks with different colors. 
