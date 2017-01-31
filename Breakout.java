@@ -82,8 +82,6 @@ public class Breakout extends GraphicsProgram {
 private void placeBricks() {
 	/*
 	 * Draw a matrix of bricks with different colors. Each color goes by two rows.
-	 * Decom:
-	 * (1) 
 	 */
 	
 }
