@@ -92,7 +92,7 @@ private void placeBricks() {
 		
 		GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 		
-		double leftX = (WIDTH - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
+		double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
 		int y = BRICK_Y_OFFSET;
 		int interval = BRICK_WIDTH+BRICK_SEP;
 		
