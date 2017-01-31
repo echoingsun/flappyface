@@ -87,20 +87,24 @@ private void placeBricks() {
 	 */
 	
 
-	
-	for (int i = 0; i < NBRICKS_PER_ROW; i++){
+	for (int k = 0; k <2; k ++){
+		for (int i = 0; i < NBRICKS_PER_ROW; i++){
+			
+			GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
+			brick.setFilled(true);
+			brick.setColor(Color.RED);
+			
+			double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
+			double leftY = BRICK_Y_OFFSET;
+			int intervalX = BRICK_WIDTH+BRICK_SEP;	
+			int intervalY = leftY+BRICK_HEIGHT+BRICK_SEP;
+			
+			add (brick, leftX + i * interval, k * y);
+		}
 		
-		GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
-		
-		double leftX = (getWidth() - BRICK_WIDTH * NBRICKS_PER_ROW - BRICK_SEP * (NBRICKS_PER_ROW-1))*0.5;
-		int y = BRICK_Y_OFFSET;
-		int interval = BRICK_WIDTH+BRICK_SEP;
-		
-		brick.setFilled(true);
-		brick.setColor(Color.RED);
-		add (brick, leftX + i * interval, y);
 	}
 	
+
 	
 }
 
