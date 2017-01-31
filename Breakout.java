@@ -91,9 +91,10 @@ private void placeBricks() {
 	
 	for (int i=0;i<NBRICKS_PER_ROW;i++){
 		for (int k = i; k < NBRICK_ROWS; k ++){
+			brick.setFilled(true);
 			brick.setColor(Color.RED);
 			double leftX = (getWidth() - BRICK_WIDTH*NBRICKS_PER_ROW - BRICK_SEP*(NBRICKS_PER_ROW-1))*0.5;
-			add (brick, leftX + i* BRICK_WIDTH,BRICK_Y_OFFSET);
+			add (brick, leftX + i* (BRICK_WIDTH + BRICK_SEP),BRICK_Y_OFFSET + k * (BRICK_HEIGHT + BRICK_SEP));
 			
 		}
 	}
