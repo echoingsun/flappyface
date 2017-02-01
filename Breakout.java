@@ -130,7 +130,8 @@ private void play() {
 	placeBricks();
 	
 	// Update count label.
-	countLabel.setLabel(count + "turn(s) left");
+	countLabel = makeCountLabel();
+	add (countLabel, getWidth() - countLabel.getWidth() - 10, countLabel.getHeight()); 
 	
 	double vx = rg.nextDouble(1.0,3.0);
 	if (rg.nextBoolean(0.5)){
@@ -278,6 +279,11 @@ private void play() {
 
 
 
+
+private GLabel makeCountLabel() {
+	countLabel = new GLabel(gameOverCount + "turn(s) left");
+	return countLabel;
+}
 
 private void stageClear() {
 	GLabel stageClear = new GLabel("STAGE CLEAR!");
