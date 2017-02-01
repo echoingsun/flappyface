@@ -175,7 +175,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	 */
 	if (obj01 != null){
 		remove (obj01);
-		bounceOnBricks(obj01.getX(),obj01.getY());
+		bounceOnBricks(obj01.getX(),obj01.getY(), vx, vy);
 	} 
 	if (obj02 != null){
 		remove (obj02);
