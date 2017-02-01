@@ -136,12 +136,20 @@ private void play() {
 		ball.move(vx, vy);
 		pause(DELAY);
 		
-		
 	}
+	
+	gameOver();
 	
 }
 
 
+
+private void gameOver() {
+	GLabel gameOver = new GLabel("GAME OVER");
+	gameOver.setFont("*-72");
+	add (gameOver, (getWidth()-gameOver.getWidth()) * 0.5, (getHeight() - gameOver.getAscent()) * 0.5);
+	
+}
 
 private boolean hitBricks(GObject ball, GObject brick){
 	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
