@@ -190,9 +190,11 @@ private void play() {
 			} 
 			
 			
-/*			 * The bottom left corner of the ball hits a brick.
-			 * The ball can either be hitting a brick beneath it,
-			 * or a brick to its left.*/
+				/*
+				 * * The bottom left corner of the ball hits a brick. The ball
+				 * can either be hitting a brick beneath it, or a brick to its
+				 * left.
+				 */
 			 
 			if (obj04 != null){
 				if (obj04.getY() > cy){
