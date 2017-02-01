@@ -159,8 +159,7 @@ private void play() {
 				if (obj03 == null){
 					if (cy > (obj01.getY() + BRICK_HEIGHT)){
 						vy = -vy;
-					} 
-					if (obj01.getX() > cx){
+					} else 	if (obj01.getX() > cx){
 						vx = -vx;
 					}
 					
@@ -189,8 +188,7 @@ private void play() {
 					
 					if (obj02.getY() > cy){
 						vy= - vy;
-					}
-					if (obj02.getX() > cx){
+					} else if (obj02.getX() > cx){
 						vx= -vx;
 					}		
 					
@@ -216,8 +214,7 @@ private void play() {
 			if (obj03 != null && obj01 == null){
 				if (cy > (obj03.getY() + BRICK_HEIGHT)){
 					vy = -vy;
-				} 
-				if (cx > obj03.getX() + BRICK_WIDTH){
+				} else if (cx > obj03.getX() + BRICK_WIDTH){
 					vx = -vx;
 				}
 				remove (obj03);
@@ -234,8 +231,7 @@ private void play() {
 			if (obj04 != null && obj02 == null){
 				if (obj04.getY() > cy){
 					vy = -vy;
-				} 
-				if (cx > obj04.getX() + BRICK_WIDTH){
+				} else	if (cx > obj04.getX() + BRICK_WIDTH){
 					vx = -vx;
 				}
 				remove (obj04);
