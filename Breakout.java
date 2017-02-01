@@ -122,10 +122,12 @@ private void play() {
 	
 
 	
-	while (!hitWalls() && !hitBricks()){
+	while (true){
 		
 		ball.move(vx, vy);
 		pause(DELAY);
+		bounce(vx, vy);
+		
 	}
 	
 	
