@@ -75,6 +75,7 @@ public class Breakout extends GraphicsProgram {
 	GRect brick = null;
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 	GRect paddle = null;
+	GLabel turnsLeft = null;
 	
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
@@ -256,6 +257,7 @@ private void play() {
 	if (gameOver(vy)){
 		gameOverCount --;
 		gameOverMessage();
+		
 	}
 	if (count ==0){
 		stageClear();
@@ -287,7 +289,12 @@ private void gameOverMessage() {
 	GLabel gameOverMessage = new GLabel("GAME OVER");
 	gameOverMessage.setFont("*-56");
 	
-	GLabel turnsLeft = new GLabel (gameOverCount + " turns left");
+	if (gameOverCount >0){
+		turnsLeft = new GLabel (gameOverCount + " turns left");
+	} else {
+		turnsLeft = new GLabel ("You lost all your lives T_T");
+	}
+	
 	
 	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
 	add (turnsLeft, (getWidth() - turnsLeft.getWidth())*0.5, gameOverMessage.getY() + 20);
