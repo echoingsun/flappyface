@@ -157,7 +157,7 @@ private void play() {
 					if (obj01.getX() > cx){
 						vx = -vx;
 					}
-					remove (obj01);
+					
 				} else {
 					if (obj03 != null && obj03 !=obj01){
 						remove(obj03);
@@ -167,7 +167,7 @@ private void play() {
 						vy = -vy;
 					}
 				}
-				
+				remove (obj01);	
 			} 
 			
 			
