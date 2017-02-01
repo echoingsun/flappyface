@@ -75,6 +75,8 @@ public class Breakout extends GraphicsProgram {
 	GRect brick = null;
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 	GRect paddle = null;
+	
+	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 
 	
 /* Method: run() */
