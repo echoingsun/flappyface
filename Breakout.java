@@ -147,7 +147,7 @@ private void play() {
 
 
 private boolean hitPaddle() {
-	GObject obj = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);	
+	GObject obj = getElementAt(ball.getX() + 2* BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);	
 	return ball.getY() + 2*BALL_RADIUS >= paddle.getY() && (obj == paddle && obj != ball);
 }
 
