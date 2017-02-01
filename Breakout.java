@@ -203,7 +203,7 @@ private void play() {
 			 * The ball can either be hitting a brick above it,
 			 * or a brick to its left.*/
 			 
-			if (obj03 != null){
+			if (obj03 != null && obj01 == null){
 				if (cy > (obj03.getY() + BRICK_HEIGHT)){
 					vy = -vy;
 				} 
@@ -220,7 +220,7 @@ private void play() {
 				 * left.
 				 */
 			 
-			if (obj04 != null){
+			if (obj04 != null && obj02 == null){
 				if (obj04.getY() > cy){
 					vy = -vy;
 				} 
