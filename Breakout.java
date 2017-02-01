@@ -72,6 +72,7 @@ public class Breakout extends GraphicsProgram {
 	 * Since the same ball and paddle is connected with several other methods,
 	 * they can be defined as instance variables.
 	 */
+	GRect brick = null;
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 	GRect paddle = null;
 
@@ -186,7 +187,7 @@ private void placeBricks() {
 	for (int k = 1; k <= NBRICK_ROWS; k ++){
 		for (int i = 0; i < NBRICKS_PER_ROW; i++){
 			
-			GRect brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
+			brick = new GRect(BRICK_WIDTH, BRICK_HEIGHT);
 			brick.setFilled(true);
 			
 			// Check which line it is and set accordingly the color.
