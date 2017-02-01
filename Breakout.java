@@ -177,10 +177,10 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	 * or, in rare cases, hitting the bottom left corner of a brick.
 	 */
 	if (obj01 != null){
-		if (cy - (obj01.getY() + BRICK_HEIGHT) <=BALL_RADIUS){
+		if (cy > (obj01.getY() + BRICK_HEIGHT)){
 			vy = -vy;
 		} 
-		if (cx-(obj01.getX() + BRICK_WIDTH) <=BALL_RADIUS){
+		if (obj01.getX() > ){
 			vx = -vx;
 		}
 		remove (obj01);
@@ -204,7 +204,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	
 }
 
-private void bounceOnBricks(double x, double y, double vx, double vy) {
+/*private void bounceOnBricks(double x, double y, double vx, double vy) {
 	double cx = ball.getX() + BALL_RADIUS;
 	double cy = ball.getY() + BALL_RADIUS;
 	
@@ -218,7 +218,7 @@ private void bounceOnBricks(double x, double y, double vx, double vy) {
 		vy = -vy;
 	}
 	
-}
+}*/
 
 private boolean hitBricks(){
 	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
