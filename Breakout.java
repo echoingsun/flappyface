@@ -262,7 +262,7 @@ private void play() {
 
 
 private void stageClear() {
-	GLabel stageClear = new GLabel("GAME OVER");
+	GLabel stageClear = new GLabel("STAGE CLEAR!");
 	stageClear.setFont("*-56");
 	add (stageClear, (getWidth()-stageClear.getWidth()) * 0.5, (getHeight() - stageClear.getAscent()) * 0.5);
 	
