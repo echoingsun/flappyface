@@ -168,16 +168,16 @@ private void removeBrick(double x, double y) {
 	GObject obj03 = getElementAt(x, y);
 	GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
 	
-	if (obj01 != null){
+	if (obj01 != null && obj01 != paddle){
 		remove (obj01);
 	} 
-	if (obj02 != null){
+	if (obj02 != null && obj02 != paddle ){
 		remove (obj02);
 	}
-	if (obj03 != null){
+	if (obj03 != null && obj03 != paddle){
 		remove (obj03);
 	} 
-	if (obj04 != null){
+	if (obj04 != null && obj04 != paddle){
 		remove (obj04);
 	}
 	
