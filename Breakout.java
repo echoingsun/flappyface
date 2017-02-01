@@ -127,7 +127,7 @@ private void play() {
 		if (hitWalls()){
 			vx = -vx;
 		}
-		if (hitCeiling()){
+		if (hitCeiling() || hitPaddle()){
 			vy = -vy;
 		}
 		ball.move(vx, vy);
@@ -145,6 +145,11 @@ private void play() {
 
 
 
+
+private boolean hitPaddle() {
+	GObject obj = getElementAt(ball.getX() + BALL_RADIUS, ball.getY() + 2 * BALL_RADIUS);	
+	return ball.getY() + 2*BALL_RADIUS >= paddle.getY() && obj == paddle;
+}
 
 private boolean hitCeiling() {
 	return ball.getY() <= 0 ;
