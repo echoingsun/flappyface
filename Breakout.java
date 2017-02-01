@@ -208,7 +208,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	 * or a brick to its left.
 	 */
 	if (obj03 != null){
-		if (obj03.getY() > cy)){
+		if (cy > (obj03.getY() + BRICK_HEIGHT)){
 			vy = -vy;
 		} 
 		if (cx > obj03.getX() + BRICK_WIDTH){
@@ -223,7 +223,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	 * or a brick to its left.
 	 */
 	if (obj04 != null){
-		if (cy > (obj04.getY() + BRICK_HEIGHT)){
+		if (obj04.getY() > cy){
 			vy = -vy;
 		} 
 		if (cx > obj04.getX() + BRICK_WIDTH){
