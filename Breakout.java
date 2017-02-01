@@ -62,6 +62,8 @@ public class Breakout extends GraphicsProgram {
 
 /** Number of turns */
 	private static final int NTURNS = 3;
+	
+	private static final int PAUSE = 3;
 
 	
 	private RandomGenerator rg = new RandomGenerator();
@@ -118,6 +120,7 @@ private void play() {
 	
 	while (true){
 		ball.move(vx, vy);
+		pause(PAUSE);
 	}
 	
 	
