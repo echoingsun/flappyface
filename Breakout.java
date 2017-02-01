@@ -76,7 +76,7 @@ public class Breakout extends GraphicsProgram {
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 	GRect paddle = null;
 	GLabel turnsLeft = null;
-	GLabel countLabel = null;
+
 	
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
@@ -129,9 +129,7 @@ private void play() {
 	// Draw the bricks.
 	placeBricks();
 	
-	// Update count label.
-	countLabel = makeCountLabel();
-	add (countLabel, getWidth() - countLabel.getWidth() - 10, countLabel.getHeight()); 
+
 	
 	double vx = rg.nextDouble(1.0,3.0);
 	if (rg.nextBoolean(0.5)){
