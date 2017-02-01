@@ -123,7 +123,10 @@ private void play() {
 
 	
 	while (true){
-		bounce(vx, vy);
+		
+		if (hitWalls){
+			vx = -vx;
+		}
 		ball.move(vx, vy);
 		pause(DELAY);
 		
@@ -136,13 +139,7 @@ private void play() {
 	
 }
 
-private void bounce(double vx, double vy) {
-	
-	if (hitWalls()){
-		vx = -vx;
-	}
-	
-}
+
 
 private boolean hitBricks() {
 	return brick == getElementAt(ball.getX(), ball.getY()) || brick == getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) || brick == getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) || brick == getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY()+ 2*BALL_RADIUS);
