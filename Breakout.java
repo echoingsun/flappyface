@@ -127,8 +127,8 @@ private void play() {
 		if (hitWalls()){
 			vx = -vx;
 		}
-		if (hitBricks()){
-			remove(brick);
+		if (hitCeiling()){
+			vy = -vy;
 		}
 		ball.move(vx, vy);
 		pause(DELAY);
@@ -144,11 +144,10 @@ private void play() {
 
 
 
-private boolean hitBricks() {
-	GObject obj = getElementAt(ball.getX(), ball.getY());
-	if (obj == brick) return true;
-	return false;
-	//return brick == getElementAt(ball.getX(), ball.getY()) || brick == getElementAt(ball.getX() + 2 * BALL_RADIUS, ball.getY()) || brick == getElementAt(ball.getX(), ball.getY() + 2 * BALL_RADIUS) || brick == getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY()+ 2*BALL_RADIUS);
+
+
+private boolean hitCeiling() {
+	return ball.getY() <= 0 ;
 }
 
 private boolean hitWalls() {
