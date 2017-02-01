@@ -84,16 +84,7 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
-		// Make and place the paddle.
-		paddle = makePaddle();
-		placePaddle();
-		
-		// Make and place the ball.
-		ball = makeBall();
-		placeBall();
-		
-		// Draw the bricks.
-		placeBricks();
+
 		
 		addMouseListeners();
 		
@@ -122,7 +113,18 @@ private void play() {
 	// Before each turn, clear all objects other than the ball, the paddle and the bricks.
 	/*GObject obj = getElementAt();*/
 	
-
+	removeAll();
+	
+	// Make and place the paddle.
+	paddle = makePaddle();
+	placePaddle();
+	
+	// Make and place the ball.
+	ball = makeBall();
+	placeBall();
+	
+	// Draw the bricks.
+	placeBricks();
 	
 	double vx = rg.nextDouble(1.0,3.0);
 	if (rg.nextBoolean(0.5)){
