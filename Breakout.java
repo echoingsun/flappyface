@@ -131,7 +131,7 @@ private void play() {
 			vy = -vy;
 		}
 		if (hitBricks(ball, brick)){
-			removeAndBounce(ball, brick);
+			remove(brick);
 		}
 		ball.move(vx, vy);
 		pause(DELAY);
@@ -141,16 +141,7 @@ private void play() {
 	
 }
 
-private void removeAndBounce(GObject ball, GObject brick) {
-	remove(brick);
-	
-	double x1 = ball.getX();
-	double x2 = ball.getX() + 2*BALL_RADIUS;
-	double y1 = ball.getY();
-	double y2 = ball.getY() + 2*BALL_RADIUS;
 
-	
-}
 
 private boolean hitBricks(GObject ball, GObject brick){
 	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
