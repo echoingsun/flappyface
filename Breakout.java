@@ -168,8 +168,15 @@ private void removeBrick(double x, double y) {
 	GObject obj03 = getElementAt(x, y);
 	GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
 	
+	/*
+	 * The upper left corner of the ball-square hits a brick.
+	 * The ball can either be hitting a brick above it, 
+	 * or a brick to its left.
+	 * or, in rare cases, hitting the bottom right corner of a brick.
+	 */
 	if (obj01 != null){
 		remove (obj01);
+		bounceOnBricks();
 	} 
 	if (obj02 != null){
 		remove (obj02);
@@ -180,6 +187,13 @@ private void removeBrick(double x, double y) {
 	if (obj04 != null){
 		remove (obj04);
 	}
+	
+}
+
+private void bounceOnBricks() {
+	double cx = ball.getX() + RADIUS;
+	double cy = ball.getY() + RADIUS;
+	
 	
 }
 
