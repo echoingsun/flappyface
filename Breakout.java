@@ -94,10 +94,6 @@ public class Breakout extends GraphicsProgram {
 		// Draw the bricks.
 		placeBricks();
 		
-		// Show how many bricks are left.
-		GLabel countLabel = new GLabel ("bricks left");
-		add (countLabel,getWidth() - countLabel.getWidth(), countLabel.getAscent());
-		
 		addMouseListeners();
 		
 		play();
