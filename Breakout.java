@@ -110,13 +110,16 @@ private GOval makeBall() {
 }
 
 private void play() {
-	waitForClick();
 	
 	double vx = rg.nextDouble(1.0,3.0);
 	if (rg.nextBoolean(0.5)){
 		vx= -vx;
 	}
 	double vy = rg.nextDouble (-1.0, -3.0);
+	
+	waitForClick();
+	
+
 	
 	while (true){
 		ball.move(vx, vy);
