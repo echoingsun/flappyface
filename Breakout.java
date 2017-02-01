@@ -131,8 +131,7 @@ private void play() {
 			vy = -vy;
 		}
 		if (hitBricks()){
-			removeBrick(ball.getX(),ball.getY());
-			
+			removeBrick(ball.getX(),ball.getY(),vx, vy);
 		}
 		ball.move(vx, vy);
 		pause(DELAY);
@@ -162,7 +161,7 @@ private void gameOverMessage() {
 	
 }
 
-private void removeBrick(double x, double y) {
+private void removeBrick(double x, double y, double vx, double vy) {
 	GObject obj01 = getElementAt(x + 2*BALL_RADIUS, y);
 	GObject obj02 = getElementAt(x + 2*BALL_RADIUS, y + 2*BALL_RADIUS);
 	GObject obj03 = getElementAt(x, y);
@@ -190,11 +189,14 @@ private void removeBrick(double x, double y) {
 	
 }
 
-private void bounceOnBricks(double x, double y) {
+private void bounceOnBricks(double x, double y, double vx, double vy) {
 	double cx = ball.getX() + BALL_RADIUS;
 	double cy = ball.getY() + BALL_RADIUS;
 	
-	
+	// If the ball hits a brick above it.
+	if (cy - (y+BRICK_HEIGHT) <= BALL_RADIUS){
+		vy = -vy;
+	}
 	
 }
 
