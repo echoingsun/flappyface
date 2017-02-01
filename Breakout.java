@@ -281,7 +281,7 @@ private void gameOverMessage() {
 	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
 	
 	GLabel turnsLeft = new GLabel (gameOverCount + "turns left");
-	add (turnsLeft, (getWdith() - turnsLeft.getWidth())*0.5)
+	add (turnsLeft, (getWidth() - turnsLeft.getWidth())*0.5, gameOverMessage.getY() + 20);
 }
 
 /*private void removeBrick(double x, double y, double vx, double vy) {
