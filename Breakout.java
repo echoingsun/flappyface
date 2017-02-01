@@ -122,7 +122,7 @@ private void play() {
 	
 
 	
-	while (true){
+	while (!gameOver(vy)){
 		
 		if (hitWalls() || hitPaddleSide() && vy >0){
 			vx = -vx;
@@ -138,13 +138,17 @@ private void play() {
 		
 	}
 	
-	gameOver();
+	
 	
 }
 
 
 
-private void gameOver() {
+private boolean gameOver(double vy) {
+	return vy>0 && ball.getY() >= getHeight();
+}
+
+private void gameOverMessage() {
 	GLabel gameOverMessage = new GLabel("GAME OVER");
 	gameOverMessage.setFont("*-72");
 	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
