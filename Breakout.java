@@ -94,9 +94,7 @@ public class Breakout extends GraphicsProgram {
 		// Draw the bricks.
 		placeBricks();
 		
-		// Show how many bricks are left.
-		GLabel countLabel = new GLabel (count + "bricks left");
-		add (countLabel,0, countLabel.getAscent());
+
 		
 		addMouseListeners();
 		
@@ -147,6 +145,10 @@ private void play() {
 			GObject obj02 = getElementAt(x + 2*BALL_RADIUS, y + 2*BALL_RADIUS);
 			GObject obj03 = getElementAt(x, y);
 			GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
+			
+			// Show how many bricks are left.
+			GLabel countLabel = new GLabel (count + "bricks left");
+			add (countLabel,0, countLabel.getAscent());
 			
 			
 /*			 * The upper right corner of the ball-square hits a brick.
