@@ -201,6 +201,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		}		
 		remove (obj02);
 	}
+	
 	if (obj03 != null){
 		remove (obj03);
 	} 
