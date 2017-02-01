@@ -161,10 +161,10 @@ private void play() {
 				} else {
 					if (obj03 != null && obj03 !=obj01){
 						remove(obj03);
-						vx= -vx;
+						vy= -vy;
 					}
 					if (obj03 == obj01){
-						vx = -vx;
+						vy = -vy;
 					}
 				}
 				
@@ -187,7 +187,13 @@ private void play() {
 					}		
 					remove (obj02);
 				} else {
-					if (obj04 != null)
+					if (obj04 != null && obj04 != obj02){
+						remove(obj04);
+						vy = -vy;						
+					}
+					if (obj04 == obj02){
+						vy=-vy;
+					}
 				}
 
 			}
