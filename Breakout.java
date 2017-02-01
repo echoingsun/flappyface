@@ -100,6 +100,10 @@ private void play() {
 	}
 	double vy = rg.nextDouble (1.0, 3.0);
 	
+	while (true){
+		ball.move(vx, vy);
+	}
+	
 	
 	
 	
