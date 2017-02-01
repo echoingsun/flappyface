@@ -124,7 +124,7 @@ private void play() {
 	
 	while (true){
 		
-		if (hitWalls()){
+		if (hitWalls() || hitPaddleSide() && vy >0){
 			vx = -vx;
 		}
 		if (hitCeiling() || (hitPaddle() && vy > 0)){
