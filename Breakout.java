@@ -173,12 +173,11 @@ private boolean hitPaddle() {
 }
 
 private boolean hitPaddleSide(){
-	double cx = ball.getX() + BALL_RADIUS;
-	double cy = ball.getY() + BALL_RADIUS;
+	double c = ball.getX() + BALL_RADIUS;
 	
 	GObject obj01 = getElementAt(ball.getX(), ball.getY() + 2* BALL_RADIUS);
 	GObject obj02 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() + 2* BALL_RADIUS);
-	return (obj01 == paddle || obj02 == paddle) && (ball.getY() + 2* BALL_RADIUS) > paddle.getY() && (cx<paddle.getX() || cx>paddle.getX()+PADDLE_WIDTH) ;
+	return (obj01 == paddle || obj02 == paddle) && (ball.getY() + 2* BALL_RADIUS) > paddle.getY() && (c<paddle.getX() || c>paddle.getX()+PADDLE_WIDTH) ;
 }
 
 private boolean hitCeiling() {
