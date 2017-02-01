@@ -138,6 +138,8 @@ private void play() {
 		
 	}
 	
+	gameOverMessage();
+	
 	
 	
 }
