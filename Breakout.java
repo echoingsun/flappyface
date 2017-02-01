@@ -130,8 +130,9 @@ private void play() {
 		if (hitCeiling() || (hitPaddle() && vy > 0)){
 			vy = -vy;
 		}
-		if (hitBricks(ball, brick)){
-			remove(brick);
+		if (hitBricks()){
+			removeBrick(ball.getX(),ball.getY());
+			
 		}
 		ball.move(vx, vy);
 		pause(DELAY);
@@ -146,9 +147,13 @@ private void play() {
 
 
 
+
+
 private boolean gameOver(double vy) {
 	return vy>0 && ball.getY() >= getHeight();
 }
+
+
 
 private void gameOverMessage() {
 	GLabel gameOverMessage = new GLabel("GAME OVER");
@@ -157,12 +162,33 @@ private void gameOverMessage() {
 	
 }
 
-private boolean hitBricks(GObject ball, GObject brick){
+private void removeBrick(double x, double y) {
+	GObject obj01 = getElementAt(x + 2*BALL_RADIUS, y);
+	GObject obj02 = getElementAt(x + 2*BALL_RADIUS, y + 2*BALL_RADIUS);
+	GObject obj03 = getElementAt(x, y);
+	GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
+	
+	if (obj01 != null){
+		remove (obj01);
+	} 
+	if (obj02 != null){
+		remove (obj02);
+	}
+	if (obj03 != null){
+		remove (obj03);
+	} 
+	if (obj04 != null){
+		remove (obj04);
+	}
+	
+}
+
+private boolean hitBricks(){
 	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
 	GObject obj02 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() + 2*BALL_RADIUS);
 	GObject obj03 = getElementAt(ball.getX(), ball.getY());
 	GObject obj04 = getElementAt(ball.getX(), ball.getY() + 2*BALL_RADIUS);
-	return obj01 == brick || obj02 == brick || obj03 == brick || obj04 == brick;
+	return obj01 != null || obj02 != null || obj03 != null || obj04 !=null;
 }
 
 
