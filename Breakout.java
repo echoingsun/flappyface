@@ -123,10 +123,10 @@ private void play() {
 
 	
 	while (true){
-		
+		bounce(vx, vy);
 		ball.move(vx, vy);
 		pause(DELAY);
-		bounce(vx, vy);
+		
 		
 	}
 	
