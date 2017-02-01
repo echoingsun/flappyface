@@ -291,7 +291,7 @@ private void gameOverMessage() {
 	
 	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
 	add (turnsLeft, (getWidth() - turnsLeft.getWidth())*0.5, gameOverMessage.getY() + 20);
-	pause(1000);
+	pause(1500);
 	remove(gameOverMessage);
 	remove(turnsLeft);
 }
