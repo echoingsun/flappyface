@@ -180,7 +180,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		if (cy > (obj01.getY() + BRICK_HEIGHT)){
 			vy = -vy;
 		} 
-		if (obj01.getX() > ){
+		if (obj01.getX() > cx){
 			vx = -vx;
 		}
 		remove (obj01);
