@@ -118,6 +118,10 @@ private GOval makeBall() {
 
 private void play() {
 	
+	
+	// Before each turn, clear all objects other than the ball, the paddle and the bricks.
+	/*GObject obj = getElementAt();*/
+	
 	double vx = rg.nextDouble(1.0,3.0);
 	if (rg.nextBoolean(0.5)){
 		vx= -vx;
