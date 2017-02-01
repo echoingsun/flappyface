@@ -168,16 +168,16 @@ private void removeBrick(double x, double y) {
 	GObject obj03 = getElementAt(x, y);
 	GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
 	
-	if (obj01 != null && obj01 != paddle){
+	if (obj01 != null){
 		remove (obj01);
 	} 
-	if (obj02 != null && obj02 != paddle ){
+	if (obj02 != null){
 		remove (obj02);
 	}
-	if (obj03 != null && obj03 != paddle){
+	if (obj03 != null){
 		remove (obj03);
 	} 
-	if (obj04 != null && obj04 != paddle){
+	if (obj04 != null){
 		remove (obj04);
 	}
 	
@@ -188,7 +188,7 @@ private boolean hitBricks(){
 	GObject obj02 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() + 2*BALL_RADIUS);
 	GObject obj03 = getElementAt(ball.getX(), ball.getY());
 	GObject obj04 = getElementAt(ball.getX(), ball.getY() + 2*BALL_RADIUS);
-	return obj01 != null || obj02 != null || obj03 != null || obj04 !=null;
+	return (obj01 != null || obj02 != null || obj03 != null || obj04 !=null) && (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle);
 }
 
 
