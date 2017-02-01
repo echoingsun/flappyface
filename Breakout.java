@@ -122,24 +122,23 @@ private void play() {
 	
 
 	
-	while (true){
-		bounce(vx, vy);
+	if (!hitWalls() && !hitBricks()){
 		ball.move(vx, vy);
 		pause(DELAY);
 	}
-	
+	bounce(vx, vy);
 	
 	
 	
 	
 }
 
-private double bounce(double vx, double vy) {
+private void bounce(double vx, double vy) {
 	
 	if (hitWalls()){
-		return vx = -vx;
+		vx = -vx;
 	} else {
-		return vx;
+		vx = vx;
 	}
 	
 }
