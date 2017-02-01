@@ -281,7 +281,7 @@ private void play() {
 
 
 private GLabel makeCountLabel() {
-	countLabel = new GLabel(gameOverCount + "turn(s) left");
+	countLabel = new GLabel(gameOverCount + " turn(s) left");
 	return countLabel;
 }
 
