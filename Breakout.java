@@ -167,8 +167,8 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	GObject obj03 = getElementAt(x, y);
 	GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
 	
-	double cx = ball.getX() + BALL_RADIUS;
-	double cy = ball.getY() + BALL_RADIUS;
+	double cx = x + BALL_RADIUS;
+	double cy = y + BALL_RADIUS;
 	
 	/*
 	 * The upper left corner of the ball-square hits a brick.
