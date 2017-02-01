@@ -185,7 +185,7 @@ private void play() {
 					if (obj02.getX() > cx){
 						vx= -vx;
 					}		
-					remove (obj02);
+					
 				} else {
 					if (obj04 != null && obj04 != obj02){
 						remove(obj04);
@@ -195,7 +195,7 @@ private void play() {
 						vy=-vy;
 					}
 				}
-
+				remove (obj02);
 			}
 			
 			
