@@ -188,7 +188,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	} 
 	
 	/*
-	 * The bottom right of the corner hits a brick.
+	 * The bottom right of the ball hits a brick.
 	 * The ball can either be hitting a brick beneath it,
 	 * or a brick to its right.
 	 */
@@ -202,7 +202,18 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		remove (obj02);
 	}
 	
+	/*
+	 * The upper left corner of the ball hits a brick.
+	 * The ball can either be hitting a brick above it,
+	 * or a brick to its left.
+	 */
 	if (obj03 != null){
+		if (cy > (obj03.getY() + BRICK_HEIGHT)){
+			vy = -vy;
+		} 
+		if (cx > obj03.getX() + BRICK_WIDTH){
+			vx = -vx;
+		}
 		remove (obj03);
 	} 
 	if (obj04 != null){
