@@ -77,6 +77,7 @@ public class Breakout extends GraphicsProgram {
 	GRect paddle = null;
 	
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
+	int gameOverCount = NTURNS;
 
 	
 /* Method: run() */
@@ -96,7 +97,10 @@ public class Breakout extends GraphicsProgram {
 		
 		addMouseListeners();
 		
-		play();
+		for (gameOverCount = NTURNS; gameOverCount >0;){
+			play();
+		}
+		
 				
 	}
 
@@ -242,6 +246,7 @@ private void play() {
 	}
 	
 	if (gameOver(vy)){
+		gameOverCount --;
 		gameOverMessage();
 	}
 	if (count ==0){
