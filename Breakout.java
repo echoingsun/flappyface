@@ -126,15 +126,20 @@ private void play() {
 		ball.move(vx, vy);
 		pause(DELAY);
 	}
-	bounce();
+	bounce(vx, vy);
 	
 	
 	
 	
 }
 
-private void bounce() {
-	// TODO Auto-generated method stub
+private double bounce(double vx, double vy) {
+	
+	if (hitWalls()){
+		return vx = -vx;
+	} else {
+		return vx;
+	}
 	
 }
 
