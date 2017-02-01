@@ -121,13 +121,23 @@ private void play() {
 	
 
 	
-	while (!hitWalls()){
+	while (!hitWalls() && !hitBricks()){
 		ball.move(vx, vy);
 		pause(DELAY);
 	}
+	bounce();
 	
 	
 	
+	
+}
+
+private void bounce() {
+	// TODO Auto-generated method stub
+	
+}
+
+private boolean hitBricks() {
 	
 }
 
