@@ -141,11 +141,14 @@ private void play() {
 	
 }
 
-private void removeAndBounce(ball, brick) {
+private void removeAndBounce(GObject ball, GObject brick) {
 	remove(brick);
-	if (getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() == brick){
-		
-	}
+	
+	double x1 = ball.getX();
+	double x2 = ball.getX() + 2*BALL_RADIUS;
+	double y1 = ball.getY();
+	double y2 = ball.getY() + 2*BALL_RADIUS;
+
 	
 }
 
