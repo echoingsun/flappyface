@@ -132,7 +132,7 @@ private void play() {
 }
 
 private boolean hitWalls() {
-	return 
+	return ball.getX() <= 0 || ball.getX() + 2*BALL_RADIUS >= getWidth();
 }
 
 private void placePaddle() {
