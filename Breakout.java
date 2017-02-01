@@ -158,6 +158,12 @@ private boolean hitPaddle() {
 	return ball.getY() + 2*BALL_RADIUS >= paddle.getY() && obj == paddle;
 }
 
+private boolean hitPaddleSide(){
+	GObject obj01 = getElementAt(ball.getX(), ball.getY() + 2* BALL_RADIUS);
+	GObject obj02 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() + 2* BALL_RADIUS);
+	return obj01 == paddle || obj02 == paddle;
+}
+
 private boolean hitCeiling() {
 	return ball.getY() <= 0 ;
 }
