@@ -198,6 +198,11 @@ private void bounceOnBricks(double x, double y, double vx, double vy) {
 		vy = -vy;
 	}
 	
+	// If the ball hits a brick beneath it.
+	if (y-cy <= BALL_RADIUS){
+		vy = -vy;
+	}
+	
 }
 
 private boolean hitBricks(){
