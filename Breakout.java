@@ -149,13 +149,29 @@ private void play() {
 			 * or, in rare cases, hitting the bottom left corner of a brick.*/
 			 
 			if (obj01 != null){
-				if (cy > (obj01.getY() + BRICK_HEIGHT)){
-					vy = -vy;
-				} 
-				if (obj01.getX() > cx){
-					vx = -vx;
+				
+				if (obj03 == null){
+					if (cy > (obj01.getY() + BRICK_HEIGHT)){
+						vy = -vy;
+					} 
+					if (obj01.getX() > cx){
+						vx = -vx;
+					}
+					remove (obj01);
+				} else {
+					if (obj03 != null){
+						remove(obj03);
+						vx= -vx;
+					}
+					if (obj03 == obj01){
+						vx = -vx;
+					}
 				}
-				remove (obj01);
+				
+				
+				
+
+
 
 			} 
 			
