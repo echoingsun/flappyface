@@ -124,7 +124,7 @@ private void play() {
 	
 	while (true){
 		
-		if (hitWalls){
+		if (hitWalls()){
 			vx = -vx;
 		}
 		ball.move(vx, vy);
