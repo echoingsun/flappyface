@@ -163,6 +163,7 @@ private void play() {
 				} else {
 					if (obj03 != null && obj03 !=obj01){
 						remove(obj03);
+						count --;
 						vy= -vy;
 					}
 					if (obj03 == obj01){
@@ -170,6 +171,7 @@ private void play() {
 					}
 				}
 				remove (obj01);	
+				count --;
 			} 
 			
 			
@@ -191,6 +193,7 @@ private void play() {
 				} else {
 					if (obj04 != null && obj04 != obj02){
 						remove(obj04);
+						count --;
 						vy = -vy;						
 					}
 					if (obj04 == obj02){
@@ -198,6 +201,7 @@ private void play() {
 					}
 				}
 				remove (obj02);
+				count --;
 			}
 			
 			
@@ -213,6 +217,7 @@ private void play() {
 					vx = -vx;
 				}
 				remove (obj03);
+				count --;
 			} 
 			
 			
@@ -230,6 +235,7 @@ private void play() {
 					vx = -vx;
 				}
 				remove (obj04);
+				count --;
 			}
 			
 			
