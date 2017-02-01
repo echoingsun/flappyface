@@ -177,13 +177,14 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	 * or, in rare cases, hitting the bottom right corner of a brick.
 	 */
 	if (obj01 != null){
-		remove (obj01);
 		if (cy - (obj01.getY() + BRICK_HEIGHT) <=BALL_RADIUS){
 			vy = -vy;
 		} 
 		if (cx-(obj01.getX() + BRICK_WIDTH) <=BALL_RADIUS){
 			vx = -vx;
 		}
+		remove (obj01);
+
 	} 
 	if (obj02 != null){
 		remove (obj02);
