@@ -95,8 +95,16 @@ public class Breakout extends GraphicsProgram {
 		
 	}
 
+private void placeBall() {
+	double x = getWidth() * 0.5 - BALL_RADIUS;
+	double y = getHeight() -PADDLE_Y_OFFSET - 2 * BALL_RADIUS;
+	add (ball, x,y);
+}
+
 private GOval makeBall() {
 	ball.setFilled(true);
+	ball.setColor(Color.BLACK);
+	return ball;
 }
 
 private void play() {
@@ -126,7 +134,7 @@ private void placePaddle() {
 private GRect makePaddle() {
 	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 	paddle.setFilled(true);
-	paddle.setColor(Color.BLACK);
+	paddle.setColor(Color.DARK_GRAY);
 	return paddle;
 }
 
