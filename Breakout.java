@@ -145,9 +145,9 @@ private void play() {
 
 
 private void gameOver() {
-	GLabel gameOver = new GLabel("GAME OVER");
-	gameOver.setFont("*-72");
-	add (gameOver, (getWidth()-gameOver.getWidth()) * 0.5, (getHeight() - gameOver.getAscent()) * 0.5);
+	GLabel gameOverMessage = new GLabel("GAME OVER");
+	gameOverMessage.setFont("*-72");
+	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
 	
 }
 
