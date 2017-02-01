@@ -130,6 +130,9 @@ private void play() {
 		if (hitCeiling() || (hitPaddle() && vy > 0)){
 			vy = -vy;
 		}
+		if (hitBricks(ball, brick)){
+			remove (brick);
+		}
 		ball.move(vx, vy);
 		pause(DELAY);
 		
@@ -138,7 +141,7 @@ private void play() {
 	
 }
 
-private boolean hitBricks(){
+private boolean hitBricks(GObject ball, GObject brick){
 	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
 	GObject obj02 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() + 2*BALL_RADIUS);
 	GObject obj03 = getElementAt(ball.getX(), ball.getY());
