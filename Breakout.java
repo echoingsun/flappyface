@@ -82,6 +82,10 @@ public class Breakout extends GraphicsProgram {
 		paddle = makePaddle();
 		placePaddle();
 		
+		// Make and place the ball.
+		ball = makeBall();
+		placeBall();
+		
 		// Draw the bricks.
 		placeBricks();
 		
@@ -90,6 +94,10 @@ public class Breakout extends GraphicsProgram {
 		play();
 		
 	}
+
+private GOval makeBall() {
+	ball.setFilled(true);
+}
 
 private void play() {
 	waitForClick();
