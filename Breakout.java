@@ -93,6 +93,7 @@ public class Breakout extends GraphicsProgram {
 			play();
 		}
 		
+		removeAll();
 				
 	}
 
