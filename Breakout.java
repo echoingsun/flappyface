@@ -121,7 +121,7 @@ private void play() {
 	
 
 	
-	while (true){
+	while (!hitWalls()){
 		ball.move(vx, vy);
 		pause(DELAY);
 	}
@@ -129,6 +129,10 @@ private void play() {
 	
 	
 	
+}
+
+private boolean hitWalls() {
+	return 
 }
 
 private void placePaddle() {
