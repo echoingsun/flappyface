@@ -159,7 +159,7 @@ private void play() {
 					}
 					remove (obj01);
 				} else {
-					if (obj03 != null){
+					if (obj03 != null && obj03 !=obj01){
 						remove(obj03);
 						vx= -vx;
 					}
@@ -168,11 +168,6 @@ private void play() {
 					}
 				}
 				
-				
-				
-
-
-
 			} 
 			
 			
@@ -181,13 +176,20 @@ private void play() {
 			 * or a brick to its right.*/
 			 
 			if (obj02 != null){
-				if (obj02.getY() > cy){
-					vy= - vy;
+				
+				if (obj04 == null){
+					
+					if (obj02.getY() > cy){
+						vy= - vy;
+					}
+					if (obj02.getX() > cx){
+						vx= -vx;
+					}		
+					remove (obj02);
+				} else {
+					if (obj04 != null)
 				}
-				if (obj02.getX() > cx){
-					vx= -vx;
-				}		
-				remove (obj02);
+
 			}
 			
 			
