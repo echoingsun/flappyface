@@ -278,10 +278,6 @@ private void play() {
 
 
 
-private GLabel makeCountLabel() {
-	countLabel = new GLabel(gameOverCount + " turn(s) left");
-	return countLabel;
-}
 
 private void stageClear() {
 	GLabel stageClear = new GLabel("STAGE CLEAR!");
