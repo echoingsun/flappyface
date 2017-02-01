@@ -105,7 +105,7 @@ private void placeBall() {
 
 private GOval makeBall() {
 	ball.setFilled(true);
-	ball.setColor(Color.BLACK);
+	ball.setColor(Color.DARK_GRAY);
 	return ball;
 }
 
