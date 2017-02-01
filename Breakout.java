@@ -97,6 +97,7 @@ public class Breakout extends GraphicsProgram {
 		addMouseListeners();
 		
 		play();
+		println(count);
 		
 	}
 
