@@ -152,7 +152,7 @@ private boolean gameOver(double vy) {
 
 private void gameOverMessage() {
 	GLabel gameOverMessage = new GLabel("GAME OVER");
-	gameOverMessage.setFont("*-72");
+	gameOverMessage.setFont("*-56");
 	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
 	
 }
