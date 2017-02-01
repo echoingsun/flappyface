@@ -171,10 +171,10 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	double cy = y + BALL_RADIUS;
 	
 	/*
-	 * The upper left corner of the ball-square hits a brick.
+	 * The upper right corner of the ball-square hits a brick.
 	 * The ball can either be hitting a brick above it, 
-	 * or a brick to its left.
-	 * or, in rare cases, hitting the bottom right corner of a brick.
+	 * or a brick to its right.
+	 * or, in rare cases, hitting the bottom left corner of a brick.
 	 */
 	if (obj01 != null){
 		if (cy - (obj01.getY() + BRICK_HEIGHT) <=BALL_RADIUS){
@@ -186,7 +186,13 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		remove (obj01);
 
 	} 
+	
+	/*
+	 * The bottom right of the corner
+	 */
 	if (obj02 != null){
+		if ()
+		
 		remove (obj02);
 	}
 	if (obj03 != null){
