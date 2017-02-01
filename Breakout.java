@@ -124,7 +124,7 @@ private void play() {
 	
 
 	
-	while (!gameOver(vy)){
+	while (!gameOver(vy) && count >0){
 		
 		if (hitWalls() || hitPaddleSide() && vy >0){
 			vx = -vx;
@@ -245,7 +245,13 @@ private void play() {
 		
 	}
 	
-	gameOverMessage();
+	if (gameOver(vy)){
+		gameOverMessage();
+	}
+	if (count ==0){
+		stageClear();
+	}
+	
 	
 	
 	
@@ -254,6 +260,13 @@ private void play() {
 
 
 
+
+private void stageClear() {
+	GLabel stageClear = new GLabel("GAME OVER");
+	stageClear.setFont("*-56");
+	add (stageClear, (getWidth()-stageClear.getWidth()) * 0.5, (getHeight() - stageClear.getAscent()) * 0.5);
+	
+}
 
 private boolean gameOver(double vy) {
 	return vy>0 && ball.getY() >= getHeight();
