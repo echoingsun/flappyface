@@ -134,7 +134,7 @@ private void placePaddle() {
 private GRect makePaddle() {
 	paddle = new GRect(PADDLE_WIDTH,PADDLE_HEIGHT);
 	paddle.setFilled(true);
-	paddle.setColor(Color.DARK_GRAY);
+	paddle.setColor(Color.GRAY);
 	return paddle;
 }
 
