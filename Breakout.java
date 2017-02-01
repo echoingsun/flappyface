@@ -127,6 +127,9 @@ private void play() {
 		if (hitWalls()){
 			vx = -vx;
 		}
+		if (hitBricks()){
+			remove(brick);
+		}
 		ball.move(vx, vy);
 		pause(DELAY);
 		
