@@ -136,13 +136,15 @@ private void play() {
 		
 	}
 	
-	
-	
-	
-	
 }
 
-
+private boolean hitBricks(){
+	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
+	GObject obj02 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() + 2*BALL_RADIUS);
+	GObject obj03 = getElementAt(ball.getX(), ball.getY());
+	GObject obj04 = getElementAt(ball.getX(), ball.getY() + 2*BALL_RADIUS);
+	return obj01 == brick || obj02 == brick || obj03 == brick || obj04 == brick;
+}
 
 
 
