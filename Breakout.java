@@ -116,7 +116,7 @@ private void play() {
 	if (rg.nextBoolean(0.5)){
 		vx= -vx;
 	}
-	double vy = rg.nextDouble (-1.0, -3.0);
+	double vy = rg.nextDouble (-3.0, -1.0);
 	
 	waitForClick();
 	
