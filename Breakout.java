@@ -130,12 +130,20 @@ private void play() {
 		if (hitCeiling() || (hitPaddle() && vy > 0)){
 			vy = -vy;
 		}
-		while (hitBricks(ball, brick)){
-			remove (brick);
+		if (hitBricks(ball, brick)){
+			removeAndBounce(ball, brick);
 		}
 		ball.move(vx, vy);
 		pause(DELAY);
 		
+		
+	}
+	
+}
+
+private void removeAndBounce(ball, brick) {
+	remove(brick);
+	if (getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY() == brick){
 		
 	}
 	
