@@ -234,21 +234,6 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	
 }
 
-/*private void bounceOnBricks(double x, double y, double vx, double vy) {
-	double cx = ball.getX() + BALL_RADIUS;
-	double cy = ball.getY() + BALL_RADIUS;
-	
-	// If the ball hits a brick above it.
-	if (cy - (y+BRICK_HEIGHT) <= BALL_RADIUS){
-		vy = -vy;
-	}
-	
-	// If the ball hits a brick beneath it.
-	if (y-cy <= BALL_RADIUS){
-		vy = -vy;
-	}
-	
-}*/
 
 private boolean hitBricks(){
 	GObject obj01 = getElementAt(ball.getX() + 2*BALL_RADIUS, ball.getY());
