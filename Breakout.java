@@ -140,8 +140,6 @@ private void bounce(double vx, double vy) {
 	
 	if (hitWalls()){
 		vx = -vx;
-	} else {
-		vx = vx;
 	}
 	
 }
