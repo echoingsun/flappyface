@@ -63,7 +63,7 @@ public class Breakout extends GraphicsProgram {
 /** Number of turns */
 	private static final int NTURNS = 3;
 	
-	private static final int DELAY = 4.5;
+	private static final int DELAY = 4;
 
 	
 	private RandomGenerator rg = new RandomGenerator();
