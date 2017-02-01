@@ -127,7 +127,7 @@ private void play() {
 		if (hitWalls()){
 			vx = -vx;
 		}
-		if (hitCeiling() || (hitPaddle() && vy > 0){
+		if (hitCeiling() || (hitPaddle() && vy > 0)){
 			vy = -vy;
 		}
 		ball.move(vx, vy);
