@@ -176,7 +176,7 @@ private void removeBrick(double x, double y) {
 	 */
 	if (obj01 != null){
 		remove (obj01);
-		bounceOnBricks();
+		bounceOnBricks(obj01.getX(),obj01.getY());
 	} 
 	if (obj02 != null){
 		remove (obj02);
@@ -190,9 +190,10 @@ private void removeBrick(double x, double y) {
 	
 }
 
-private void bounceOnBricks() {
-	double cx = ball.getX() + RADIUS;
-	double cy = ball.getY() + RADIUS;
+private void bounceOnBricks(double x, double y) {
+	double cx = ball.getX() + BALL_RADIUS;
+	double cy = ball.getY() + BALL_RADIUS;
+	
 	
 	
 }
