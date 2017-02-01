@@ -131,7 +131,80 @@ private void play() {
 			vy = -vy;
 		}
 		if (hitBricks()){
-			removeBrick(ball.getX(),ball.getY(),vx, vy);
+			/*removeBrick(ball.getX(),ball.getY(),vx, vy)*/;
+			double x = ball.getX();
+			double y = ball.getY();
+			double cx = x + BALL_RADIUS;
+			double cy = y + BALL_RADIUS;
+			
+			GObject obj01 = getElementAt(x + 2*BALL_RADIUS, y);
+			GObject obj02 = getElementAt(x + 2*BALL_RADIUS, y + 2*BALL_RADIUS);
+			GObject obj03 = getElementAt(x, y);
+			GObject obj04 = getElementAt(x, y + 2*BALL_RADIUS);
+			
+			
+/*			 * The upper right corner of the ball-square hits a brick.
+			 * The ball can either be hitting a brick above it, 
+			 * or a brick to its right.
+			 * or, in rare cases, hitting the bottom left corner of a brick.*/
+			 
+			if (obj01 != null){
+				if (cy > (obj01.getY() + BRICK_HEIGHT)){
+					vy = -vy;
+				} 
+				if (obj01.getX() > cx){
+					vx = -vx;
+				}
+				remove (obj01);
+
+			} 
+			
+			
+/*			 * The bottom right of the ball hits a brick.
+			 * The ball can either be hitting a brick beneath it,
+			 * or a brick to its right.*/
+			 
+			if (obj02 != null){
+				if (obj02.getY() > cy){
+					vy= - vy;
+				}
+				if (obj02.getX() > cx){
+					vx= -vx;
+				}		
+				remove (obj02);
+			}
+			
+			
+/*			 * The upper left corner of the ball hits a brick.
+			 * The ball can either be hitting a brick above it,
+			 * or a brick to its left.*/
+			 
+			if (obj03 != null){
+				if (cy > (obj03.getY() + BRICK_HEIGHT)){
+					vy = -vy;
+				} 
+				if (cx > obj03.getX() + BRICK_WIDTH){
+					vx = -vx;
+				}
+				remove (obj03);
+			} 
+			
+			
+/*			 * The bottom left corner of the ball hits a brick.
+			 * The ball can either be hitting a brick beneath it,
+			 * or a brick to its left.*/
+			 
+			if (obj04 != null){
+				if (obj04.getY() > cy){
+					vy = -vy;
+				} 
+				if (cx > obj04.getX() + BRICK_WIDTH){
+					vx = -vx;
+				}
+				remove (obj04);
+			}
+			
+			
 		}
 		ball.move(vx, vy);
 		pause(DELAY);
@@ -161,7 +234,7 @@ private void gameOverMessage() {
 	
 }
 
-private void removeBrick(double x, double y, double vx, double vy) {
+/*private void removeBrick(double x, double y, double vx, double vy) {
 	GObject obj01 = getElementAt(x + 2*BALL_RADIUS, y);
 	GObject obj02 = getElementAt(x + 2*BALL_RADIUS, y + 2*BALL_RADIUS);
 	GObject obj03 = getElementAt(x, y);
@@ -170,12 +243,12 @@ private void removeBrick(double x, double y, double vx, double vy) {
 	double cx = x + BALL_RADIUS;
 	double cy = y + BALL_RADIUS;
 	
-	/*
+	
 	 * The upper right corner of the ball-square hits a brick.
 	 * The ball can either be hitting a brick above it, 
 	 * or a brick to its right.
 	 * or, in rare cases, hitting the bottom left corner of a brick.
-	 */
+	 
 	if (obj01 != null){
 		if (cy > (obj01.getY() + BRICK_HEIGHT)){
 			vy = -vy;
@@ -187,11 +260,11 @@ private void removeBrick(double x, double y, double vx, double vy) {
 
 	} 
 	
-	/*
+	
 	 * The bottom right of the ball hits a brick.
 	 * The ball can either be hitting a brick beneath it,
 	 * or a brick to its right.
-	 */
+	 
 	if (obj02 != null){
 		if (obj02.getY() > cy){
 			vy= - vy;
@@ -202,11 +275,11 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		remove (obj02);
 	}
 	
-	/*
+	
 	 * The upper left corner of the ball hits a brick.
 	 * The ball can either be hitting a brick above it,
 	 * or a brick to its left.
-	 */
+	 
 	if (obj03 != null){
 		if (cy > (obj03.getY() + BRICK_HEIGHT)){
 			vy = -vy;
@@ -217,11 +290,11 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		remove (obj03);
 	} 
 	
-	/*
+	
 	 * The bottom left corner of the ball hits a brick.
 	 * The ball can either be hitting a brick beneath it,
 	 * or a brick to its left.
-	 */
+	 
 	if (obj04 != null){
 		if (obj04.getY() > cy){
 			vy = -vy;
@@ -232,7 +305,7 @@ private void removeBrick(double x, double y, double vx, double vy) {
 		remove (obj04);
 	}
 	
-}
+}*/
 
 
 private boolean hitBricks(){
