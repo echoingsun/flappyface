@@ -283,12 +283,12 @@ private void gameOverMessage() {
 	GLabel gameOverMessage = new GLabel("GAME OVER");
 	gameOverMessage.setFont("*-56");
 	add (gameOverMessage, (getWidth()-gameOverMessage.getWidth()) * 0.5, (getHeight() - gameOverMessage.getAscent()) * 0.5);
-	pause(200);
+	pause(500);
 	remove(gameOverMessage);
 	
 	GLabel turnsLeft = new GLabel (gameOverCount + " turns left");
 	add (turnsLeft, (getWidth() - turnsLeft.getWidth())*0.5, gameOverMessage.getY() + 20);
-	pause(200);
+	pause(500);
 	remove(turnsLeft);
 }
 
