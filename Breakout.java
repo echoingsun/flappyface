@@ -130,7 +130,7 @@ private void play() {
 		if (hitCeiling() || (hitPaddle() && vy > 0)){
 			vy = -vy;
 		}
-		if (hitBricks(ball, brick)){
+		while (hitBricks(ball, brick)){
 			remove (brick);
 		}
 		ball.move(vx, vy);
