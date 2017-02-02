@@ -65,19 +65,16 @@ public class Breakout extends GraphicsProgram {
 	
 	private static final int DELAY = 10;
 
-	
+	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
 	
-	/*
-	 * Since the same ball and paddle is connected with several other methods,
-	 * they can be defined as instance variables.
-	 */
+	// Define bricks, the ball, the paddle and some labels as instance variables.
 	GRect brick = null;
 	GOval ball = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
 	GRect paddle = null;
 	GLabel turnsLeft = null;
 
-	
+	// Also define two counts: how many bricks are on the screen; how many turns left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 
@@ -86,51 +83,30 @@ public class Breakout extends GraphicsProgram {
 /** Runs the Breakout program. */
 	public void run() {
 		
-
-		
+		// Add mouse listeners to the program.
 		addMouseListeners();
 		
+		// Play the game for maximum NTURNS times if user fails to clear stage at some point.
 		for (gameOverCount = NTURNS; gameOverCount >0;){
 			play();
 		}
 		
+		// Once user has used up all 3 chances, clear the canvas.
 		removeAll();
 				
 	}
 
-private void placeBall() {
-	double x = getWidth() * 0.5 - BALL_RADIUS;
-	double y = getHeight() -PADDLE_Y_OFFSET - 2 * BALL_RADIUS;
-	add (ball, x,y);
-}
-
-private GOval makeBall() {
-	ball.setFilled(true);
-	ball.setColor(Color.DARK_GRAY);
-	return ball;
-}
-
 private void play() {
 	
-	
-	// Before each turn, clear all objects other than the ball, the paddle and the bricks.
-	/*GObject obj = getElementAt();*/
-	
-	removeAll();
-	
-	// Make and place the paddle.
-	paddle = makePaddle();
-	placePaddle();
-	
-	// Make and place the ball.
-	ball = makeBall();
-	placeBall();
-	
-	// Draw the bricks.
-	placeBricks();
-	
+	/*
+	 * Before each turn starts, 
+	 * clear all objects and re-place them on the canvas.
+	 */
 
+	removeAll();	
+	placeItems();
 	
+	// Random generate the speed and direction of the ball.
 	double vx = rg.nextDouble(1.0,3.0);
 	if (rg.nextBoolean(0.5)){
 		vx= -vx;
@@ -272,12 +248,32 @@ private void play() {
 	
 }
 
+private void placeItems() {
+	
+	// Make and place the paddle.
+	paddle = makePaddle();
+	placePaddle();
+	
+	// Make and place the ball.
+	ball = makeBall();
+	placeBall();
+	
+	// Draw the bricks.
+	placeBricks();
+	
+}
 
+private void placeBall() {
+	double x = getWidth() * 0.5 - BALL_RADIUS;
+	double y = getHeight() -PADDLE_Y_OFFSET - 2 * BALL_RADIUS;
+	add (ball, x,y);
+}
 
-
-
-
-
+private GOval makeBall() {
+	ball.setFilled(true);
+	ball.setColor(Color.DARK_GRAY);
+	return ball;
+}
 
 private void stageClear() {
 	GLabel stageClear = new GLabel("STAGE CLEAR!");
