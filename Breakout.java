@@ -352,10 +352,60 @@ public class Breakout extends GraphicsProgram {
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
 		
+		double x1_ = x1 + vx;
+		double y1_ = y1 + vy;
+		double x2_ = x2 + vx;
+		double y2_ = y2 + vy;
+		
+		GObject obj01_ = getElementAt(x1_, y1_);
+		GObject obj02_ = getElementAt(x1_, y2_);
+		GObject obj03_ = getElementAt(x2_, y1_);
+		GObject obj04_ = getElementAt(x2_, y2_);
+		
+		/*
+		 * If the ball is moving towards the top left, vx < 0, vy < 0;
+		 * Objects 01, 02 and 03 can be bricks. 
+		 */
+
+		
+		
 		return (obj01 != null || obj02 != null || obj03 != null || obj04 != null)
 				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle);
 	}
 
+	private void preHit(){
+		double x1 = ball.getX();
+		double y1 = ball.getY();
+		double x2 = ball.getX() + 2 * BALL_RADIUS;
+		double y2 = ball.getY() + 2 * BALL_RADIUS;
+
+		GObject obj01 = getElementAt(x1, y1);
+		GObject obj02 = getElementAt(x1, y2);
+		GObject obj03 = getElementAt(x2, y1);
+		GObject obj04 = getElementAt(x2, y2);
+		
+		double x1_ = x1 + vx;
+		double y1_ = y1 + vy;
+		double x2_ = x2 + vx;
+		double y2_ = y2 + vy;
+		
+		GObject obj01_ = getElementAt(x1_, y1_);
+		GObject obj02_ = getElementAt(x1_, y2_);
+		GObject obj03_ = getElementAt(x2_, y1_);
+		GObject obj04_ = getElementAt(x2_, y2_);
+		
+		/*
+		 * If the ball is moving towards the top left, vx < 0, vy < 0;
+		 * Objects 01, 02 and 03 can be bricks. 
+		 */
+
+		if (vx < 0 && vy <0){
+			
+		}
+		
+	}
+	
+	
 	private boolean hitPaddle() {
 		/*
 		 * This method defines the behavior of the ball when it hits the top of the paddle.
