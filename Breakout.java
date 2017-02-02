@@ -186,21 +186,16 @@ public class Breakout extends GraphicsProgram {
 				if (cy > (obj01.getY() + BRICK_HEIGHT) && x1 >= obj01.getX() && x1 <= obj01.getX() + BRICK_WIDTH ) {
 					vy = -vy; // Case (1)
 				} else if (cx > obj01.getX() + BRICK_WIDTH && y1 <= obj01.getY() + BRICK_HEIGHT && y2 >= obj01.getY() + BRICK_HEIGHT) {
+					
+					// Check if the ball is hitting two bricks from the right leftwards at the same time.
 					if (obj02 == null){
 						vx = -vx; // Case (2)
 					} else {
 						remove(obj02);
 						vx = -vx;
 					}
-					
-					
+						
 				}
-				
-				// Check if the ball its hitting two bricks from the right leftwards at the same time.
-				if (obj02 != null){
-					
-				}
-				
 
 			} else {
 				if (obj03 != null && obj03 != obj01) {
@@ -226,9 +221,9 @@ public class Breakout extends GraphicsProgram {
 		if (obj02 != null) {
 
 			if (obj04 == null) {
-				if (obj02.getY() > cy) {
+				if (obj02.getY() > cy && x1 >= obj02.getX() && x1 <= obj02.getX() + BRICK_WIDTH) {
 					vy = -vy;
-				} else if (obj02.getX() > cx) {
+				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT && y2 >= obj02.getY() + BRICK_HEIGHT) {
 					vx = -vx;
 				}
 			} else {
