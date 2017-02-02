@@ -192,6 +192,7 @@ public class Breakout extends GraphicsProgram {
 						vx = -vx; // Case (2)
 					} else {
 						remove(obj02);
+						count --;
 						vx = -vx;
 					}
 						
@@ -247,6 +248,7 @@ public class Breakout extends GraphicsProgram {
 					vx = -vx;
 				} else {
 					remove(obj04);
+					count --;
 					vx = -vx;
 				}
 				
