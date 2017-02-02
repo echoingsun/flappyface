@@ -150,7 +150,7 @@ private void play() {
 			vy = -vy;
 		}
 		if (hitBricks()){
-			/*removeBrick(ball.getX(),ball.getY(),vx, vy)*/;
+		
 			double x = ball.getX();
 			double y = ball.getY();
 			double cx = x + BALL_RADIUS;
