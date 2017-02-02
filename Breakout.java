@@ -67,7 +67,11 @@ public class Breakout extends GraphicsProgram {
 	/** Number of turns */
 	private static final int NTURNS = 3;
 
+	// Pause in ball movement.
 	private static final int DELAY = 10;
+	
+	// Pause in showing some of the labels before they are removed.
+	private static final int PAUSE = 1500;
 
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
@@ -315,7 +319,7 @@ public class Breakout extends GraphicsProgram {
 		add(gameOverMessage, (getWidth() - gameOverMessage.getWidth()) * 0.5,
 				(getHeight() - gameOverMessage.getAscent()) * 0.5);
 		add(turnsLeft, (getWidth() - turnsLeft.getWidth()) * 0.5, gameOverMessage.getY() + 20);
-		pause(1500);
+		pause(PAUSE);
 		remove(gameOverMessage);
 		remove(turnsLeft);
 	}
