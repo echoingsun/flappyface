@@ -364,7 +364,7 @@ public class Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY()) || (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY());
+		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY()) || (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY()) || (obj03 == paddle) || (obj01 == paddle);
 	}
 
 	private boolean hitCeiling() {
