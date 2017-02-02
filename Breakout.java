@@ -207,10 +207,6 @@ public class Breakout extends GraphicsProgram {
 					vy = -vy; // If obj03 is the same brick, just reverse vy.
 				}
 			}
-			
-
-
-			
 			// In any case, obj01 will be removed.
 			remove(obj01);
 			count--;
@@ -223,7 +219,7 @@ public class Breakout extends GraphicsProgram {
 			if (obj04 == null) {
 				if (obj02.getY() > cy && x1 >= obj02.getX() && x1 <= obj02.getX() + BRICK_WIDTH) {
 					vy = -vy;
-				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT && y2 >= obj02.getY() + BRICK_HEIGHT) {
+				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT && y2 >= obj02.getY() + BRICK_HEIGHT && obj01 == null) {
 					vx = -vx;
 				}
 			} else {
