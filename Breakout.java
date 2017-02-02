@@ -84,7 +84,6 @@ public class Breakout extends GraphicsProgram {
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	
-	AudioClip serveClip = MediaTools.loadAudioClip("Tennis Serve.au");
 
 	double vx = rg.nextDouble(1.0, 3.0);
 	double vy = rg.nextDouble(-3.0, -1.0);
@@ -122,7 +121,6 @@ public class Breakout extends GraphicsProgram {
 		}
 
 		waitForClick();
-		serveClip.play();
 
 		while (!gameOver() && count > 0) {
 
