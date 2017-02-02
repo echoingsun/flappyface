@@ -2,8 +2,8 @@
 /*
  * File: Breakout.java
  * -------------------
- * Name:
- * Section Leader:
+ * Name: Rachel Sun
+ * Section Leader: Maria Yang
  * 
  * This file will eventually implement the game of Breakout.
  */
