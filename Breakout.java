@@ -241,7 +241,15 @@ public class Breakout extends GraphicsProgram {
 			if (cy > (obj03.getY() + BRICK_HEIGHT) && x2 >= obj03.getX() && x2 <= obj03.getX() + BRICK_WIDTH) {
 				vy = -vy;
 			} else if (cx > obj03.getX() + BRICK_WIDTH && y1 <= obj03.getY() + BRICK_HEIGHT && y2 >= obj03.getY() + BRICK_HEIGHT) {
-				vx = -vx;
+				
+				// Check if the ball is hitting two bricks from the left rightwards.
+				if (obj04 == null){
+					vx = -vx;
+				} else {
+					remove(obj04);
+					vx = -vx;
+				}
+				
 			}
 			remove(obj03);
 			count--;
@@ -249,9 +257,9 @@ public class Breakout extends GraphicsProgram {
 
 		// obj04 is similar to obj03.
 		if (obj04 != null && obj02 == null) {
-			if (obj04.getY() > cy) {
+			if (obj04.getY() > cy && x2 >= obj04.getX() && x2 <= obj04.getX() + BRICK_WIDTH) {
 				vy = -vy;
-			} else if (cx > obj04.getX() + BRICK_WIDTH) {
+			} else if (cx < obj04.getX() && y2 <= obj04.getY() + BRICK_HEIGHT && y2 >= obj04.getY() + BRICK_HEIGHT && obj03 == null) {
 				vx = -vx;
 			}
 			remove(obj04);
