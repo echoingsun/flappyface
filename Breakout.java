@@ -353,13 +353,16 @@ public class Breakout extends GraphicsProgram {
 	private boolean hitPaddleSide() {
 		/*
 		 * Sometimes the ball can hit the paddle's left or right side.
-		 * This can only happen when either (x1,y2) or (x2,y2) hits the paddle's sides.
+		 * 
 		 */
 		double x1 = ball.getX();
 		double x2 = ball.getX() + 2 * BALL_RADIUS;
+		double y1 = ball.getY();
 		double y2 = ball.getY() + 2 * BALL_RADIUS;
 		double cx = x1 + BALL_RADIUS;
+		GObject obj01 = getElementAt(x1, y1);
 		GObject obj02 = getElementAt(x1, y2);
+		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
 		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY()) || (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY());
 	}
