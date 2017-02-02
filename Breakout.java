@@ -236,15 +236,11 @@ public class Breakout extends GraphicsProgram {
 			count--;
 		}
 
-		/*
-		 * Since some cases are already discussed in the obj01 section,
-		 * for obj03 only one situation is discussed here:
-		 * when the ball is hitting obj03 ONLY.
-		 */
+		// For obj03:
 		if (obj03 != null && obj01 == null) {
-			if (cy > (obj03.getY() + BRICK_HEIGHT)) {
+			if (cy > (obj03.getY() + BRICK_HEIGHT) && x2 >= obj03.getX() && x2 <= obj03.getX() + BRICK_WIDTH) {
 				vy = -vy;
-			} else if (cx > obj03.getX() + BRICK_WIDTH) {
+			} else if (cx > obj03.getX() + BRICK_WIDTH && y1 <= obj03.getY() + BRICK_HEIGHT && y2 >= obj03.getY() + BRICK_HEIGHT) {
 				vx = -vx;
 			}
 			remove(obj03);
