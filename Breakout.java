@@ -186,7 +186,14 @@ public class Breakout extends GraphicsProgram {
 				if (cy > (obj01.getY() + BRICK_HEIGHT) && x1 >= obj01.getX() && x1 <= obj01.getX() + BRICK_WIDTH ) {
 					vy = -vy; // Case (1)
 				} else if (cx > obj01.getX() + BRICK_WIDTH && y1 <= obj01.getY() + BRICK_HEIGHT && y2 >= obj01.getY() + BRICK_HEIGHT) {
-					vx = -vx; // Case (2)
+					if (obj02 == null){
+						vx = -vx; // Case (2)
+					} else {
+						remove(obj02);
+						vx = -vx;
+					}
+					
+					
 				}
 				
 				// Check if the ball its hitting two bricks from the right leftwards at the same time.
