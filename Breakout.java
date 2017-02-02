@@ -145,6 +145,7 @@ public class Breakout extends GraphicsProgram {
 		// If the bricks are all cleared (count=0), show stage clear message.
 		if (count == 0) {
 			stageClear();
+			// Reset count.
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
 			waitForClick();
 		}
