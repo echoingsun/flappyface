@@ -53,7 +53,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	private static final int NBRICKS_PER_ROW = 10;
 
 	/** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 20;
+	private static final int NBRICK_ROWS = 10;
 
 	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
