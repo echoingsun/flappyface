@@ -137,13 +137,20 @@ public class Extension_Breakout extends GraphicsProgram {
 		while (true){
 			pause(1000);
 			welcome.setColor(rg.nextColor());
-
+			waitForClick();
+			break;
+			
 		}
 		
 		
 		
 		
+		
 	}
+
+
+
+
 
 
 
