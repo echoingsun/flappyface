@@ -93,10 +93,9 @@ public class Extension_Breakout extends GraphicsProgram {
 	AudioClip paddleBounce = MediaTools.loadAudioClip("paddleBounce.au");
 	AudioClip fail = MediaTools.loadAudioClip("fail.au");
 	
-
+	// Create vx and vy as instance variables.
 	double vx = 0;
 	double vy = 0;
-
 
 
 	/* Method: run() */
@@ -127,6 +126,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		removeAll();
 		placeItems();
 		
+		// Instantiate vx and vy.
 		vx = rg.nextDouble(1.0, 3.0);
 		// Set a 50% possibility for vx to be reversed.
 		if (rg.nextBoolean(0.5)) {
