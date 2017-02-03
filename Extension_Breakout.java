@@ -86,7 +86,9 @@ public class Extension_Breakout extends GraphicsProgram {
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	int mouseClickCount = 0;
-	int pts = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+	
+	int pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+	int pts = pts0;
 	
 
 	// Define bricks, the ball, the paddle and some labels as instance
@@ -407,9 +409,9 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 	
 	private void updatePoints() {
-		pts = pts + (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+		pts = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
-		points.setLabel(pts + " pts");
+		points.setLabel((pts+pts0) + " pts");
 	}
 
 	private void showTurns() {
