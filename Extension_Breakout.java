@@ -71,9 +71,6 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	// Pause in ball movement.
 	private static final int DELAY = 10;
-	
-	// Pause in showing some of the labels before they are removed.
-	private static final int PAUSE = 2000;
 
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
@@ -97,8 +94,8 @@ public class Extension_Breakout extends GraphicsProgram {
 	AudioClip fail = MediaTools.loadAudioClip("fail.au");
 	
 
-	double vx = rg.nextDouble(1.0, 3.0);
-	double vy = rg.nextDouble(-3.0, -1.0);
+	double vx = 0;
+	double vy = 0;
 
 
 
