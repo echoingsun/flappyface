@@ -84,6 +84,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	GRect paddle = null;
 	GLabel turnsLeft = null;
+	GOval lives = null;
 
 	// Also define two counts: how many bricks are on the screen; how many turns
 	// left.
