@@ -262,7 +262,7 @@ public class Breakout extends GraphicsProgram {
 		}
 
 		// obj04 is similar to obj03.
-		if (obj04 != null && obj02 == null) {
+		if (obj04 != null && obj02 == null && obj03 == null) {
 			if (obj04.getY() > cy && x2 >= obj04.getX() && x2 <= obj04.getX() + BRICK_WIDTH) {
 				vy = -vy;
 			} else if (cx < obj04.getX() && y2 <= obj04.getY() + BRICK_HEIGHT && y2 >= obj04.getY() + BRICK_HEIGHT && obj03 == null) {
