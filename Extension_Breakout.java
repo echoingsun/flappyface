@@ -296,7 +296,8 @@ public class Extension_Breakout extends GraphicsProgram {
 			vy = -vy;
 			if (hitCeiling()){
 				hitWalls.play();
-			} else if (hitPaddle()){
+			} 
+			if (hitPaddle()){
 				paddleBounce.play();
 			}
 		}
