@@ -162,6 +162,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	private void hitAndRemove() {
 		if (hitBricks()) {			
+			hitBricks.play();
 			removeBricks();			
 		}
 
