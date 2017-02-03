@@ -546,7 +546,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	public void mouseMoved(MouseEvent e) {
 		
-		if (mouseClickCount ==1){
+		if (mouseClickCount ==1 && paddleInstantiated ==1){
 			
 			
 			double x = e.getX() - PADDLE_WIDTH * 0.5;
