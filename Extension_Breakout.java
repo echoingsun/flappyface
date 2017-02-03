@@ -78,19 +78,19 @@ public class Extension_Breakout extends GraphicsProgram {
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
 
-	// Define bricks, the ball, the paddle and some labels as instance
-	// variables.
-	GRect brick = null;
-	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
-	GRect paddle = null;
-	GLabel turnsLeft = null;
-	GOval lives = null;
-
 	// Also define two counts: how many bricks are on the screen; how many turns
 	// left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	int mouseClickCount = 0;
+	
+
+	// Define bricks, the ball, the paddle and some labels as instance
+	// variables.
+	GRect brick = null;
+	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
+	GRect paddle = null;
+	GLabel turnsLeft = new GLabel (gameOverCount + " turns left");
 	
 	AudioClip theme = MediaTools.loadAudioClip("theme.au");
 	AudioClip hitBricks = MediaTools.loadAudioClip("hitBricks.au");
