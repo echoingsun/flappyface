@@ -81,12 +81,12 @@ public class Extension_Breakout extends GraphicsProgram {
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
 
-	// Also define two counts: how many bricks are on the screen; how many turns
-	// left.
+	// Also define two counts: how many bricks are on the screen; how many turns left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	int mouseClickCount = 0;
 	
+	// Let pts0 be the points user gets in one game, and pts be the total points.
 	int pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
 	int pts = pts0;
 	
