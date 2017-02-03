@@ -404,7 +404,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void showPoints() {
-		points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "pts")
+		points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "pts");
 		add (points, getWidth() - points.getWidth()-5, 15);
 		
 	}
