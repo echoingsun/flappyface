@@ -107,7 +107,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		// Add mouse listeners to the program.
 		addMouseListeners();
 
-
+		startScreen();
 		
 
 		// Play the game for maximum NTURNS times if user fails to clear stage
