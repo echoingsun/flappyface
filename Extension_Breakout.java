@@ -141,8 +141,8 @@ public class Extension_Breakout extends GraphicsProgram {
 			pause(1000);
 			welcome.setColor(rg.nextColor());	
 		}
-		
 		waitForClick();
+		removeAll();
 		theme.stop();	
 		
 	}
