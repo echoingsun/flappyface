@@ -8,6 +8,7 @@
  * This file will eventually implement the game of Breakout.
  * Extensions added:
  * (1) Sound effects
+ * (2) A start screen
  */
 
 import acm.graphics.*;
