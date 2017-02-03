@@ -215,6 +215,9 @@ public class Extension_Breakout extends GraphicsProgram {
 			fail.play();
 			gameOverCount--;
 			gameOverMessage();
+			
+			pts = pts + pts0;
+			count = NBRICKS_PER_ROW * NBRICK_ROWS;
 			waitForClick();
 
 		}
