@@ -141,8 +141,8 @@ public class Extension_Breakout extends GraphicsProgram {
 		add (gameOverLabel, (getWidth() - gameOverLabel.getWidth())*0.5, getHeight() * 0.5 + gameOverLabel.getAscent() * 0.5);
 		
 		while (true){
-			pause(1000);
 			gameOverLabel.setColor(rg.nextColor());
+			pause(1000);
 		}
 		
 	}
@@ -166,10 +166,10 @@ public class Extension_Breakout extends GraphicsProgram {
 		add (credit, (getWidth() - credit.getWidth())*0.5, clickToStart.getY() + 20 + credit.getAscent());
 
 		while (mouseClickCount == 0){
-			pause(1000);
 			welcome.setColor(rg.nextColor());
 			clickToStart.setColor(rg.nextColor());
 			credit.setColor(rg.nextColor());
+			pause(1000);
 		}
 		
 		removeAll();
