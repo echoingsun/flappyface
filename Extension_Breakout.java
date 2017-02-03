@@ -74,6 +74,9 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	// Pause in ball movement.
 	private static final int DELAY = 10;
+	
+	// Points per brick removed.
+	private static final int POINT_PER_BRICK = 100;
 
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
@@ -91,6 +94,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	GRect paddle = null;
 	GLabel turnsLeft = new GLabel (gameOverCount + " turns left");
+	GLabel points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
 	
 	AudioClip theme = MediaTools.loadAudioClip("theme.au");
 	AudioClip hitBricks = MediaTools.loadAudioClip("hitBricks.au");
@@ -385,7 +389,15 @@ public class Extension_Breakout extends GraphicsProgram {
 		
 		// Show how many turns (lives) are there left.
 		showTurns();
+		
+		// Show how many points you have earned.
+		showPoints();
 
+	}
+
+	private void showPoints() {
+		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+		
 	}
 
 	private void showTurns() {
