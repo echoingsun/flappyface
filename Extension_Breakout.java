@@ -108,14 +108,8 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// Add mouse listeners to the program.
 		addMouseListeners();
+	
 
-		
-		threeTurns();
-
-
-	}
-
-	private void threeTurns() {
 		// Play the game for maximum NTURNS times if user fails to clear stage
 		// at some point.
 		for (gameOverCount = NTURNS; gameOverCount > 0;) {
@@ -124,8 +118,9 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// Once user used up all 3 chances, clear the canvas.
 		removeAll();
-		
+
 	}
+
 
 	private void play() {
 		
