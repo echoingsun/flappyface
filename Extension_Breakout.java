@@ -108,7 +108,8 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// Add mouse listeners to the program.
 		addMouseListeners();
-	
+
+		
 
 		// Play the game for maximum NTURNS times if user fails to clear stage
 		// at some point.
@@ -120,6 +121,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		removeAll();
 
 	}
+
 
 
 	private void play() {
@@ -295,14 +297,13 @@ public class Extension_Breakout extends GraphicsProgram {
 				paddleBounce.play();
 			}
 		}
-		if (hitCeiling() || hitPaddle()) {
+		if (hitCeiling()) {
 			vy = -vy;
-			if (hitCeiling()){
-				hitWalls.play();
-			} else if (hitPaddle()){
+			hitWalls.play();
+		}
+		if (hitPaddle()){
 			vy = -vy;
 			paddleBounce.play();
-			}
 		}
 	}
 
