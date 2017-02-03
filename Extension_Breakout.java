@@ -120,6 +120,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// Once user used up all 3 chances, clear the canvas.
 		removeAll();
+		closeScreen();
 
 	}
 
@@ -128,6 +129,8 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void closeScreen() {
+		theme.loop();
+		
 		GRect closeScreen = new GRect (getWidth(),getHeight());
 		closeScreen.setFilled(true);
 		closeScreen.setColor(Color.BLACK);
@@ -136,6 +139,12 @@ public class Extension_Breakout extends GraphicsProgram {
 		GLabel gameOverLabel = new GLabel("GAME OVER");
 		gameOverLabel.setFont("*-36");
 		add (gameOverLabel, (getWidth() - gameOverLabel.getWidth())*0.5, getHeight() * 0.5 + gameOverLabel.getAscent() * 0.5);
+		
+		while (true){
+			pause(1000);
+			gameOverLabel.setColor(rg.nextColor());
+		}
+		
 	}
 	private void startScreen() {
 		theme.loop();
