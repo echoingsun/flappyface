@@ -140,6 +140,7 @@ public class Breakout extends GraphicsProgram {
 		if (gameOver()) {
 			gameOverCount--;
 			gameOverMessage();
+			waitForClick();
 
 		}
 		
@@ -337,9 +338,7 @@ public class Breakout extends GraphicsProgram {
 		add(gameOverMessage, (getWidth() - gameOverMessage.getWidth()) * 0.5,
 				(getHeight() - gameOverMessage.getAscent()) * 0.5);
 		add(turnsLeft, (getWidth() - turnsLeft.getWidth()) * 0.5, gameOverMessage.getY() + 20);
-		waitForClick();
-		remove(gameOverMessage);
-		remove(turnsLeft);
+
 	}
 
 	private boolean hitBricks() {
