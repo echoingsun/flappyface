@@ -337,7 +337,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		GLabel stageClear = new GLabel("STAGE CLEAR!");
 		stageClear.setFont("*-56");
 		add(stageClear, (getWidth() - stageClear.getWidth()) * 0.5, (getHeight() - stageClear.getAscent()) * 0.5);
-		pause(PAUSE);
+
 	}
 
 	private boolean gameOver() {
