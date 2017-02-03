@@ -222,9 +222,10 @@ public class Extension_Breakout extends GraphicsProgram {
 		// If the bricks are all cleared (count=0), show stage clear message.
 		if (count == 0) {
 			stageClear();
-			// Reset count but NOT points.			
+			// Reset count but NOT points.	
+			pts = pts0;
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
-			pts = pts0 + (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+
 	
 			waitForClick();
 		}
@@ -409,9 +410,10 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 	
 	private void updatePoints() {
-		pts = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+		pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+		pts = pts + pts0;
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
-		points.setLabel((pts+pts0) + " pts");
+		points.setLabel(pts + " pts");
 	}
 
 	private void showTurns() {
