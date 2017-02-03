@@ -94,7 +94,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	GRect paddle = null;
 	GLabel turnsLeft = new GLabel (gameOverCount + " turns left");
-	GLabel points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+	GLabel points = null;
 	
 	AudioClip theme = MediaTools.loadAudioClip("theme.au");
 	AudioClip hitBricks = MediaTools.loadAudioClip("hitBricks.au");
@@ -404,6 +404,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void showPoints() {
+		points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "pts")
 		add (points, getWidth() - points.getWidth()-5, 15);
 		
 	}
