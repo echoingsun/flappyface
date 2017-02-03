@@ -295,13 +295,14 @@ public class Extension_Breakout extends GraphicsProgram {
 				paddleBounce.play();
 			}
 		}
-		if (hitCeiling()) {
+		if (hitCeiling() || hitPaddle()) {
 			vy = -vy;
-			hitWalls.play();
-		}
-		if (hitPaddle()){
+			if (hitCeiling()){
+				hitWalls.play();
+			} else if (hitPaddle()){
 			vy = -vy;
 			paddleBounce.play();
+			}
 		}
 	}
 
