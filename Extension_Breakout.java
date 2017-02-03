@@ -152,6 +152,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			fail.play();
 			gameOverCount--;
 			gameOverMessage();
+			waitForClick();
 
 		}
 		
