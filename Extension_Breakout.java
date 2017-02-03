@@ -389,7 +389,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void showTurns() {
-		
+		add (turnsLeft,10,10);
 		
 	}
 
