@@ -105,7 +105,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		// Add mouse listeners to the program.
 		addMouseListeners();
 
-		theme.play();
+		theme.loop();
 		startScreen();
 		waitForClick();
 		theme.stop();
