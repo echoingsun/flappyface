@@ -17,7 +17,6 @@ import acm.util.*;
 import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.lang.Object;
 
 public class Extension_Breakout extends GraphicsProgram {
 
@@ -135,7 +134,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		welcome.setFont("*-36");
 		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
 
-		while (!mouseClicked()){
+		while (true){
 			pause(1000);
 			welcome.setColor(rg.nextColor());
 			
