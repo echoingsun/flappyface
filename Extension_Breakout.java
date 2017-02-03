@@ -115,7 +115,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			play();
 		}
 
-		// Once user has used up all 3 chances, clear the canvas.
+		// Once user used up all 3 chances, clear the canvas.
 		removeAll();
 
 	}
