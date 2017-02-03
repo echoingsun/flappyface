@@ -292,16 +292,14 @@ public class Extension_Breakout extends GraphicsProgram {
 				paddleBounce.play();
 			}
 		}
-		if (hitCeiling() || (hitPaddle())) {
+		if (hitCeiling()) {
 			vy = -vy;
-			if (hitCeiling()){
-				hitWalls.play();
-			} 
-			if (hitPaddle()){
-				paddleBounce.play();
-			}
+			hitWalls.play();
 		}
-		
+		if (hitPaddle()){
+			vy = -vy;
+			paddleBounce.play();
+		}
 	}
 
 	private void placeItems() {
