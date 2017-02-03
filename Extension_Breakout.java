@@ -411,7 +411,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	
 	private void updatePoints() {
 		pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
-		pts = pts + pts0;
+	
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
 		points.setLabel(pts + " pts");
 	}
