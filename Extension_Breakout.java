@@ -9,6 +9,7 @@
  * Extensions added:
  * (1) Sound effects
  * (2) A start screen
+ * (3) A close screen
  */
 
 import acm.graphics.*;
@@ -126,6 +127,16 @@ public class Extension_Breakout extends GraphicsProgram {
 		mouseClickCount = 1;
 	}
 
+	private void closeScreen() {
+		GRect closeScreen = new GRect (getWidth(),getHeight());
+		closeScreen.setFilled(true);
+		closeScreen.setColor(Color.BLACK);
+		add (closeScreen,0,0);
+		
+		GLabel gameOverLabel = new GLabel("GAME OVER");
+		gameOverLabel.setFont("*-36");
+		add (gameOverLabel, (getWidth() - gameOverLabel.getWidth())*0.5, getHeight() * 0.5 + gameOverLabel.getAscent() * 0.5);
+	}
 	private void startScreen() {
 		theme.loop();
 		
