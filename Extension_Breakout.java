@@ -123,8 +123,9 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 
-
 	private void startScreen() {
+
+		
 		GRect startScreen = new GRect (getWidth(),getHeight());
 		startScreen.setFilled(true);
 		startScreen.setColor(Color.BLACK);
