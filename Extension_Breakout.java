@@ -106,6 +106,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		addMouseListeners();
 
 		theme.play();
+		startScreen();
 		waitForClick();
 		theme.stop();
 		
@@ -119,6 +120,28 @@ public class Extension_Breakout extends GraphicsProgram {
 		// Once user used up all 3 chances, clear the canvas.
 		removeAll();
 
+	}
+
+
+
+	private void startScreen() {
+		GRect startScreen = new GRect (getWidth(),getHeight());
+		startScreen.setFilled(true);
+		startScreen.setColor(Color.BLACK);
+		add (startScreen,0,0);
+		
+		GLabel welcome = new GLabel("BREAKOUT");
+		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
+
+		while (true){
+			pause(1000);
+			welcome.setColor(rg.nextColor());
+
+		}
+		
+		
+		
+		
 	}
 
 
