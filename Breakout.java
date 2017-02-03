@@ -85,6 +85,8 @@ public class Breakout extends GraphicsProgram {
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	
+	int paddleInstantiated = 0;
+	
 
 	// Create instance variables vx and vy.
 	double vx = 0;
@@ -406,6 +408,7 @@ public class Breakout extends GraphicsProgram {
 
 	private GRect makePaddle() {
 		paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddleInstantiated = 1;
 		paddle.setFilled(true);
 		paddle.setColor(Color.GRAY);
 		return paddle;
@@ -416,15 +419,20 @@ public class Breakout extends GraphicsProgram {
 		double y = getHeight() - PADDLE_Y_OFFSET;
 		double xx = e.getX() + PADDLE_WIDTH * 0.5;
 
-		if (x > 0 && xx < getWidth()) {
-			paddle.setLocation(x, y);
-		} else {
-			if (x < 0) {
-				paddle.setLocation(0, y);
-			} else if (xx > getWidth()) {
-				paddle.setLocation(getWidth() - PADDLE_WIDTH, y);
+		if (paddleInstantiated ==1){
+			if (x > 0 && xx < getWidth()) {
+				paddle.setLocation(x, y);
+			} else {
+				if (x < 0) {
+					paddle.setLocation(0, y);
+				} else if (xx > getWidth()) {
+					paddle.setLocation(getWidth() - PADDLE_WIDTH, y);
+				}
 			}
+			
 		}
+		
+
 	}
 
 	private void placeBricks() {
