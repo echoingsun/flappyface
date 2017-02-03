@@ -85,7 +85,9 @@ public class Extension_Breakout extends GraphicsProgram {
 	// Also define two counts: how many bricks are on the screen; how many turns left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
+	
 	int mouseClickCount = 0;
+	int paddleInstantiated = 0;
 	
 	// Let pts0 be the points user gets in one game, and pts be the total points.
 	int pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
@@ -536,6 +538,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	private GRect makePaddle() {
 		paddle = new GRect(PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddleInstantiated = 1;
 		paddle.setFilled(true);
 		paddle.setColor(Color.GRAY);
 		return paddle;
