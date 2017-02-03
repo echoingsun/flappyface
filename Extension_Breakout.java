@@ -10,6 +10,7 @@
  * (1) Sound effects
  * (2) A start screen
  * (3) A close screen
+ * (4) points display and turns display
  */
 
 import acm.graphics.*;
