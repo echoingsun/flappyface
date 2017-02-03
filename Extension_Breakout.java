@@ -390,10 +390,11 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	private void placeLives() {
 		for (int i = 0; i < gameOverCount; i++){
-			lives = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
+			lives = new GOval (BALL_RADIUS, BALL_RADIUS);
 			lives.setFilled(true);
-			lives.setFillColor(Color.GRAY);
-			add (lives, 10 + i*(2*BALL_RADIUS + 5), 10);
+			lives.setColor(PINK);
+			lives.setFillColor(Color.PINK);
+			add (lives, 10 + i*(BALL_RADIUS + 5), 10);
 		}
 		
 	}
