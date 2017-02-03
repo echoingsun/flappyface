@@ -89,8 +89,8 @@ public class Breakout extends GraphicsProgram {
 	int gameOverCount = NTURNS;
 	
 
-	double vx = rg.nextDouble(1.0, 3.0);
-	double vy = rg.nextDouble(-3.0, -1.0);
+	double vx = 0;
+	double vy = 0;
 
 
 
@@ -118,11 +118,12 @@ public class Breakout extends GraphicsProgram {
 		removeAll();
 		placeItems();
 		
-
+		vx = rg.nextDouble(1.0, 3.0);
 		// Set a 50% possibility for vx to be reversed.
 		if (rg.nextBoolean(0.5)) {
 			vx = -vx;
 		}
+		vy = rg.nextDouble(-3.0, -1.0);
 
 		waitForClick();
 
