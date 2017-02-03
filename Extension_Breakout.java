@@ -220,12 +220,9 @@ public class Extension_Breakout extends GraphicsProgram {
 		// If the bricks are all cleared (count=0), show stage clear message.
 		if (count == 0) {
 			stageClear();
-			// Reset count but NOT points.
-			
+			// Reset count but NOT points.			
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
-			
-			// But not reset points.
-			(NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK
+	
 			waitForClick();
 		}
 
