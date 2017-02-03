@@ -86,6 +86,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	int mouseClickCount = 0;
+	int pts = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
 	
 
 	// Define bricks, the ball, the paddle and some labels as instance
@@ -219,11 +220,12 @@ public class Extension_Breakout extends GraphicsProgram {
 		// If the bricks are all cleared (count=0), show stage clear message.
 		if (count == 0) {
 			stageClear();
-			// Reset count.
+			// Reset count but NOT points.
+			
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
 			
 			// But not reset points.
-			
+			(NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK
 			waitForClick();
 		}
 
@@ -401,14 +403,14 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void showPoints() {
-		points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + " pts");
+		points = new GLabel (pts + " pts");
 		add (points, getWidth() - points.getWidth()-5, 15);
 		
 	}
 	
 	private void updatePoints() {
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
-		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + " pts");
+		points.setLabel(pts + " pts");
 	}
 
 	private void showTurns() {
