@@ -88,6 +88,12 @@ public class Extension_Breakout extends GraphicsProgram {
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
 	
+	AudioClip theme = MediaTools.loadAudioClip("theme.au");
+	AudioClip hitBricks = MediaTools.loadAudioClip("hitBricks.au");
+	AudioClip hitWalls = MediaTools.loadAudioClip("hitWalls.au");
+	AudioClip paddleBounce = MediaTools.loadAudioClip("paddleBounce.au");
+	AudioClip fail = MediaTools.loadAudioClip("fail.au");
+	
 
 	double vx = rg.nextDouble(1.0, 3.0);
 	double vy = rg.nextDouble(-3.0, -1.0);
