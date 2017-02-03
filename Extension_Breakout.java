@@ -107,10 +107,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		// Add mouse listeners to the program.
 		addMouseListeners();
 
-		theme.loop();
-		startScreen();
-		waitForClick();
-		theme.stop();
+
 		
 
 		// Play the game for maximum NTURNS times if user fails to clear stage
@@ -129,7 +126,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void startScreen() {
-
+		theme.loop();
 		
 		GRect startScreen = new GRect (getWidth(),getHeight());
 		startScreen.setFilled(true);
@@ -142,13 +139,11 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		while (mouseClickCount == 0){
 			pause(1000);
-			welcome.setColor(rg.nextColor());
-			
+			welcome.setColor(rg.nextColor());	
 		}
 		
-		
-		
-		
+		waitForClick();
+		theme.stop();	
 		
 	}
 
