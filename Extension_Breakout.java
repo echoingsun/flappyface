@@ -148,6 +148,8 @@ public class Extension_Breakout extends GraphicsProgram {
 		gameOverLabel.setFont("*-36");
 		add (gameOverLabel, (getWidth() - gameOverLabel.getWidth())*0.5, getHeight() * 0.5 + gameOverLabel.getAscent() * 0.5);
 		
+		GLabel finalPoints = new GLabel ("You got "+ pts + " points in all!");
+		
 		while (true){
 			gameOverLabel.setColor(rg.nextColor());
 			pause(1000);
