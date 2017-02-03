@@ -136,6 +136,12 @@ public class Extension_Breakout extends GraphicsProgram {
 		GLabel welcome = new GLabel("BREAKOUT");
 		welcome.setFont("*-36");
 		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
+		
+		GLabel clickToStart = new GLabel ("Click to Start");
+		GLabel credit = new GLabel ("Music and sound effects from game DX-BALL");
+		
+		add (clickToStart, (getWidth() - clickToStart.getWidth())*0.5, welcome.getY() + 20 + clickToStart.getAscent());
+		add (credit, (getWidth() - credit.getWidth())*0.5, clickToStart.getY() + 20 + credit.getAscent());
 
 		while (mouseClickCount == 0){
 			pause(1000);
