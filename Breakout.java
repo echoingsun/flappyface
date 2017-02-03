@@ -219,7 +219,7 @@ public class Breakout extends GraphicsProgram {
 
 		// The similar check process applies to obj02 and 04.
 
-		if (obj02 != null) {
+		if (obj02 != null && obj01 == null) {
 
 			if (obj04 == null) {
 				if (obj02.getY() > cy && x1 >= obj02.getX() && x1 <= obj02.getX() + BRICK_WIDTH) {
