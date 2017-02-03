@@ -84,7 +84,6 @@ public class Extension_Breakout extends GraphicsProgram {
 	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	GRect paddle = null;
 	GLabel turnsLeft = null;
-	GOval lives = null;
 
 	// Also define two counts: how many bricks are on the screen; how many turns
 	// left.
@@ -384,18 +383,12 @@ public class Extension_Breakout extends GraphicsProgram {
 		placeBricks();
 		
 		// Show how many turns (lives) are there left.
-		placeLives();
+		showTurns();
 
 	}
 
-	private void placeLives() {
-		for (int i = 0; i < gameOverCount; i++){
-			lives = new GOval (BALL_RADIUS, BALL_RADIUS);
-			lives.setFilled(true);
-			lives.setColor(Color.PINK);
-			lives.setFillColor(Color.PINK);
-			add (lives, 10 + i*(BALL_RADIUS + 5), 10);
-		}
+	private void showTurns() {
+		add (turnsLeft, 10,10);
 		
 	}
 
@@ -451,7 +444,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		GObject obj04 = getElementAt(x2, y2);
 		
 		return (obj01 != null || obj02 != null || obj03 != null || obj04 != null)
-				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle) && (obj01 != lives && obj02 != lives && obj03 != lives && obj04 != lives);
+				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle) ;
 	}
 
 	private boolean hitPaddle() {
