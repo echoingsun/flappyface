@@ -407,7 +407,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 	
 	private void updatePoints() {
-		
+		pts = pts;
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
 		points.setLabel(pts + " pts");
 	}
