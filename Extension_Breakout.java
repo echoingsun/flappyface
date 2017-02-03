@@ -6,6 +6,8 @@
  * Section Leader: Maria Yang
  * 
  * This file will eventually implement the game of Breakout.
+ * Extensions added:
+ * (1) Sound effects
  */
 
 import acm.graphics.*;
@@ -281,12 +283,23 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void bounceAround() {
-		if (hitWalls() || hitPaddleSide() && vy > 0) {
+		if (hitWalls() || (hitPaddleSide() && vy > 0)) {
 			vx = -vx;
+			if (hitWalls()){
+				hitWalls.play();
+			} else if (hitPaddleSide() && vy >0){
+				paddleBounce.play();
+			}
 		}
 		if (hitCeiling() || (hitPaddle())) {
 			vy = -vy;
+			if (hitCeiling()){
+				hitWalls.play();
+			} else if (hitPaddle()){
+				paddleBounce.play();
+			}
 		}
+		
 	}
 
 	private void placeItems() {
