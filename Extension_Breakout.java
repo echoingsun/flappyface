@@ -223,7 +223,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		if (count == 0) {
 			stageClear();
 			// Reset count but NOT points.	
-			pts = pts0;
+			pts = pts + pts0;
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
 
 	
