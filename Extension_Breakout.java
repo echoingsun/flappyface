@@ -382,7 +382,20 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// Draw the bricks.
 		placeBricks();
+		
+		// Show how many turns (lives) are there left.
+		placeLives();
 
+	}
+
+	private void placeLives() {
+		for (int i = 0; i < gameOverCount; i++){
+			lives = new GOval (2*BALL_RADIUS, 2*BALL_RADIUS);
+			lives.setFilled(true);
+			lives.setFillColor(Color.GRAY);
+			add (lives, 10 + i*(2*BALL_RADIUS + 5), 10);
+		}
+		
 	}
 
 	private void placeBall() {
