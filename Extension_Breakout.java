@@ -542,19 +542,25 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	public void mouseMoved(MouseEvent e) {
-		double x = e.getX() - PADDLE_WIDTH * 0.5;
-		double y = getHeight() - PADDLE_Y_OFFSET;
-		double xx = e.getX() + PADDLE_WIDTH * 0.5;
+		
+		if (mouseClickCount ==1){
+			
+			
+			double x = e.getX() - PADDLE_WIDTH * 0.5;
+			double y = getHeight() - PADDLE_Y_OFFSET;
+			double xx = e.getX() + PADDLE_WIDTH * 0.5;
 
-		if (x > 0 && xx < getWidth()) {
-			paddle.setLocation(x, y);
-		} else {
-			if (x < 0) {
-				paddle.setLocation(0, y);
-			} else if (xx > getWidth()) {
-				paddle.setLocation(getWidth() - PADDLE_WIDTH, y);
+			if (x > 0 && xx < getWidth()) {
+				paddle.setLocation(x, y);
+			} else {
+				if (x < 0) {
+					paddle.setLocation(0, y);
+				} else if (xx > getWidth()) {
+					paddle.setLocation(getWidth() - PADDLE_WIDTH, y);
+				}
 			}
 		}
+
 	}
 
 	private void placeBricks() {
