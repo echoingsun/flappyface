@@ -390,7 +390,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	private void showTurns() {
 		turnsLeft.setColor(Color.MAGENTA);
-		add (turnsLeft,5,20);
+		add (turnsLeft,5,15);
 		
 	}
 
