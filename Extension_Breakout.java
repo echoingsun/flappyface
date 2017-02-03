@@ -49,10 +49,10 @@ public class Extension_Breakout extends GraphicsProgram {
 	private static final int PADDLE_Y_OFFSET = 30;
 
 	/** Number of bricks per row */
-	private static final int NBRICKS_PER_ROW = 10;
+	private static final int NBRICKS_PER_ROW = 3;
 
 	/** Number of rows of bricks */
-	private static final int NBRICK_ROWS = 10;
+	private static final int NBRICK_ROWS = 3;
 
 	/** Separation between bricks */
 	private static final int BRICK_SEP = 4;
