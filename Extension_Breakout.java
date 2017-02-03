@@ -18,6 +18,7 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 
+
 public class Extension_Breakout extends GraphicsProgram {
 
 	/**
@@ -86,6 +87,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	// left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
+	int mouseClickCount = 0;
 	
 	AudioClip theme = MediaTools.loadAudioClip("theme.au");
 	AudioClip hitBricks = MediaTools.loadAudioClip("hitBricks.au");
@@ -122,6 +124,9 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	}
 
+	public void mouseClicked(MouseEvent e){
+		mouseClickCount = 1;
+	}
 
 	private void startScreen() {
 
@@ -135,7 +140,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		welcome.setFont("*-36");
 		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
 
-		while (true){
+		while (mouseClickCount == 0){
 			pause(1000);
 			welcome.setColor(rg.nextColor());
 			
