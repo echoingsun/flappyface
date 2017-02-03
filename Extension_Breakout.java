@@ -446,7 +446,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		GObject obj04 = getElementAt(x2, y2);
 		
 		return (obj01 != null || obj02 != null || obj03 != null || obj04 != null)
-				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle) ;
+				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle)&& (obj01 != turnsLeft && obj02 != turnsLeft && obj03 != turnsLeft && obj04 != turnsLeft) ;
 	}
 
 	private boolean hitPaddle() {
