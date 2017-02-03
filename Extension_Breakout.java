@@ -138,7 +138,9 @@ public class Extension_Breakout extends GraphicsProgram {
 		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
 		
 		GLabel clickToStart = new GLabel ("Click to Start");
+		clickToStart.setColor(Color.WHITE);
 		GLabel credit = new GLabel ("Music and sound effects from game DX-BALL");
+		credit.setColor(Color.WHITE);
 		
 		add (clickToStart, (getWidth() - clickToStart.getWidth())*0.5, welcome.getY() + 20 + clickToStart.getAscent());
 		add (credit, (getWidth() - credit.getWidth())*0.5, clickToStart.getY() + 20 + credit.getAscent());
