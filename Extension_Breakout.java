@@ -145,6 +145,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// If the player lost one turn, gameOverCount -1 and show game over message.
 		if (gameOver()) {
+			fail.play();
 			gameOverCount--;
 			gameOverMessage();
 
