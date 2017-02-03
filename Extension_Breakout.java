@@ -404,7 +404,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void showPoints() {
-		add (points, getWidth() - points.getWidth()-5, 15);
+		add (points, getWidth() - points.getWidth()-25, 15);
 		
 	}
 
