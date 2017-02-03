@@ -611,7 +611,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		} else if (k % 14 == 11 || k % 14 == 12) {
 			return Color.BLUE;
 		} else if (k % 14 == 13 || k % 14 == 0) {
-			return Color.BLACK;
+			return Color.MAGENTA;
 		} else {
 			return null;
 		}
