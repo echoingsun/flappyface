@@ -410,7 +410,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	
 	private void updatePoints() {
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
-		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "pts");
 	}
 
 	private void showTurns() {
