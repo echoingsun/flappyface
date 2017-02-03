@@ -182,12 +182,6 @@ public class Extension_Breakout extends GraphicsProgram {
 		
 	}
 
-
-
-
-
-
-
 	private void play() {
 		
 		//Before each turn starts, clear all objects and re-place them on the canvas.
@@ -227,6 +221,9 @@ public class Extension_Breakout extends GraphicsProgram {
 			stageClear();
 			// Reset count.
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
+			
+			// But not reset points.
+			
 			waitForClick();
 		}
 
@@ -404,14 +401,14 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	private void showPoints() {
-		points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "pts");
+		points = new GLabel ((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + " pts");
 		add (points, getWidth() - points.getWidth()-5, 15);
 		
 	}
 	
 	private void updatePoints() {
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
-		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "pts");
+		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + " pts");
 	}
 
 	private void showTurns() {
