@@ -71,7 +71,7 @@ public class Breakout extends GraphicsProgram {
 	private static final int DELAY = 10;
 	
 	// Pause in showing some of the labels before they are removed.
-	private static final int PAUSE = 1500;
+	private static final int PAUSE = 2000;
 
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
