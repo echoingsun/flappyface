@@ -277,7 +277,7 @@ public class Extension_Breakout extends GraphicsProgram {
 					} else {
 						remove(obj02);
 						count --;
-						points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+						updatePoints();
 						vx = -vx;
 					}
 						
@@ -287,7 +287,7 @@ public class Extension_Breakout extends GraphicsProgram {
 				if (obj03 != null && obj03 != obj01) {
 					remove(obj03); // If obj03 is another brick, remove it too.
 					count--;
-					points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+					updatePoints();
 					vy = -vy;
 				}
 				if (obj03 == obj01) {
@@ -297,7 +297,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			// In any case, obj01 will be removed.
 			remove(obj01);
 			count--;
-			points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+			updatePoints();
 		}
 
 		// The similar check process applies to obj02 and 04.
@@ -314,7 +314,7 @@ public class Extension_Breakout extends GraphicsProgram {
 				if (obj04 != null && obj04 != obj02) {
 					remove(obj04);
 					count--;
-					points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+					updatePoints();
 					vy = -vy;
 				}
 				if (obj04 == obj02) {
@@ -323,7 +323,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			}
 			remove(obj02);
 			count--;
-			points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+			updatePoints();
 		}
 
 		// For obj03:
@@ -338,14 +338,14 @@ public class Extension_Breakout extends GraphicsProgram {
 				} else {
 					remove(obj04);
 					count --;
-					points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+					updatePoints();
 					vx = -vx;
 				}
 				
 			}
 			remove(obj03);
 			count--;
-			points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+			updatePoints();
 		}
 
 		// obj04 is similar to obj03.
@@ -357,7 +357,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			}
 			remove(obj04);
 			count--;
-			points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
+			updatePoints();
 		}
 
 		
@@ -406,6 +406,11 @@ public class Extension_Breakout extends GraphicsProgram {
 	private void showPoints() {
 		add (points, getWidth() - points.getWidth()-5, 15);
 		
+	}
+	
+	private void updatePoints() {
+		points.setLocation(getWidth() - points.getWidth()-5, 15);
+		points.setLabel((NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK + "");
 	}
 
 	private void showTurns() {
