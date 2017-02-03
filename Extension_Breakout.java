@@ -392,7 +392,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		for (int i = 0; i < gameOverCount; i++){
 			lives = new GOval (BALL_RADIUS, BALL_RADIUS);
 			lives.setFilled(true);
-			lives.setColor(PINK);
+			lives.setColor(Color.PINK);
 			lives.setFillColor(Color.PINK);
 			add (lives, 10 + i*(BALL_RADIUS + 5), 10);
 		}
