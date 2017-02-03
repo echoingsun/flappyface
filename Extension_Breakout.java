@@ -222,6 +222,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			stageClear();
 			// Reset count but NOT points.			
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
+			pts = pts + (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
 	
 			waitForClick();
 		}
@@ -406,7 +407,7 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 	
 	private void updatePoints() {
-		pts = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+		
 		points.setLocation(getWidth() - points.getWidth()-5, 15);
 		points.setLabel(pts + " pts");
 	}
