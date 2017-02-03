@@ -131,7 +131,7 @@ public class Extension_Breakout extends GraphicsProgram {
 		add (startScreen,0,0);
 		
 		GLabel welcome = new GLabel("BREAKOUT");
-		welcome.setFont(*-36);
+		welcome.setFont("*-36");
 		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
 
 		while (true){
