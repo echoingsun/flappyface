@@ -69,7 +69,7 @@ public class Breakout extends GraphicsProgram {
 
 	// Pause in ball movement.
 	private static final int DELAY = 10;
-	
+
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
 
@@ -84,15 +84,12 @@ public class Breakout extends GraphicsProgram {
 	// left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
-	
+
 	int paddleInstantiated = 0;
-	
 
 	// Create instance variables vx and vy.
 	double vx = 0;
 	double vy = 0;
-
-
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -113,11 +110,12 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void play() {
-		
-		//Before each turn starts, clear all objects and re-place them on the canvas.
+
+		// Before each turn starts, clear all objects and re-place them on the
+		// canvas.
 		removeAll();
 		placeItems();
-		
+
 		// Instantiate vx and vy.
 		vx = rg.nextDouble(1.0, 3.0);
 		// Set a 50% possibility for vx to be reversed.
@@ -137,14 +135,15 @@ public class Breakout extends GraphicsProgram {
 			pause(DELAY);
 		}
 
-		// If the player lost one turn, gameOverCount -1 and show game over message.
+		// If the player lost one turn, gameOverCount -1 and show game over
+		// message.
 		if (gameOver()) {
 			gameOverCount--;
 			gameOverMessage();
 			waitForClick();
 
 		}
-		
+
 		// If the bricks are all cleared (count=0), show stage clear message.
 		if (count == 0) {
 			stageClear();
@@ -156,8 +155,8 @@ public class Breakout extends GraphicsProgram {
 	}
 
 	private void hitAndRemove() {
-		if (hitBricks()) {			
-			removeBricks();			
+		if (hitBricks()) {
+			removeBricks();
 		}
 
 	}
@@ -174,34 +173,37 @@ public class Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		
+
 		/*
-		 * obj01 is the object that collides with the top left corner (imaginary) of the ball.
-		 * When there is an obj 01, it can be:
-		 * (1) the brick which the ball hits from the bottom upwards;
-		 * (2) the brick which the ball hits from the right leftwards;
-		 * For every brick that's removed, let the brick count "count" -1.
+		 * obj01 is the object that collides with the top left corner
+		 * (imaginary) of the ball. When there is an obj 01, it can be: (1) the
+		 * brick which the ball hits from the bottom upwards; (2) the brick
+		 * which the ball hits from the right leftwards; For every brick that's
+		 * removed, let the brick count "count" -1.
 		 */
 		if (obj01 != null) {
 
 			/*
-			 * Check if the ball is hitting two bricks from the bottom upwards at the same time,
-			 * or the ball hits somewhere in between the brick's width (then obj01 == obj03).
-			 */			
-			if (obj03 == null) {				
-				if (cy > (obj01.getY() + BRICK_HEIGHT) && x1 >= obj01.getX() && x1 <= obj01.getX() + BRICK_WIDTH ) {
+			 * Check if the ball is hitting two bricks from the bottom upwards
+			 * at the same time, or the ball hits somewhere in between the
+			 * brick's width (then obj01 == obj03).
+			 */
+			if (obj03 == null) {
+				if (cy > (obj01.getY() + BRICK_HEIGHT) && x1 >= obj01.getX() && x1 <= obj01.getX() + BRICK_WIDTH) {
 					vy = -vy; // Case (1)
-				} else if (cx > obj01.getX() + BRICK_WIDTH && y1 <= obj01.getY() + BRICK_HEIGHT && y2 >= obj01.getY() + BRICK_HEIGHT) {
-					
-					// Check if the ball is hitting two bricks from the right leftwards at the same time.
-					if (obj02 == null){
+				} else if (cx > obj01.getX() + BRICK_WIDTH && y1 <= obj01.getY() + BRICK_HEIGHT
+						&& y2 >= obj01.getY() + BRICK_HEIGHT) {
+
+					// Check if the ball is hitting two bricks from the right
+					// leftwards at the same time.
+					if (obj02 == null) {
 						vx = -vx; // Case (2)
 					} else {
 						remove(obj02);
-						count --;
+						count--;
 						vx = -vx;
 					}
-						
+
 				}
 
 			} else {
@@ -226,7 +228,8 @@ public class Breakout extends GraphicsProgram {
 			if (obj04 == null) {
 				if (obj02.getY() > cy && x1 >= obj02.getX() && x1 <= obj02.getX() + BRICK_WIDTH) {
 					vy = -vy;
-				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT && y2 >= obj02.getY() + BRICK_HEIGHT && obj01 == null) {
+				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT
+						&& y2 >= obj02.getY() + BRICK_HEIGHT && obj01 == null) {
 					vx = -vx;
 				}
 			} else {
@@ -247,17 +250,19 @@ public class Breakout extends GraphicsProgram {
 		if (obj03 != null && obj01 == null) {
 			if (cy > (obj03.getY() + BRICK_HEIGHT) && x2 >= obj03.getX() && x2 <= obj03.getX() + BRICK_WIDTH) {
 				vy = -vy;
-			} else if (cx > obj03.getX() + BRICK_WIDTH && y1 <= obj03.getY() + BRICK_HEIGHT && y2 >= obj03.getY() + BRICK_HEIGHT) {
-				
-				// Check if the ball is hitting two bricks from the left rightwards.
-				if (obj04 == null){
+			} else if (cx > obj03.getX() + BRICK_WIDTH && y1 <= obj03.getY() + BRICK_HEIGHT
+					&& y2 >= obj03.getY() + BRICK_HEIGHT) {
+
+				// Check if the ball is hitting two bricks from the left
+				// rightwards.
+				if (obj04 == null) {
 					vx = -vx;
 				} else {
 					remove(obj04);
-					count --;
+					count--;
 					vx = -vx;
 				}
-				
+
 			}
 			remove(obj03);
 			count--;
@@ -267,14 +272,14 @@ public class Breakout extends GraphicsProgram {
 		if (obj04 != null && obj02 == null && obj03 == null) {
 			if (obj04.getY() > cy && x2 >= obj04.getX() && x2 <= obj04.getX() + BRICK_WIDTH) {
 				vy = -vy;
-			} else if (cx < obj04.getX() && y2 <= obj04.getY() + BRICK_HEIGHT && y2 >= obj04.getY() + BRICK_HEIGHT && obj03 == null) {
+			} else if (cx < obj04.getX() && y2 <= obj04.getY() + BRICK_HEIGHT && y2 >= obj04.getY() + BRICK_HEIGHT
+					&& obj03 == null) {
 				vx = -vx;
 			}
 			remove(obj04);
 			count--;
 		}
 
-		
 	}
 
 	private void bounceAround() {
@@ -352,15 +357,16 @@ public class Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		
+
 		return (obj01 != null || obj02 != null || obj03 != null || obj04 != null)
 				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle);
 	}
 
 	private boolean hitPaddle() {
 		/*
-		 * This method defines the behavior of the ball when it hits the top of the paddle.
-		 * The lower coordinate(s) of the ball is greater than / equals the coordinate of the paddle.
+		 * This method defines the behavior of the ball when it hits the top of
+		 * the paddle. The lower coordinate(s) of the ball is greater than /
+		 * equals the coordinate of the paddle.
 		 */
 		double x1 = ball.getX();
 		double x2 = ball.getX() + 2 * BALL_RADIUS;
@@ -368,7 +374,7 @@ public class Breakout extends GraphicsProgram {
 
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj04 = getElementAt(x2, y2);
-		
+
 		return y2 >= paddle.getY() && (obj02 == paddle || obj04 == paddle) && vy > 0;
 	}
 
@@ -386,7 +392,9 @@ public class Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY()) || (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY()) || (obj03 == paddle) || (obj01 == paddle);
+		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY())
+				|| (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY()) || (obj03 == paddle)
+				|| (obj01 == paddle);
 	}
 
 	private boolean hitCeiling() {
@@ -419,7 +427,7 @@ public class Breakout extends GraphicsProgram {
 		double y = getHeight() - PADDLE_Y_OFFSET;
 		double xx = e.getX() + PADDLE_WIDTH * 0.5;
 
-		if (paddleInstantiated ==1){
+		if (paddleInstantiated == 1) {
 			if (x > 0 && xx < getWidth()) {
 				paddle.setLocation(x, y);
 			} else {
@@ -429,9 +437,8 @@ public class Breakout extends GraphicsProgram {
 					paddle.setLocation(getWidth() - PADDLE_WIDTH, y);
 				}
 			}
-			
+
 		}
-		
 
 	}
 
