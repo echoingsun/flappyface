@@ -21,7 +21,6 @@ import java.applet.*;
 import java.awt.*;
 import java.awt.event.*;
 
-
 public class Extension_Breakout extends GraphicsProgram {
 
 	/**
@@ -75,43 +74,43 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	// Pause in ball movement.
 	private static final int DELAY = 10;
-	
+
 	// Points per brick removed.
 	private static final int POINT_PER_BRICK = 100;
 
 	// Define a random generator for generating random speed.
 	private RandomGenerator rg = new RandomGenerator();
 
-	// Also define two counts: how many bricks are on the screen; how many turns left.
+	// Also define two counts: how many bricks are on the screen; how many turns
+	// left.
 	int count = NBRICKS_PER_ROW * NBRICK_ROWS;
 	int gameOverCount = NTURNS;
-	
+
 	int mouseClickCount = 0;
 	int paddleInstantiated = 0;
-	
-	// Let pts0 be the points user gets in one game, and pts be the total points.
-	int pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
+
+	// Let pts0 be the points user gets in one game, and pts be the total
+	// points.
+	int pts0 = (NBRICKS_PER_ROW * NBRICK_ROWS - count) * POINT_PER_BRICK;
 	int pts = pts0;
-	
 
 	// Define bricks, the ball, the paddle and some labels as instance
 	// variables.
 	GRect brick = null;
 	GOval ball = new GOval(2 * BALL_RADIUS, 2 * BALL_RADIUS);
 	GRect paddle = null;
-	GLabel turnsLeft = new GLabel (gameOverCount + " turns left");
+	GLabel turnsLeft = new GLabel(gameOverCount + " turns left");
 	GLabel points = null;
-	
+
 	AudioClip theme = MediaTools.loadAudioClip("theme.au");
 	AudioClip hitBricks = MediaTools.loadAudioClip("hitBricks.au");
 	AudioClip hitWalls = MediaTools.loadAudioClip("hitWalls.au");
 	AudioClip paddleBounce = MediaTools.loadAudioClip("paddleBounce.au");
 	AudioClip fail = MediaTools.loadAudioClip("fail.au");
-	
+
 	// Create vx and vy as instance variables.
 	double vx = 0;
 	double vy = 0;
-
 
 	/* Method: run() */
 	/** Runs the Breakout program. */
@@ -121,7 +120,6 @@ public class Extension_Breakout extends GraphicsProgram {
 		addMouseListeners();
 
 		startScreen();
-		
 
 		// Play the game for maximum NTURNS times if user fails to clear stage
 		// at some point.
@@ -135,69 +133,72 @@ public class Extension_Breakout extends GraphicsProgram {
 
 	}
 
-	public void mouseClicked(MouseEvent e){
+	public void mouseClicked(MouseEvent e) {
 		mouseClickCount = 1;
 	}
 
 	private void closeScreen() {
 		theme.loop();
-		
-		GRect closeScreen = new GRect (getWidth(),getHeight());
+
+		GRect closeScreen = new GRect(getWidth(), getHeight());
 		closeScreen.setFilled(true);
 		closeScreen.setColor(Color.BLACK);
-		add (closeScreen,0,0);
-		
+		add(closeScreen, 0, 0);
+
 		GLabel gameOverLabel = new GLabel("GAME OVER");
 		gameOverLabel.setFont("*-36");
-		add (gameOverLabel, (getWidth() - gameOverLabel.getWidth())*0.5, getHeight() * 0.5 + gameOverLabel.getAscent() * 0.5);
-		
-		GLabel finalPoints = new GLabel ("Your final score: " + pts);
-		add (finalPoints,(getWidth() - finalPoints.getWidth())*0.5, gameOverLabel.getY() + 20 + finalPoints.getAscent());
-		
-		while (true){
+		add(gameOverLabel, (getWidth() - gameOverLabel.getWidth()) * 0.5,
+				getHeight() * 0.5 + gameOverLabel.getAscent() * 0.5);
+
+		GLabel finalPoints = new GLabel("Your final score: " + pts);
+		add(finalPoints, (getWidth() - finalPoints.getWidth()) * 0.5,
+				gameOverLabel.getY() + 20 + finalPoints.getAscent());
+
+		while (true) {
 			gameOverLabel.setColor(rg.nextColor());
 			finalPoints.setColor(rg.nextColor());
 			pause(1000);
 		}
-		
+
 	}
+
 	private void startScreen() {
 		theme.loop();
-		
-		GRect startScreen = new GRect (getWidth(),getHeight());
+
+		GRect startScreen = new GRect(getWidth(), getHeight());
 		startScreen.setFilled(true);
 		startScreen.setColor(Color.BLACK);
-		add (startScreen,0,0);
-		
+		add(startScreen, 0, 0);
+
 		GLabel welcome = new GLabel("BREAKOUT");
 		welcome.setFont("*-36");
-		add (welcome, (getWidth() - welcome.getWidth())*0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
-		
-		GLabel clickToStart = new GLabel ("Click to Start");
-		GLabel credit = new GLabel ("Music and sound effects from game DX-BALL");
+		add(welcome, (getWidth() - welcome.getWidth()) * 0.5, getHeight() * 0.5 + welcome.getAscent() * 0.5);
 
-		
-		add (clickToStart, (getWidth() - clickToStart.getWidth())*0.5, welcome.getY() + 20 + clickToStart.getAscent());
-		add (credit, (getWidth() - credit.getWidth())*0.5, clickToStart.getY() + 20 + credit.getAscent());
+		GLabel clickToStart = new GLabel("Click to Start");
+		GLabel credit = new GLabel("Music and sound effects from game DX-BALL");
 
-		while (mouseClickCount == 0){
+		add(clickToStart, (getWidth() - clickToStart.getWidth()) * 0.5, welcome.getY() + 20 + clickToStart.getAscent());
+		add(credit, (getWidth() - credit.getWidth()) * 0.5, clickToStart.getY() + 20 + credit.getAscent());
+
+		while (mouseClickCount == 0) {
 			welcome.setColor(rg.nextColor());
 			clickToStart.setColor(rg.nextColor());
 			credit.setColor(rg.nextColor());
 			pause(1000);
 		}
-		
+
 		removeAll();
-		theme.stop();	
-		
+		theme.stop();
+
 	}
 
 	private void play() {
-		
-		//Before each turn starts, clear all objects and re-place them on the canvas.
+
+		// Before each turn starts, clear all objects and re-place them on the
+		// canvas.
 		removeAll();
 		placeItems();
-		
+
 		// Instantiate vx and vy.
 		vx = rg.nextDouble(1.0, 3.0);
 		// Set a 50% possibility for vx to be reversed.
@@ -217,35 +218,35 @@ public class Extension_Breakout extends GraphicsProgram {
 			pause(DELAY);
 		}
 
-		// If the player lost one turn, gameOverCount -1 and show game over message.
+		// If the player lost one turn, gameOverCount -1 and show game over
+		// message.
 		if (gameOver()) {
 			fail.play();
 			gameOverCount--;
 			gameOverMessage();
-			
+
 			pts = pts + pts0;
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
 			waitForClick();
 
 		}
-		
+
 		// If the bricks are all cleared (count=0), show stage clear message.
 		if (count == 0) {
 			stageClear();
-			// Reset count but NOT points.	
+			// Reset count but NOT points.
 			pts = pts + pts0;
 			count = NBRICKS_PER_ROW * NBRICK_ROWS;
 
-	
 			waitForClick();
 		}
 
 	}
 
 	private void hitAndRemove() {
-		if (hitBricks()) {			
+		if (hitBricks()) {
 			hitBricks.play();
-			removeBricks();			
+			removeBricks();
 		}
 
 	}
@@ -262,35 +263,38 @@ public class Extension_Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		
+
 		/*
-		 * obj01 is the object that collides with the top left corner (imaginary) of the ball.
-		 * When there is an obj 01, it can be:
-		 * (1) the brick which the ball hits from the bottom upwards;
-		 * (2) the brick which the ball hits from the right leftwards;
-		 * For every brick that's removed, let the brick count "count" -1.
+		 * obj01 is the object that collides with the top left corner
+		 * (imaginary) of the ball. When there is an obj 01, it can be: (1) the
+		 * brick which the ball hits from the bottom upwards; (2) the brick
+		 * which the ball hits from the right leftwards; For every brick that's
+		 * removed, let the brick count "count" -1.
 		 */
 		if (obj01 != null) {
 
 			/*
-			 * Check if the ball is hitting two bricks from the bottom upwards at the same time,
-			 * or the ball hits somewhere in between the brick's width (then obj01 == obj03).
-			 */			
-			if (obj03 == null) {				
-				if (cy > (obj01.getY() + BRICK_HEIGHT) && x1 >= obj01.getX() && x1 <= obj01.getX() + BRICK_WIDTH ) {
+			 * Check if the ball is hitting two bricks from the bottom upwards
+			 * at the same time, or the ball hits somewhere in between the
+			 * brick's width (then obj01 == obj03).
+			 */
+			if (obj03 == null) {
+				if (cy > (obj01.getY() + BRICK_HEIGHT) && x1 >= obj01.getX() && x1 <= obj01.getX() + BRICK_WIDTH) {
 					vy = -vy; // Case (1)
-				} else if (cx > obj01.getX() + BRICK_WIDTH && y1 <= obj01.getY() + BRICK_HEIGHT && y2 >= obj01.getY() + BRICK_HEIGHT) {
-					
-					// Check if the ball is hitting two bricks from the right leftwards at the same time.
-					if (obj02 == null){
+				} else if (cx > obj01.getX() + BRICK_WIDTH && y1 <= obj01.getY() + BRICK_HEIGHT
+						&& y2 >= obj01.getY() + BRICK_HEIGHT) {
+
+					// Check if the ball is hitting two bricks from the right
+					// leftwards at the same time.
+					if (obj02 == null) {
 						vx = -vx; // Case (2)
 					} else {
 						remove(obj02);
-						count --;
+						count--;
 						updatePoints();
 						vx = -vx;
 					}
-						
+
 				}
 
 			} else {
@@ -317,7 +321,8 @@ public class Extension_Breakout extends GraphicsProgram {
 			if (obj04 == null) {
 				if (obj02.getY() > cy && x1 >= obj02.getX() && x1 <= obj02.getX() + BRICK_WIDTH) {
 					vy = -vy;
-				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT && y2 >= obj02.getY() + BRICK_HEIGHT && obj01 == null) {
+				} else if (cx > obj02.getX() + BRICK_WIDTH && y2 <= obj02.getY() + BRICK_HEIGHT
+						&& y2 >= obj02.getY() + BRICK_HEIGHT && obj01 == null) {
 					vx = -vx;
 				}
 			} else {
@@ -340,18 +345,20 @@ public class Extension_Breakout extends GraphicsProgram {
 		if (obj03 != null && obj01 == null) {
 			if (cy > (obj03.getY() + BRICK_HEIGHT) && x2 >= obj03.getX() && x2 <= obj03.getX() + BRICK_WIDTH) {
 				vy = -vy;
-			} else if (cx > obj03.getX() + BRICK_WIDTH && y1 <= obj03.getY() + BRICK_HEIGHT && y2 >= obj03.getY() + BRICK_HEIGHT) {
-				
-				// Check if the ball is hitting two bricks from the left rightwards.
-				if (obj04 == null){
+			} else if (cx > obj03.getX() + BRICK_WIDTH && y1 <= obj03.getY() + BRICK_HEIGHT
+					&& y2 >= obj03.getY() + BRICK_HEIGHT) {
+
+				// Check if the ball is hitting two bricks from the left
+				// rightwards.
+				if (obj04 == null) {
 					vx = -vx;
 				} else {
 					remove(obj04);
-					count --;
+					count--;
 					updatePoints();
 					vx = -vx;
 				}
-				
+
 			}
 			remove(obj03);
 			count--;
@@ -362,7 +369,8 @@ public class Extension_Breakout extends GraphicsProgram {
 		if (obj04 != null && obj02 == null && obj03 == null) {
 			if (obj04.getY() > cy && x2 >= obj04.getX() && x2 <= obj04.getX() + BRICK_WIDTH) {
 				vy = -vy;
-			} else if (cx < obj04.getX() && y2 <= obj04.getY() + BRICK_HEIGHT && y2 >= obj04.getY() + BRICK_HEIGHT && obj03 == null) {
+			} else if (cx < obj04.getX() && y2 <= obj04.getY() + BRICK_HEIGHT && y2 >= obj04.getY() + BRICK_HEIGHT
+					&& obj03 == null) {
 				vx = -vx;
 			}
 			remove(obj04);
@@ -370,15 +378,14 @@ public class Extension_Breakout extends GraphicsProgram {
 			updatePoints();
 		}
 
-		
 	}
 
 	private void bounceAround() {
 		if (hitWalls() || (hitPaddleSide() && vy > 0)) {
 			vx = -vx;
-			if (hitWalls()){
+			if (hitWalls()) {
 				hitWalls.play();
-			} else if (hitPaddleSide() && vy >0){
+			} else if (hitPaddleSide() && vy > 0) {
 				paddleBounce.play();
 			}
 		}
@@ -386,7 +393,7 @@ public class Extension_Breakout extends GraphicsProgram {
 			vy = -vy;
 			hitWalls.play();
 		}
-		if (hitPaddle()){
+		if (hitPaddle()) {
 			vy = -vy;
 			paddleBounce.play();
 		}
@@ -404,32 +411,32 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		// Draw the bricks.
 		placeBricks();
-		
+
 		// Show how many turns (lives) are there left.
 		showTurns();
-		
+
 		// Show how many points you have earned.
 		showPoints();
 
 	}
 
 	private void showPoints() {
-		points = new GLabel (pts + " pts");
-		add (points, getWidth() - points.getWidth()-5, 15);
-		
+		points = new GLabel(pts + " pts");
+		add(points, getWidth() - points.getWidth() - 5, 15);
+
 	}
-	
+
 	private void updatePoints() {
-		pts0 = (NBRICKS_PER_ROW*NBRICK_ROWS - count)*POINT_PER_BRICK;
-	
-		points.setLocation(getWidth() - points.getWidth()-5, 15);
+		pts0 = (NBRICKS_PER_ROW * NBRICK_ROWS - count) * POINT_PER_BRICK;
+
+		points.setLocation(getWidth() - points.getWidth() - 5, 15);
 		points.setLabel((pts + pts0) + " pts");
 	}
 
 	private void showTurns() {
 		turnsLeft.setColor(Color.MAGENTA);
-		add (turnsLeft,5,15);
-		
+		add(turnsLeft, 5, 15);
+
 	}
 
 	private void placeBall() {
@@ -482,15 +489,18 @@ public class Extension_Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		
+
 		return (obj01 != null || obj02 != null || obj03 != null || obj04 != null)
-				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle)&& (obj01 != turnsLeft && obj02 != turnsLeft && obj03 != turnsLeft && obj04 != turnsLeft) && (obj01 != points && obj02 != points && obj03 != points && obj04 != points);
+				&& (obj01 != paddle && obj02 != paddle && obj03 != paddle && obj04 != paddle)
+				&& (obj01 != turnsLeft && obj02 != turnsLeft && obj03 != turnsLeft && obj04 != turnsLeft)
+				&& (obj01 != points && obj02 != points && obj03 != points && obj04 != points);
 	}
 
 	private boolean hitPaddle() {
 		/*
-		 * This method defines the behavior of the ball when it hits the top of the paddle.
-		 * The lower coordinate(s) of the ball is greater than / equals the coordinate of the paddle.
+		 * This method defines the behavior of the ball when it hits the top of
+		 * the paddle. The lower coordinate(s) of the ball is greater than /
+		 * equals the coordinate of the paddle.
 		 */
 		double x1 = ball.getX();
 		double x2 = ball.getX() + 2 * BALL_RADIUS;
@@ -498,7 +508,7 @@ public class Extension_Breakout extends GraphicsProgram {
 
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj04 = getElementAt(x2, y2);
-		
+
 		return y2 >= paddle.getY() && (obj02 == paddle || obj04 == paddle) && vy > 0;
 	}
 
@@ -516,7 +526,9 @@ public class Extension_Breakout extends GraphicsProgram {
 		GObject obj02 = getElementAt(x1, y2);
 		GObject obj03 = getElementAt(x2, y1);
 		GObject obj04 = getElementAt(x2, y2);
-		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY()) || (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY()) || (obj03 == paddle) || (obj01 == paddle);
+		return (obj04 == paddle && cx < paddle.getX() && y2 > paddle.getY())
+				|| (obj02 == paddle && cx > paddle.getX() + PADDLE_WIDTH && y2 > paddle.getY()) || (obj03 == paddle)
+				|| (obj01 == paddle);
 	}
 
 	private boolean hitCeiling() {
@@ -545,10 +557,9 @@ public class Extension_Breakout extends GraphicsProgram {
 	}
 
 	public void mouseMoved(MouseEvent e) {
-		
-		if (mouseClickCount ==1 && paddleInstantiated ==1){
-			
-			
+
+		if (mouseClickCount == 1 && paddleInstantiated == 1) {
+
 			double x = e.getX() - PADDLE_WIDTH * 0.5;
 			double y = getHeight() - PADDLE_Y_OFFSET;
 			double xx = e.getX() + PADDLE_WIDTH * 0.5;
