@@ -17,13 +17,17 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		while (true){
+		while (notHit(bird)) {
 			bird.freeMove();
 			pause(DELAY);
 		}
-		
 
+	}
 
+	private boolean notHit(Bird aBird) {
+
+		boolean upperLeft = getElementAt(aBird.img.getX() - 1, img.getY() - 1) != null;
+		return false;
 
 	}
 
@@ -33,7 +37,7 @@ public class Contest_Run extends Program implements Constants {
 				bird.moveUp();
 			}
 		});
-		
+
 	}
 
 	private void loadBird() {
