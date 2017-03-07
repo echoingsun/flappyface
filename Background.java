@@ -14,5 +14,17 @@ public class Background extends GCanvas implements Constants{
 		add(img);
 	}
 
-
+	/*
+	 * Method addBird puts the flying object onto the screen.
+	 */
+	public void addBird() {
+		
+	}
+	
+	/*
+	 * Method addBlocks add a pair of blocks to the screen.
+	 */
+	public void addBlocks() {
+		
+	}
 }
