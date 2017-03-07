@@ -28,7 +28,7 @@ public class Bird implements Constants {
 
 	public boolean notHit(Background sky){
 		GObject obj = sky.getElementAt(img.getX()-1, img.getY() -1);
-		boolean upperLeft = sky.getElementAt(img.getX()-1, img.getY() -1) != null;
+		boolean upperLeft = sky.getElementAt(img.getX()-1, img.getY() -1) == null;
 		boolean bottomLeft = sky.getElementAt(img.getX() -1, img.getY() + img.getHeight() +1) == null;
 		boolean upperRight = sky.getElementAt(img.getX() + img.getWidth() + 1, img.getY() -1) == null;
 		boolean bottomRight = sky.getElementAt(img.getX() + img.getWidth() + 1, img.getY() + img.getHeight() +1) == null;
