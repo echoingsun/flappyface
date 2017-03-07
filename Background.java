@@ -1,10 +1,10 @@
-import acm.graphics.*;
+import acm.graphics.GCanvas;
+import acm.graphics.GImage;
+import acm.program.*;
 
 public class Background extends GCanvas implements Constants{
 
-	public Background(){
-		
-	}
+
 	
 	public void init (){
 		addBackground();
