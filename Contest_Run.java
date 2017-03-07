@@ -25,8 +25,7 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private boolean notHit(Bird aBird) {
-
-		boolean upperLeft = getElementAt(aBird.img.getX() - 1, img.getY() - 1) != null;
+		boolean upperLeft = getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) != null;
 		return false;
 
 	}
