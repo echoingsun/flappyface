@@ -6,6 +6,7 @@ public class Bird implements Constants {
 
 	public Bird() {
 		img = new GImage("karel.png");
+		img.setSize(BIRD_WIDTH, BIRD_HEIGHT);
 	}
 
 	public GImage getImg() {
