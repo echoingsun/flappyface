@@ -18,7 +18,8 @@ public class Background extends GCanvas implements Constants{
 	 * Method addBird puts the flying object onto the screen.
 	 */
 	public void addBird() {
-		
+		Bird bird = new Bird();
+		this.add (bird.getImg(), 0,0);
 	}
 	
 	/*
