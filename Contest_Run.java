@@ -30,7 +30,7 @@ public class Contest_Run extends Program implements Constants {
 		boolean upperLeft = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) == null;
 		boolean bottomLeft = sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null;
 		
-		GObject obj = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1);
+		GObject obj = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 2, aBird.getImg().getY() -1);
 		boolean uR = obj == null;
 		boolean upperRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1) == null;
 		boolean bottomRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null;
