@@ -19,7 +19,7 @@ public class Contest_Run extends Program implements Constants {
 		enableMouse();
 		while (true){
 			bird.freeMove();
-			pause(1000);
+			pause(4);
 		}
 		
 
