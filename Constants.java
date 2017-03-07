@@ -6,5 +6,5 @@ public interface Constants {
 	public static final int BIRD_WIDTH = 50;
 	public static final int BIRD_HEIGHT = 50;
 	
-	public statis final int VY_DELTA = 20;
+	public static final int VY_DELTA = 20;
 }
