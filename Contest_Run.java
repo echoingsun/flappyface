@@ -11,6 +11,7 @@ public class Contest_Run extends Program implements Constants{
 	
 	public void run (){
 		loadCanvas();
+		sky.addBird();
 		
 	}
 
