@@ -1,9 +1,9 @@
 import acm.graphics.GImage;
 import acm.program.*;
 
-public class Contest_Run extends GraphicsProgram implements Constants{
+public class Contest_Run extends Program implements Constants{
 	
-/*	private Background sky = new Background();
+	private Background sky = new Background();
 	
 	public void init (){
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -17,16 +17,7 @@ public class Contest_Run extends GraphicsProgram implements Constants{
 	private void loadCanvas() {
 		add(sky);
 		sky.init();		
-	}*/
-	
-/*	public void init (){
-		
-	}*/
-	
-	public void run() {
-		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-		Background sky = new Background ("background.jpg");
-		add(sky);
 	}
+
 
 }
