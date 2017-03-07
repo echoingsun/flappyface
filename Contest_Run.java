@@ -17,7 +17,10 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		bird.freeMove();
+		while (true){
+			bird.freeMove();
+		}
+		
 
 
 
