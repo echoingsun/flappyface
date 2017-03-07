@@ -7,6 +7,6 @@ public class Background extends GCanvas implements Constants{
 	public Background (String fileName){
 		this.img = new GImage (fileName);
 		this.img.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-		/*this.add(img,0,0);*/
+		this.add(img,0,0);
 	}
 }
