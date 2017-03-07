@@ -1,7 +1,7 @@
 import acm.graphics.GImage;
 import acm.program.*;
 
-public class Contest_Run extends GraphicsProgram implements Constants{
+public class Contest_Run extends Program implements Constants{
 	
 	private Background sky = new Background();
 	
