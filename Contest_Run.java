@@ -29,7 +29,7 @@ public class Contest_Run extends Program implements Constants{
 	}
 
 	private void loadBird() {
-		sky.addBird();
+		sky.addBird(bird);
 	}
 
 	private void loadCanvas() {
