@@ -18,6 +18,7 @@ public class Contest_Run extends GraphicsProgram implements Constants{
 	
 	public void run (){
 		sky = new Background ("background.jpg");
+		add (sky,0,0);
 	}
 
 }
