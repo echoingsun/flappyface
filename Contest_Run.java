@@ -17,21 +17,13 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		while (notHit(bird)) {
+		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
 		}
 
 	}
 
-	private boolean notHit(Bird aBird) {
-		boolean upperLeft = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) != null;
-		boolean bottomLeft = sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) != null;
-		boolean upperRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1) != null;
-		boolean bottomRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) != null;
-		return false;
-
-	}
 
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
