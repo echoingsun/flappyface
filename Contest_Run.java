@@ -27,13 +27,10 @@ public class Contest_Run extends Program implements Constants {
 
 	private boolean notHit(Bird aBird){
 
-		boolean upperLeft = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) == null;
-		boolean bottomLeft = sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null;
-		
-		GObject obj = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1);
-		boolean uR = obj == sky.getImg();
-		boolean upperRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1) == null;
-		boolean bottomRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null;
+		boolean upperLeft = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) != sky.getImg();
+		boolean bottomLeft = sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) != sky.getImg();
+		boolean upperRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1) != sky.getImg();
+		boolean bottomRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) != sky.getImg();
 		boolean top = aBird.getImg().getY() -1 <= 0;
 		boolean bottom = aBird.getImg().getY() + aBird.getImg().getHeight() + 1 >= sky.getHeight();
 		
