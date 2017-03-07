@@ -10,10 +10,16 @@ public class Contest_Run extends Program implements Constants{
 	}
 	
 	public void run (){
-		add(sky);
-		sky.init();
+		loadCanvas();
+		
+		
 		
 
+	}
+
+	private void loadCanvas() {
+		add(sky);
+		sky.init();		
 	}
 
 }
