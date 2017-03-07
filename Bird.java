@@ -1,5 +1,9 @@
 import acm.graphics.*;
 
-public class Bird extends GObject{
 
+public class Bird {
+
+	public Bird () {
+		
+	}
 }
