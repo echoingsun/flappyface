@@ -2,6 +2,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import acm.graphics.GImage;
+import acm.graphics.GObject;
 import acm.program.*;
 
 public class Contest_Run extends Program implements Constants {
@@ -25,9 +26,12 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private boolean notHit(Bird aBird){
-		/*GObject obj = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1);*/
+
 		boolean upperLeft = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) == null;
 		boolean bottomLeft = sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null;
+		
+		GObject obj = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1);
+		boolean uR = obj == null;
 		boolean upperRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1) == null;
 		boolean bottomRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null;
 		boolean top = aBird.getImg().getY() -1 <= 0;
