@@ -1,4 +1,5 @@
 import acm.graphics.*;
+import acm.util.RandomGenerator;
 
 public class Bird implements Constants {
 
@@ -16,6 +17,11 @@ public class Bird implements Constants {
 	public void moveUp() {
 		this.getImg().move(0, -VY_DELTA);
 		
+	}
+	
+	public void move(){
+		RandomGenerator rg = new RandomGenerator ();
+		double vx = rg.nextDouble(MIN_SPEED, MAX_SPEED);
 	}
 	
 	
