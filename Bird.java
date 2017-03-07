@@ -14,7 +14,7 @@ public class Bird implements Constants {
 	}
 
 	public void moveUp() {
-		this.move(0, -VY_DELTA);
+		this.getImg().move(0, -VY_DELTA);
 		
 	}
 	
