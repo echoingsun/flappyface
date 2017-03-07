@@ -23,7 +23,7 @@ public class Bird implements Constants {
 		RandomGenerator rg = new RandomGenerator ();
 		double vx = rg.nextDouble(MIN_SPEED, MAX_SPEED);
 		double vy = rg.nextDouble(MIN_SPEED, MAX_SPEED);
-		this.getImg().move(vx, vy);
+		this.img.move(vx, vy);
 	}
 	
 	
