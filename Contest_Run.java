@@ -1,9 +1,13 @@
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 import acm.graphics.GImage;
 import acm.program.*;
 
 public class Contest_Run extends Program implements Constants{
 	
 	private Background sky = new Background();
+	private Bird bird = new bird();
 	
 	public void init (){
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -12,6 +16,15 @@ public class Contest_Run extends Program implements Constants{
 	public void run (){
 		loadCanvas();
 		loadBird();
+
+		sky.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+
+				// If the mouse is clicked, the oval moves upwards by a certain
+				// amount.
+				
+			}
+		});
 		
 		
 	}
