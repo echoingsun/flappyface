@@ -15,7 +15,8 @@ public class Contest_Run extends GraphicsProgram implements Constants{
 	}
 	
 	public void run (){
-		println(getWidth()*1.0, getHeight()*1.0);
+		println(getWidth());
+		println(getHeight());
 	}
 
 }
