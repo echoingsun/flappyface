@@ -20,8 +20,7 @@ public class Contest_Run extends Program implements Constants{
 		sky.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 
-				// If the mouse is clicked, the oval moves upwards by a certain
-				// amount.
+bird.moveUp();
 				
 			}
 		});		
