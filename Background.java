@@ -16,12 +16,14 @@ public class Background extends GCanvas implements Constants{
 	}
 
 	/*
-	 * Method addBird puts the flying object onto the screen.
+	 * Method addBird puts the flying object onto the screen
+	 * at a random position at the left, on the upper part of the screen.
 	 */
 	public void addBird() {
+		
 		RandomGenerator rg = new RandomGenerator();
 		
-		Bird bird = new Bird();
+		Bird bird = new Bird(); // create a bird to put.
 		double x = 0;
 		double y = rg.nextDouble (0, (this.getHeight()- bird.getImg().getHeight()) * 0.5);
 		
