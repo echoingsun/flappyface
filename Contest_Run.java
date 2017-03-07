@@ -11,7 +11,8 @@ import java.awt.event.*;
 public class Contest_Run extends GraphicsProgram implements Constants{
 
 	public void run (){
-		
+		println(getWidth());
+		println(getHeight());
 	}
 
 }
