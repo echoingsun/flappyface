@@ -12,6 +12,11 @@ public class Bird implements Constants {
 	public GImage getImg() {
 		return img;
 	}
+
+	public void moveUp() {
+		this.move(0, -VY_DELTA);
+		
+	}
 	
 	
 	
