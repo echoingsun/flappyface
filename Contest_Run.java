@@ -19,11 +19,12 @@ public class Contest_Run extends GraphicsProgram implements Constants{
 		sky.init();		
 	}*/
 	
-	public void init (){
-		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
-	}
+/*	public void init (){
+		
+	}*/
 	
 	public void run() {
+		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		Background sky = new Background ("background.jpg");
 		add(sky);
 	}
