@@ -24,8 +24,7 @@ public class Background extends GCanvas implements Constants{
 		RandomGenerator rg = new RandomGenerator();
 		
 		double x = 0;
-		double y = rg.nextDouble (0, (this.getHeight()- bird.getImg().getHeight()) * 0.5);
-		
+		double y = rg.nextDouble (0, (this.getHeight()- bird.getImg().getHeight()) * 0.5);		
 		this.add (bird.getImg(), x, y);
 	}
 	
