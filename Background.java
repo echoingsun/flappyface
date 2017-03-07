@@ -1,6 +1,7 @@
 import acm.graphics.GCanvas;
 import acm.graphics.GImage;
 import acm.program.*;
+import acm.util.RandomGenerator;
 
 public class Background extends GCanvas implements Constants{
 
@@ -18,6 +19,7 @@ public class Background extends GCanvas implements Constants{
 	 * Method addBird puts the flying object onto the screen.
 	 */
 	public void addBird() {
+		RandomGenerater rg = new RandomGenerator();
 		Bird bird = new Bird();
 		this.add (bird.getImg(), 0,0);
 	}
