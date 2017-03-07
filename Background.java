@@ -25,7 +25,7 @@ public class Background extends GCanvas implements Constants{
 		double x = 0;
 		double y = rg.nextDouble (0, this.getHeight()- bird.getImg().getHeight());
 		
-		this.add (bird.getImg(), 0,0);
+		this.add (bird.getImg(), x, y);
 	}
 	
 	/*
