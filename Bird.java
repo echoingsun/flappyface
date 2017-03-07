@@ -12,6 +12,8 @@ public class Bird implements Constants {
 	public GImage getImg() {
 		return img;
 	}
+	
+	
 
 	
 	
