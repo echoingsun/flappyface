@@ -34,4 +34,6 @@ public class Background extends GCanvas implements Constants{
 	public void addBlocks() {
 		
 	}
+	
+
 }
