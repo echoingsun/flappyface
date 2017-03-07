@@ -5,12 +5,13 @@ import acm.util.RandomGenerator;
 
 public class Background extends GCanvas implements Constants{
 
+	private GImage img;
 	public void init (){
 		addBackground();
 	}
 
 	private void addBackground() {		
-		GImage img = new GImage ("background.jpg");
+		img = new GImage ("background.jpg");
 		img.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		add(img);
 	}
@@ -33,6 +34,10 @@ public class Background extends GCanvas implements Constants{
 	 */
 	public void addBlocks() {
 		
+	}
+	
+	public GImage getImg() {
+		return img;
 	}
 	
 
