@@ -23,11 +23,7 @@ public class Pair extends GCompound implements Constants{
 		
 	}
 	
-	public void moveLeft(){
-		
-		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
-		pair.move(vx, 0);
-	}
+
 	
 
 }
