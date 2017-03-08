@@ -13,8 +13,6 @@ public class Pair extends GCompound implements Constants{
 		Blocks upper = new Blocks (true);
 		double upperY = bottomY - rg.nextDouble (APPLICATION_HEIGHT * 0.3, APPLICATION_HEIGHT * 0.5) - upper.getImg().getHeight();
 		
-		
-		
 		pair.add(bottom.getImg());
 		pair.add(upper.getImg());
 		
@@ -22,24 +20,9 @@ public class Pair extends GCompound implements Constants{
 	
 	public void moveLeft(){
 		
-		
 		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
 		pair.move(vx, 0);
 	}
 	
-	/*
-	 * Method addBlocks add a pair of blocks to the screen.
-	 */
-	public void addBlocks() {
-		// add the bottom block.
-		Blocks bottom = new Blocks (false);
-		
-		this.add(bottom.getImg(), BLOCK_START_POINT,bottomY);
-		
-		// add the upper block
-		Blocks upper = new Blocks (true);
-		
-		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
 
-	}
 }
