@@ -23,6 +23,7 @@ public class Contest_Run extends Program implements Constants {
 		loadBird();
 		enableMouse();
 		blockPairs = sky.addBlockPairs(BLOCK_START_POINT - BLOCK_INTERVAL);
+		sky.pairArray.add(blockPairs);
 		
 		double distance = 0;
 		while (bird.notHit(sky)) {
@@ -35,9 +36,11 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				distance = 0;
 				
+				
+				
 				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + blockPairs.getWidth() - BLOCK_WIDTH + BLOCK_INTERVAL);
 
-				blockPairs.add(newBlockPairs);
+				blockPairs.add(newBlockPairs,0,0);
 				
 			}			
 			pause(DELAY);
