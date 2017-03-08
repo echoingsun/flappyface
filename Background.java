@@ -1,4 +1,5 @@
 import acm.graphics.GCanvas;
+import acm.graphics.GCompound;
 import acm.graphics.GImage;
 import acm.program.*;
 import acm.util.RandomGenerator;
@@ -29,22 +30,9 @@ public class Background extends GCanvas implements Constants{
 		this.add (bird.getImg(), x, y);
 	}
 	
-	/*
-	 * Method addBlocks add a pair of blocks to the screen.
-	 */
-	public void addBlocks() {
-		// add the bottom block.
-		Blocks bottom = new Blocks (false);
-		double bottomY = rg.nextDouble(this.getHeight() * 0.6, this.getHeight() * 0.8);
-		this.add(bottom.getImg(), BLOCK_START_POINT,bottomY);
-		
-		// add the upper block
-		Blocks upper = new Blocks (true);
-		double upperY = bottomY - rg.nextDouble (this.getHeight() * 0.3, this.getHeight() * 0.5) - upper.getImg().getHeight();
-		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
-		
-		bottom.moveLeft();
-		upper.moveLeft();
+
+	public void addBlockPair(Pair pair){
+		this.add(pair);
 	}
 	
 	public GImage getImg() {
