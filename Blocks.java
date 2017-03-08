@@ -26,7 +26,7 @@ public class Blocks implements Constants {
 	public void moveLeft(){
 		
 		RandomGenerator rg = new RandomGenerator();
-		double vx = rg.nextDouble();
-		img.move(), dy);
+		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
+		img.move(vx, 0);
 	}
 }
