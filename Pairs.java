@@ -4,7 +4,7 @@ import acm.util.RandomGenerator;
 public class Pairs extends GCompound implements Constants {
 
 	RandomGenerator rg = new RandomGenerator();
-	double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
+	double vx = rg.nextDouble(-MOVE_MAX_SPEED, -MOVE_MIN_SPEED);
 
 	public Pairs() {
 
