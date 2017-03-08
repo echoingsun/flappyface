@@ -19,11 +19,5 @@ public class Pair extends GCompound implements Constants{
 		pair.add(upper.getImg(),0,upperY);
 		pair.add(bottom.getImg(), 0, bottomY);
 
-		
-		
-
-
-
-		this.add(pair);
 	}
 }
