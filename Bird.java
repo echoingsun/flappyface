@@ -26,6 +26,20 @@ public class Bird implements Constants {
 		this.img.move(vx, vy);
 	}
 
+	private boolean notHit(Background sky){
+
+		boolean upperLeft = sky.getElementAt(this.getImg().getX()-1, this.getImg().getY() -1) == null || sky.getElementAt(this.getImg().getX()-1, this.getImg().getY() -1) == sky.getImg();
+		boolean bottomLeft = sky.getElementAt(this.getImg().getX() -1, this.getImg().getY() + this.getImg().getHeight() +1) == null || sky.getElementAt(this.getImg().getX() -1, this.getImg().getY() + this.getImg().getHeight() +1) == sky.getImg();
+		boolean upperRight = sky.getElementAt(this.getImg().getX() + this.getImg().getWidth() + 1, this.getImg().getY() -1) == sky.getImg();
+		boolean bottomRight = sky.getElementAt(this.getImg().getX() + this.getImg().getWidth() + 1, this.getImg().getY() + this.getImg().getHeight() +1) == sky.getImg();
+		boolean top = this.getImg().getY() -1 <= 0;
+		boolean bottom = this.getImg().getY() + this.getImg().getHeight() + 1 >= sky.getHeight();
+		
+		if (upperLeft && bottomLeft && upperRight && bottomRight && !top && !bottom){
+			return true;
+		} 
+		return false;
+	}
 
 	
 	
