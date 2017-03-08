@@ -20,6 +20,9 @@ public interface Constants {
 	public static final double FALL_MIN_SPEED = 0.2;
 	public static final double FALL_MAX_SPEED = 0.4;
 	
+	public static final double MOVE_MIN_SPEED = 1;
+	public static final double MOVE_MAX_SPEED = 2;
+	
 	public static final int DELAY = 4;
 	
 	public static final int PAIR_NUM = 3;
