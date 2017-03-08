@@ -31,10 +31,10 @@ public class Background extends GCanvas implements Constants{
 	}
 	
 
-	public void addBlockPair(){
+	public Pair addBlockPair(){
 		Pair pair = new Pair();
 		this.add(pair, 0, 0);
-
+		return pair;
 	}
 	
 	public GImage getImg() {
