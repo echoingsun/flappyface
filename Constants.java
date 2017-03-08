@@ -21,4 +21,6 @@ public interface Constants {
 	public static final double MAX_SPEED = 0.4;
 	
 	public static final int DELAY = 4;
+	
+	public static final int PAIR_NUM = 3;
 }
