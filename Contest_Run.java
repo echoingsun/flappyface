@@ -10,7 +10,7 @@ public class Contest_Run extends Program implements Constants {
 	private Background sky = new Background();
 	private Bird bird = new Bird();
 	private Pairs blockPairs = new Pairs();
-	private double distance = 0;
+	
 
 	public void init() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -21,6 +21,8 @@ public class Contest_Run extends Program implements Constants {
 		loadBird();
 		enableMouse();
 		blockPairs = sky.addBlockPairs(BLOCK_START_POINT - BLOCK_INTERVAL);
+		
+		double distance = 0;
 		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
