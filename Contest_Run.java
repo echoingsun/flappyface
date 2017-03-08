@@ -36,7 +36,7 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				distance = 0;
 				
-				Pairs newBlockPairs = sky.addBlockPairs(500);
+				Pairs newBlockPairs = sky.addBlockPairs(BLOCK_START_POINT);
 				blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
 				
 			}			
