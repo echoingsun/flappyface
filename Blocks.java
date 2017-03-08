@@ -10,7 +10,7 @@ public class Blocks implements Constants {
 		GImage upperBlock = new GImage ("pipeFlip.png");
 		GImage bottomBlock = new GImage ("pipe.png");
 
-		if (isFlip == false){
+		if (isFlip == true){
 			img = upperBlock;
 			
 		} else {
