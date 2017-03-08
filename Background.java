@@ -45,6 +45,8 @@ public class Background extends GCanvas implements Constants{
 		pair.add(bottom.getImg());
 		pair.add(upper.getImg());
 
+		this.add(pair);
+		
 		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
 		
 		while (true){
