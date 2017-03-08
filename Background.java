@@ -37,12 +37,7 @@ public class Background extends GCanvas implements Constants{
 		
 		
 		
-/*		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
-		
-		while (true){
-			pair.move(vx, 0);
-		}*/
-			
+
 
 
 	}
