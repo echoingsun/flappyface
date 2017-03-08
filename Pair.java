@@ -19,4 +19,13 @@ public class Pair extends GCompound implements Constants{
 /*		pair.add(upper.getImg());
 		pair.add(bottom.getImg());*/
 	}
+	
+	public void moveLeft(){
+		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
+		
+		while (true){
+			this.move(vx, 0);
+		}
+			
+	}
 }
