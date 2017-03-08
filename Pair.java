@@ -7,6 +7,8 @@ public class Pair extends GCompound implements Constants{
 	RandomGenerator rg = new RandomGenerator();
 	
 	public Pair (){
+		pair = new GCompound();
+		
 		Blocks bottom = new Blocks (false);
 		double bottomY = rg.nextDouble(APPLICATION_HEIGHT * 0.6, APPLICATION_HEIGHT * 0.8);
 		
