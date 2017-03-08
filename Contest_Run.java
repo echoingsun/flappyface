@@ -19,7 +19,7 @@ public class Contest_Run extends Program implements Constants {
 		loadBird();
 		enableMouse();
 		sky.addBlockPair();
-		while (notHit(bird)) {
+		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
 			
@@ -27,20 +27,7 @@ public class Contest_Run extends Program implements Constants {
 
 	}
 
-	private boolean notHit(Bird aBird){
 
-		boolean upperLeft = sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) == null || sky.getElementAt(aBird.getImg().getX()-1, aBird.getImg().getY() -1) == sky.getImg();
-		boolean bottomLeft = sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == null || sky.getElementAt(aBird.getImg().getX() -1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == sky.getImg();
-		boolean upperRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() -1) == sky.getImg();
-		boolean bottomRight = sky.getElementAt(aBird.getImg().getX() + aBird.getImg().getWidth() + 1, aBird.getImg().getY() + aBird.getImg().getHeight() +1) == sky.getImg();
-		boolean top = aBird.getImg().getY() -1 <= 0;
-		boolean bottom = aBird.getImg().getY() + aBird.getImg().getHeight() + 1 >= sky.getHeight();
-		
-		if (upperLeft && bottomLeft && upperRight && bottomRight && !top && !bottom){
-			return true;
-		} 
-		return false;
-	}
 	
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
