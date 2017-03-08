@@ -35,7 +35,9 @@ public class Background extends GCanvas implements Constants{
 		Pair pair = new Pair();
 		this.add(pair, 0, 0);
 		
-		
+		while(true){
+			pair.moveLeft();
+		}
 		
 
 
