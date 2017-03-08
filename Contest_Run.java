@@ -23,7 +23,8 @@ public class Contest_Run extends Program implements Constants {
 		loadBird();
 		enableMouse();
 		blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
-
+		sky.pairArray.add(blockPairs);
+		
 		
 		double distance = 0;
 		while (bird.notHit(sky)) {
