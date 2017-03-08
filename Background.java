@@ -31,11 +31,11 @@ public class Background extends GCanvas implements Constants{
 	}
 	
 
-	public void addBlockPair(Bird bird, Background sky){
-		Pair newPair = new Pair(sky);
-		this.add(newPair);
+	public void addBlockPair(){
+		Pair newPair = new Pair();
+		this.add(newPair,0,0);
 		
-		newPair.moveLeft(bird, this);
+
 	}
 	
 	public GImage getImg() {
