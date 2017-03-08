@@ -18,11 +18,14 @@ public class Pair extends GCompound implements Constants{
 		
 	}
 	
-	public void moveLeft(){
-		
-		
+	public void moveLeft(Bird bird, Background sky){
 		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
-		pair.move(vx, 0);
+		while (bird.notHit(sky)) {
+			pair.move(vx, 0);
+			pause(DELAY);
+			
+		}
+		
 	}
 
 }
