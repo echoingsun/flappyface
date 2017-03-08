@@ -3,6 +3,7 @@ import java.awt.event.MouseEvent;
 
 import acm.graphics.GImage;
 import acm.graphics.GObject;
+import acm.graphics.GOval;
 import acm.program.*;
 
 public class Contest_Run extends Program implements Constants {
@@ -32,9 +33,12 @@ public class Contest_Run extends Program implements Constants {
 				distance += blockPairs.vx;
 			} else {
 				distance = 0;
-				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
+				
+				GOval oval = new GOval (100,100);
+				sky.add(oval,300,300);
+/*				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
 				blockPairs.add(newBlockPairs);
-				blockPairs.moveLeft();
+				blockPairs.moveLeft();*/
 			}			
 			pause(DELAY);
 
