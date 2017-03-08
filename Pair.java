@@ -1,7 +1,7 @@
 import acm.graphics.GCompound;
 import acm.util.RandomGenerator;
 
-public class Pair implements Constants{
+public class Pair extends GCompound implements Constants{
 	
 	GCompound pair;
 	RandomGenerator rg = new RandomGenerator();
