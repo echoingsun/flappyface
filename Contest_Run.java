@@ -24,13 +24,11 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 			
 			
-			
 		}
 
 	}
 
 
-	
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
