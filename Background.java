@@ -4,7 +4,7 @@ import acm.graphics.GImage;
 import acm.program.*;
 import acm.util.RandomGenerator;
 
-public class Background extends GCanvas implements Constants{
+public class Background extends GraphicsProgram implements Constants{
 
 	private GImage img;
 	RandomGenerator rg = new RandomGenerator();
