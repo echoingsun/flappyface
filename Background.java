@@ -42,6 +42,9 @@ public class Background extends GCanvas implements Constants{
 		Blocks upper = new Blocks (true);
 		double upperY = bottomY - rg.nextDouble (this.getHeight() * 0.3, this.getHeight() * 0.5) - upper.getImg().getHeight();
 		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
+		
+		bottom.moveLeft();
+		upper.moveLeft();
 	}
 	
 	public GImage getImg() {
