@@ -46,8 +46,8 @@ public class Contest_Run extends Program implements Constants {
 
 			for (int i = 0; i < sky.pairArray.size(); i++){
 				if (sky.pairArray.get(i).getX() + BLOCK_WIDTH < 200){
-					//blockPairs.remove(sky.pairArray.get(i));
-					sky.remove(sky.pairArray.get(i));
+					blockPairs.remove(sky.pairArray.get(i));
+					//sky.remove(sky.pairArray.get(i));
 				}
 			}
 			
