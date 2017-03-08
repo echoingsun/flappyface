@@ -23,6 +23,8 @@ public class Contest_Run extends Program implements Constants {
 			bird.freeMove();
 			pause(DELAY);
 			
+			
+			
 		}
 
 	}

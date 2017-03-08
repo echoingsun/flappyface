@@ -15,9 +15,6 @@ public class Pair extends GCompound implements Constants{
 				
 		this.add(upper.getImg(),BLOCK_START_POINT, upperY);
 		this.add(bottom.getImg(), BLOCK_START_POINT, bottomY);
-
-/*		pair.add(upper.getImg());
-		pair.add(bottom.getImg());*/
 	}
 	
 	public void moveLeft(){
