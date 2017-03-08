@@ -26,7 +26,7 @@ public class Contest_Run extends Program implements Constants {
 			
 			blockPairs.moveLeft();
 			pause(DELAY);
-			
+
 			
 			
 		}
