@@ -17,8 +17,8 @@ public class Pair extends GCompound implements Constants{
 		double bottomY = rg.nextDouble (0.6*APPLICATION_HEIGHT, 0.8*APPLICATION_HEIGHT);
 		double upperY = bottomY - rg.nextDouble(0.3*APPLICATION_HEIGHT, 0.6*APPLICATION_HEIGHT) - upper.getImg().getHeight();
 				
-		pair.add(upper.getImg(),0,upperY);
-		pair.add(bottom.getImg(), 0, bottomY);
+		sky.add(upper.getImg(),BLOCK_START_POINT, upperY);
+		pair.add(bottom.getImg(), BLOCK_START_POINT, bottomY);
 
 	}
 }
