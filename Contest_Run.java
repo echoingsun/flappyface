@@ -10,6 +10,7 @@ public class Contest_Run extends Program implements Constants {
 	private Background sky = new Background();
 	private Bird bird = new Bird();
 	private Pairs blockPairs = new Pairs();
+	private double distance = 0;
 
 	public void init() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
