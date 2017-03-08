@@ -1,7 +1,7 @@
 import acm.graphics.*;
 import acm.util.RandomGenerator;
 
-public class Blocks implements Constants {
+public class Blocks extends GCompound implements Constants {
 
 	GImage img;
 
