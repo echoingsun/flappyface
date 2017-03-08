@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -30,11 +31,13 @@ public class Contest_Run extends Program implements Constants {
 			
 			blockPairs.moveLeft();
 			if (distance <= BLOCK_WIDTH){
-				distance += blockPairs.vx;
+				distance += Math.abs(blockPairs.vx);
 			} else {
 				distance = 0;
 				
 				GOval oval = new GOval (100,100);
+				oval.setFilled(true);
+				oval.setColor(Color.BLACK);
 				sky.add(oval,300,300);
 /*				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
 				blockPairs.add(newBlockPairs);
