@@ -30,13 +30,13 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 			
 			blockPairs.moveLeft();
-			if (distance <= BLOCK_WIDTH){
+			if (distance <= BLOCK_INTERVAL){
 				distance += Math.abs(blockPairs.vx);
 			} else {
-				distance = 0;
+
 				double x = blockPairs.getX();
 				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
-				double x1 = newBlockPairs.getX();
+
 				blockPairs.add(newBlockPairs);
 				blockPairs.moveLeft();
 			}			
