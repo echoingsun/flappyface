@@ -42,8 +42,14 @@ public class Background extends GCanvas implements Constants{
 		double upperY = bottomY - rg.nextDouble (APPLICATION_HEIGHT * 0.3, APPLICATION_HEIGHT * 0.5) - upper.getImg().getHeight();
 		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
 		
-		pair.add(bottom.getImg());
+/*		pair.add(bottom.getImg());
 		pair.add(upper.getImg());
+		
+		
+			
+			double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
+			pair.move(vx, 0);*/
+
 
 	}
 	
