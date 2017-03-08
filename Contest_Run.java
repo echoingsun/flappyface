@@ -20,7 +20,7 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		blockPairs = sky.addBlockPairs(-500);
+		blockPairs = sky.addBlockPairs(0);
 		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
