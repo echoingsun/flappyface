@@ -26,4 +26,6 @@ public class Pairs extends GCompound implements Constants {
 		this.move(vx, 0);
 
 	}
+	
+	
 }
