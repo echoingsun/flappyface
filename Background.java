@@ -32,9 +32,18 @@ public class Background extends GCanvas implements Constants{
 	
 
 	public void addBlockPair(){
-		Pair newPair = new Pair(this);
-		this.add(newPair,0,0);
+		GCompound pair = new GCompound();
 		
+		Blocks bottom = new Blocks (false);
+		double bottomY = rg.nextDouble(APPLICATION_HEIGHT * 0.6, APPLICATION_HEIGHT * 0.8);
+		this.add(bottom.getImg(), BLOCK_START_POINT, bottomY);
+		
+		Blocks upper = new Blocks (true);
+		double upperY = bottomY - rg.nextDouble (APPLICATION_HEIGHT * 0.3, APPLICATION_HEIGHT * 0.5) - upper.getImg().getHeight();
+		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
+		
+		pair.add(bottom.getImg());
+		pair.add(upper.getImg());
 
 	}
 	
