@@ -34,7 +34,7 @@ public class Contest_Run extends Program implements Constants {
 				distance += Math.abs(blockPairs.vx);
 			} else {
 				distance = 0;
-
+				double x = blockPairs.getX();
 				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
 				blockPairs.add(newBlockPairs);
 				blockPairs.moveLeft();
