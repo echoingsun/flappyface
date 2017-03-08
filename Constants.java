@@ -3,6 +3,9 @@ public interface Constants {
 	public static final int APPLICATION_WIDTH = 500;
 	public static final int APPLICATION_HEIGHT = 712;
 	
+	public static final int BCKGRND_WIDTH = 1200;
+	public static final int BCKGRND_HEIGHT = 712;
+		
 	public static final int BLOCK_HEIGHT = 793;
 	public static final int BLOCK_WIDTH = 138;
 	
