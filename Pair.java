@@ -2,13 +2,11 @@ import acm.graphics.GCompound;
 import acm.util.RandomGenerator;
 
 public class Pair extends GCompound implements Constants{
-	GCompound pair;
+
 	RandomGenerator rg = new RandomGenerator();
 
-	
 	public Pair (){
-		pair = new GCompound();
-		
+				
 		Blocks bottom = new Blocks (false);
 		Blocks upper = new Blocks (true);
 		
