@@ -9,6 +9,7 @@ public class Pair extends GCompound implements Constants{
 	public Pair (){
 		Blocks bottom = new Blocks (false);
 		double bottomY = rg.nextDouble(APPLICATION_HEIGHT * 0.6, APPLICATION_HEIGHT * 0.8);
+		pair.add(bottom, BLOCK_START_POINT, bottomY);
 		
 		Blocks upper = new Blocks (true);
 		double upperY = bottomY - rg.nextDouble (APPLICATION_HEIGHT * 0.3, APPLICATION_HEIGHT * 0.5) - upper.getImg().getHeight();
