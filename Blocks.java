@@ -3,7 +3,7 @@ import acm.util.RandomGenerator;
 
 public class Blocks implements Constants {
 
-	GImage img;
+	private GImage img;
 
 	public Blocks(boolean isFlip) {
 
