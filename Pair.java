@@ -1,32 +1,45 @@
 import acm.graphics.GCompound;
 import acm.util.RandomGenerator;
 
-public class Pair extends GCompound implements Constants{
+public class Pair implements Constants{
 	
 	GCompound pair;
 	RandomGenerator rg = new RandomGenerator();
 	
-	public Pair (Background sky){
+	public Pair (){
 		Blocks bottom = new Blocks (false);
 		double bottomY = rg.nextDouble(APPLICATION_HEIGHT * 0.6, APPLICATION_HEIGHT * 0.8);
+		
 		Blocks upper = new Blocks (true);
 		double upperY = bottomY - rg.nextDouble (APPLICATION_HEIGHT * 0.3, APPLICATION_HEIGHT * 0.5) - upper.getImg().getHeight();
-		sky.add(bottom.getImg(), BLOCK_START_POINT, bottomY);
-		sky.add(upper.getImg(), BLOCK_START_POINT, upperY);
+		
+		
 		
 		pair.add(bottom.getImg());
 		pair.add(upper.getImg());
 		
 	}
 	
-	public void moveLeft(Bird bird, Background sky){
-		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
-		while (bird.notHit(sky)) {
-			pair.move(vx, 0);
-			pause(DELAY);
-			
-		}
+	public void moveLeft(){
 		
+		
+		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
+		pair.move(vx, 0);
 	}
+	
+	/*
+	 * Method addBlocks add a pair of blocks to the screen.
+	 */
+	public void addBlocks() {
+		// add the bottom block.
+		Blocks bottom = new Blocks (false);
+		
+		this.add(bottom.getImg(), BLOCK_START_POINT,bottomY);
+		
+		// add the upper block
+		Blocks upper = new Blocks (true);
+		
+		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
 
+	}
 }
