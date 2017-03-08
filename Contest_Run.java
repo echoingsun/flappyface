@@ -28,10 +28,8 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 			
 			blockPairs.moveLeft();
-			boolean distanceCheck = distance<=BLOCK_WIDTH;
 			if (distance <= BLOCK_WIDTH){
-				double a = blockPairs.vx;
-				distance += a;
+				distance += blockPairs.vx;
 			} else {
 				distance = 0;
 				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
