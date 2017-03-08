@@ -34,14 +34,6 @@ public class Background extends GCanvas implements Constants{
 	public void addBlockPair(){
 		Pair pair = new Pair();
 		this.add(pair, 0, 0);
-		
-		while(true){
-			pair.moveLeft();
-			pause(DELAY);
-		}
-		
-
-
 
 	}
 	
