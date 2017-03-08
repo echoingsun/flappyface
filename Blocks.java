@@ -12,11 +12,14 @@ public class Blocks implements Constants {
 
 		if (isFlip == false){
 			img = upperBlock;
+			
 		} else {
 			img = bottomBlock;
 		}
 		
 	}
 
-
+	public GImage getImg(){
+		return img;
+	}
 }
