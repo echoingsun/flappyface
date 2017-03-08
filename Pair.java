@@ -1,4 +1,5 @@
+import acm.graphics.GCompound;
 
-public class Pair {
+public class Pair extends GCompound implements Constants{
 
 }
