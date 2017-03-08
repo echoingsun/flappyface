@@ -38,11 +38,18 @@ public class Contest_Run extends Program implements Constants {
 				distance = 0;
 				
 				Pairs newBlockPairs = sky.addBlockPairs(BLOCK_START_POINT);
+				sky.pairArray.add(newBlockPairs);
 				blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
 				
 			}			
 			pause(DELAY);
 
+			for (int i = 0; i < sky.pairArray.size(); i++){
+				if (sky.pairArray.get(i).getX() + BLOCK_WIDTH < 0){
+					blockPairs.remove(sky.pairArray.get(i));
+					sky.remove(sky.pairArray.get(i));
+				}
+			}
 			
 			
 		}
