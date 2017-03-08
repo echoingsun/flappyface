@@ -38,8 +38,8 @@ public class Background extends GCanvas implements Constants{
 		this.add(bottom.getImg(), 200,-400);
 		
 		// add the upper block
-		/*Blocks upper = new Blocks (true);
-		this.add(upper.getImg(), 200, -500);*/
+		Blocks upper = new Blocks (true);
+		this.add(upper.getImg(), 200, -500);
 	}
 	
 	public GImage getImg() {
