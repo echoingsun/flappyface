@@ -6,6 +6,8 @@ import acm.util.RandomGenerator;
 public class Background extends GCanvas implements Constants{
 
 	private GImage img;
+	RandomGenerator rg = new RandomGenerator();
+	
 	public void init (){
 		addBackground();
 	}
@@ -22,8 +24,6 @@ public class Background extends GCanvas implements Constants{
 	 */
 	public void addBird(Bird bird) {
 		
-		RandomGenerator rg = new RandomGenerator();
-		
 		double x = 0;
 		double y = rg.nextDouble (0, (this.getHeight()- bird.getImg().getHeight()) * 0.5);		
 		this.add (bird.getImg(), x, y);
@@ -35,11 +35,13 @@ public class Background extends GCanvas implements Constants{
 	public void addBlocks() {
 		// add the bottom block.
 		Blocks bottom = new Blocks (false);
-		this.add(bottom.getImg(), BLOCK_START_POINT,400);
+		double bottomY = rg.nextDouble(this.getHeight() * 0.6, this.getHeight() * 0.8);
+		this.add(bottom.getImg(), BLOCK_START_POINT,bottomY);
 		
 		// add the upper block
 		Blocks upper = new Blocks (true);
-		this.add(upper.getImg(), BLOCK_START_POINT, -500);
+		double upperY = bottomY - rg.nextDouble (this.getHeight() * 0.3, this.getHeight() * 0.5) - upper.getImg().getHeight();
+		this.add(upper.getImg(), BLOCK_START_POINT, upperY);
 	}
 	
 	public GImage getImg() {
