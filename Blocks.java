@@ -23,10 +23,5 @@ public class Blocks implements Constants {
 		return img;
 	}
 
-	public void moveLeft(){
-		
-		RandomGenerator rg = new RandomGenerator();
-		double vx = rg.nextDouble(-MAX_SPEED, -MIN_SPEED);
-		img.move(vx, 0);
-	}
+
 }
