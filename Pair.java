@@ -8,14 +8,15 @@ public class Pair extends GCompound implements Constants{
 	Blocks upper;
 	Blocks bottom;
 	
-	public Pair (){
+	public Pair (Background sky){
 		pair = new GCompound();
-		upper = new Blocks (true);
+		
 		bottom = new Blocks (false);
+		upper = new Blocks (true);
 		
-		double upperY = 0;
-		double bottomY = upperY + upper.getImg().getHeight() + rg.nextDouble(0.3*APPLICATION_HEIGHT, 0.5* APPLICATION_HEIGHT);
-		
+		double bottomY = rg.nextDouble (0.6*APPLICATION_HEIGHT, 0.8*APPLICATION_HEIGHT);
+		double upperY = bottomY - rg.nextDouble(0.3*APPLICATION_HEIGHT, 0.6*APPLICATION_HEIGHT) - upper.getImg().getHeight();
+				
 		pair.add(upper.getImg(),0,upperY);
 		pair.add(bottom.getImg(), 0, bottomY);
 
