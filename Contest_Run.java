@@ -34,14 +34,10 @@ public class Contest_Run extends Program implements Constants {
 				distance += Math.abs(blockPairs.vx);
 			} else {
 				distance = 0;
-				
-				GOval oval = new GOval (100,100);
-				oval.setFilled(true);
-				oval.setColor(Color.BLACK);
-				sky.add(oval,300,300);
-/*				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
+
+				Pairs newBlockPairs = sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL);
 				blockPairs.add(newBlockPairs);
-				blockPairs.moveLeft();*/
+				blockPairs.moveLeft();
 			}			
 			pause(DELAY);
 
