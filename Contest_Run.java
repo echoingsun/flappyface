@@ -25,13 +25,14 @@ public class Contest_Run extends Program implements Constants {
 			bird.freeMove();
 			pause(DELAY);
 			
-/*			blockPairs.moveLeft();
+			blockPairs.moveLeft();
 			if (distance <= BLOCK_WIDTH){
 				distance += blockPairs.vx;
 			} else {
 				distance = 0;
+				blockPairs.add(sky.addBlockPairs(blockPairs.getX() + BLOCK_INTERVAL));
 			}			
-			pause(DELAY);*/
+			pause(DELAY);
 
 			
 			
