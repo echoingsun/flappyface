@@ -33,7 +33,11 @@ public class Background extends GCanvas implements Constants{
 	 * Method addBlocks add a pair of blocks to the screen.
 	 */
 	public void addBlocks() {
+		// add the bottom block.
+		Blocks bottom = new Blocks (false);
 		
+		// add the upper block
+		Blocks upper = new Blocks (true);
 	}
 	
 	public GImage getImg() {
