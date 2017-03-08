@@ -4,9 +4,8 @@ import acm.util.RandomGenerator;
 public class Blocks implements Constants {
 	
 	GImage img;
-	boolean isFlip;
 
-	public Blocks() {
+	public Blocks(boolean isFlip) {
 		RandomGenerator rg = new RandomGenerator();
 		GImage upperBlock = new GImage ("pipeFlip.png");
 		GImage bottomBlock = new GImage ("pipe.png");
@@ -18,10 +17,6 @@ public class Blocks implements Constants {
 		}
 		
 	}
-	
-	public void setFlip(){
-		isFlip = false;
-		isFlip = true;
-	}
+
 
 }
