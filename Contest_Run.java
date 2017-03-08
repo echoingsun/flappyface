@@ -26,6 +26,7 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 			
 			blockPairs.moveLeft();
+			boolean distanceCheck = distance<=BLOCK_WIDTH;
 			if (distance <= BLOCK_WIDTH){
 				distance += blockPairs.vx;
 			} else {
