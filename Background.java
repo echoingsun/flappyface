@@ -31,9 +31,9 @@ public class Background extends GCanvas implements Constants{
 	}
 	
 
-	public Pairs addBlockPairs(){
+	public Pairs addBlockPairs(double x){
 		Pairs pairs = new Pairs();
-		this.add(pairs, 0, 0);
+		this.add(pairs, x, 0);
 		return pairs;
 	}
 	
