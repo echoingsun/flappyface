@@ -37,6 +37,7 @@ public class Background extends GCanvas implements Constants{
 		
 		while(true){
 			pair.moveLeft();
+			pause(DELAY);
 		}
 		
 
