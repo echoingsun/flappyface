@@ -35,11 +35,11 @@ public class Background extends GCanvas implements Constants{
 	public void addBlocks() {
 		// add the bottom block.
 		Blocks bottom = new Blocks (false);
-		this.add(bottom.getImg(), 200,400);
+		this.add(bottom.getImg(), BLOCK_START_POINT,400);
 		
 		// add the upper block
 		Blocks upper = new Blocks (true);
-		this.add(upper.getImg(), 200, -500);
+		this.add(upper.getImg(), BLOCK_START_POINT, -500);
 	}
 	
 	public GImage getImg() {
