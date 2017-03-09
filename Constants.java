@@ -26,7 +26,7 @@ public interface Constants {
 	
 	public static final int TITLE_SHAKE = 100;
 	public static final int TITLE_MOVE_AMT = 5;
-	public static final int TITLE_UPPER_BORDER = 180;
+	public static final int TITLE_UPPER_BORDER = 190;
 	public static final int TITLE_LOWER_BORDER = 206;
 	
 	public static final int PAIR_NUM = 3;
