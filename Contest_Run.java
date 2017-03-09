@@ -34,6 +34,7 @@ public class Contest_Run extends Program implements Constants {
 		
 		
 		loadCanvas();
+		enableMouse();
 		
 		loadTitle();
 		
@@ -99,6 +100,15 @@ public class Contest_Run extends Program implements Constants {
 		});
 	}
 
+	private void enableBirdMove() {
+		sky.addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				
+				bird.moveUp();
+			}
+		});
+	}
+	
 	private void loadBird() {
 		sky.addBird(bird);
 		
