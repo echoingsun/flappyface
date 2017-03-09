@@ -22,7 +22,7 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
 	
-	private boolean mouseClicked = false;
+	private int mouseClicked = 0;
 	
 	private double count = 0;
 
@@ -69,7 +69,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.addDisplay("Title", title);
 		sky.addDisplay("ClickToStart", clickToStart);
 		
-		while (mouseClicked == false){
+		while (mouseClicked == 0){
 			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
 				title.getImg().move(0, -TITLE_MOVE_AMT);
 				pause(TITLE_SHAKE);
@@ -104,7 +104,7 @@ public class Contest_Run extends Program implements Constants {
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				mouseClicked = true;
+				mouseClicked = 1;
 				
 			}
 		});
