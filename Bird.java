@@ -35,7 +35,7 @@ public class Bird implements Constants {
 
 	public void changeImg(){
 		
-		this.img.setImage(img03.getImage());
+		this.img.setImage("face_03.png");
 	}
 	
 	public void flip() {
