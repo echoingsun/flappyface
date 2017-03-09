@@ -11,7 +11,7 @@ public class Contest_Run extends Program implements Constants {
 
 	private Background sky = new Background();
 	private Bird bird = new Bird();
-	private PairComp comp = new PairComp();
+	private Pairs blockPairs = new Pairs();
 	
 
 	public void init() {
@@ -22,9 +22,7 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		Pairs blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
-		comp.add(blockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
-		println(comp.getBounds());
+		blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
 		sky.pairArray.add(blockPairs);
 		
 		
@@ -33,17 +31,15 @@ public class Contest_Run extends Program implements Constants {
 			bird.freeMove();
 			pause(DELAY);
 			
-			comp.moveLeft();
+			blockPairs.moveLeft();
 			if (distance <= BLOCK_INTERVAL + BLOCK_WIDTH){
-				distance += Math.abs(comp.vx);
+				distance += Math.abs(blockPairs.vx);
 			} else {
 				distance = 0;
 				
 				Pairs newBlockPairs = sky.addBlockPairs(0);
 				sky.pairArray.add(newBlockPairs);
-				comp.add(newBlockPairs, comp.getWidth() + BLOCK_INTERVAL, 0);
-				
-				//blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
+				blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
 				
 			}			
 			pause(DELAY);
