@@ -11,6 +11,7 @@ public class Displays implements Constants {
 		switch (str){
 		case "Title" : img = new GImage ("FlappyFaceTitle.png"); break;
 		case "ClickToStart" : img = new GImage ("clicktostart.png"); break;
+		case "GameOver" : img = new GImage ("gameover.png"); break;
 		case "Points" : lbl = new GLabel( Integer.toString(pts));
 
 		}
