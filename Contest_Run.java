@@ -116,21 +116,13 @@ public class Contest_Run extends Program implements Constants {
 		Displays clickToStart = sky.addDisplay("ClickToStart");
 		
 		while (mouseClicked == false){
-			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_SHAKE);
-/*			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
-				title.getImg().move(0, -TITLE_MOVE_AMT);
-				pause(TITLE_SHAKE);
-			}
-			while (title.getImg().getY() <= TITLE_LOWER_BORDER){
-				title.getImg().move(0, TITLE_MOVE_AMT);
-				pause(TITLE_SHAKE);
-			}*/
+			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
 		
 		sky.remove(clickToStart.getImg());
 		while (title.getImg().getY() + title.getImg().getHeight() >=0){
 			title.getImg().move(0, - VY_DELTA);
-			pause(TITLE_SHAKE);
+			pause(TITLE_FLOAT);
 		}
 		
 		sky.remove(title.getImg());
