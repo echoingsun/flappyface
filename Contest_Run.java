@@ -71,7 +71,7 @@ public class Contest_Run extends Program implements Constants {
 				pause(DELAY);
 				count ++;
 				pts = count / 3;
-				updatePoints(ptsOnScreen,pts);
+				updatePoints(ptsOnScreen,pts, bird.getImg().getX() - ptsOnScreen.getLbl().getWidth(), bird.getImg().getY() + bird.getImg().getHeight() * 0.5);
 				if (pts % 100 == 0){
 					bird.flip();
 				}
