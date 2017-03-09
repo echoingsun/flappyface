@@ -99,12 +99,12 @@ public class Contest_Run extends Program implements Constants {
 		} 
 	}
 
-	private void floatDisplay (Displays ds, int upperBoarder, int lowerBoarder, double moveAmt, int delayTime){
-		while (ds.getImg().getY() >= upperBoarder){
+	private void floatDisplay (Displays ds, int upperBorder, int lowerBorder, double moveAmt, int delayTime){
+		while (ds.getImg().getY() >= upperBorder){
 			ds.getImg().move(0, -moveAmt);
 			pause(delayTime);
 		}
-		while (ds.getImg().getY() <= lowerBoarder){
+		while (ds.getImg().getY() <= lowerBorder){
 			ds.getImg().move(0, moveAmt);
 			pause(delayTime);
 		}
@@ -116,15 +116,15 @@ public class Contest_Run extends Program implements Constants {
 		Displays clickToStart = sky.addDisplay("ClickToStart");
 		
 		while (mouseClicked == false){
-			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BOARDER,TITLE_MOVE_AMT,TITLE_SHAKE);
-			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
+			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_SHAKE);
+/*			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
 				title.getImg().move(0, -TITLE_MOVE_AMT);
 				pause(TITLE_SHAKE);
 			}
 			while (title.getImg().getY() <= TITLE_LOWER_BORDER){
 				title.getImg().move(0, TITLE_MOVE_AMT);
 				pause(TITLE_SHAKE);
-			}
+			}*/
 		}
 		
 		sky.remove(clickToStart.getImg());
