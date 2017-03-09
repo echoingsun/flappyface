@@ -81,7 +81,7 @@ public class Contest_Run extends Program implements Constants {
 		centerBird();
 	
 		Displays gameOver = sky.addDisplay("GameOver");
-		floatDisplay(gameOver,TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
+		floatDisplay(gameOver,GAMEOVER_UPPER_BORDER, GAMOVER_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		println(count);
 		println(pts);
 		
