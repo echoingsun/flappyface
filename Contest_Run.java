@@ -73,7 +73,7 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void gameOver() {
-		sky.removeMouseListener(l);
+		//sky.removeMouseListener(l);
 		
 		bird.changeImg();
 		pause(GAMEOVER_DELAY);
