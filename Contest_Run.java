@@ -57,7 +57,7 @@ public class Contest_Run extends Program implements Constants {
 				if (count == 300){
 					count = 0;
 					pts = pts + PTS_DELTA;
-					bird.flip();
+					//bird.flip();
 
 				}
 			}
@@ -66,13 +66,33 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 
 		}
+		
+		gameOver();
+
+
+	}
+
+	private void gameOver() {
 		bird.changeImg();
-		pause(2000);
+		pause(GAMEOVER_DELAY);
 		sky.remove(blockPairs1);
 		sky.remove(blockPairs2);
+		
+		centerBird();
 		println(count);
 		println(pts);
+		
+	}
 
+	private void centerBird() {
+
+		double cy = sky.getHeight() * 0.5;
+		while (bird.getImg().getY() + bird.getImg().getHeight() * 0.5 <= cy){
+			bird.getImg().move(0, MOVE_SPEED);
+		}
+		while (bird.getImg().getY() >= cy){
+			bird.getImg().move(0, -MOVE_SPEED);
+		} 
 	}
 
 	private void loadTitle() {
