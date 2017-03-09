@@ -13,7 +13,7 @@ public class Pairs extends GCompound implements Constants {
 			Blocks upper = new Blocks(true);
 
 			double bottomY = rg.nextDouble(0.6 * APPLICATION_HEIGHT, 0.8 * APPLICATION_HEIGHT);
-			double upperY = bottomY - rg.nextDouble(0.3 * APPLICATION_HEIGHT, 0.6 * APPLICATION_HEIGHT)
+			double upperY = bottomY - rg.nextDouble(0.3 * APPLICATION_HEIGHT, 0.5 * APPLICATION_HEIGHT)
 					- upper.getImg().getHeight();
 
 			this.add(upper.getImg(), BLOCK_INTERVAL + (BLOCK_INTERVAL + BLOCK_WIDTH)* i, upperY);
