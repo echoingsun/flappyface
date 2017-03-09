@@ -2,7 +2,7 @@ import acm.graphics.GLabel;
 
 public class Instructions extends GLabel implements Constants {
 
-	GLabel lbl;
+	private GLabel lbl;
 	public Instructions (String str, String content, int pts){
 		
 		if (str.equals("Instructions")){
