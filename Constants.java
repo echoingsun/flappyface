@@ -1,6 +1,6 @@
 
 public interface Constants {
-	public static final int APPLICATION_WIDTH = 500;
+	public static final int APPLICATION_WIDTH = 450;
 	public static final int APPLICATION_HEIGHT = 712;
 	
 	public static final int BCKGRND_WIDTH = 1200;
