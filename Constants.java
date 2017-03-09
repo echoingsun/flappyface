@@ -23,6 +23,7 @@ public interface Constants {
 	public static final double MOVE_SPEED = 1.5;
 	
 	public static final int DELAY = 4;
+	public static final int GAMEOVER_DELAY = 2000;
 	
 	public static final int TITLE_SHAKE = 100;
 	public static final double TITLE_MOVE_AMT = 1.5;
