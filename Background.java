@@ -40,7 +40,7 @@ public class Background extends GCanvas implements Constants{
 		return pairs;
 	}
 
-	public Display addDisplay(String str){
+	public Displays addDisplay(String str){
 		if (str.equals("Title")) {
 			Displays title = new Displays ("Title", "", 0);
 			double x = this.getWidth() * 0.5 - title.getImg().getWidth() * 0.5;
