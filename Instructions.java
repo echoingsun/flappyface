@@ -1,9 +1,11 @@
 import acm.graphics.GLabel;
 
-public class Instructions extends GLabel implements Constants {
+public class Instructions implements Constants {
 
 	private GLabel lbl;
 	public Instructions (String str, String content, int pts){
+		
+		lbl = new GLabel("");
 		
 		if (str.equals("Instructions")){
 			lbl = new GLabel (content);
@@ -13,6 +15,8 @@ public class Instructions extends GLabel implements Constants {
 		if (str.equals("Points")){
 			lbl = new GLabel( Integer.toString(pts));
 		}
+		
+	
 	}
 	
 	public GLabel getLbl (){
