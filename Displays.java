@@ -16,7 +16,7 @@ public class Displays implements Constants {
 		case "Points" : lbl = new GLabel(Integer.toString(pts)); lbl.setFont("Chalkboard-30");
 		case "PointsOnScreen" : lbl = new GLabel(Integer.toString(pts)); lbl.setFont("Chalkboard-24");
 		case "Instructions": img = new GImage ("Instructions.png"); break;
-		case "InstructionLabel" : img = new GImage ("InstructionLabel.png");break;
+		case "InstructionLabel": img = new GImage ("InstructionLabel.png");break;
 		}
 		
 	}
