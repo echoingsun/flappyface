@@ -59,6 +59,8 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 
 		}
+		
+		mouseClicked = 2;
 		//println(count);
 
 	}
@@ -111,12 +113,15 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void enableBirdMove() {
-		sky.addMouseListener(new MouseAdapter() {
-			public void mouseClicked(MouseEvent e) {
-				
-				bird.moveUp();
-			}
-		});
+		
+		while (mouseClicked == 1){
+			sky.addMouseListener(new MouseAdapter() {
+				public void mouseClicked(MouseEvent e) {
+					
+					bird.moveUp();
+				}
+			});
+		}
 	}
 	
 	private void loadBird() {
