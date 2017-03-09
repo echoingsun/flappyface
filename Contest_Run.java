@@ -97,6 +97,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.remove(blockPairs2);
 		
 		centerBird();
+		titleMusic.loop();
 		showGameOver();
 		
 		
