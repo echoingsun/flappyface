@@ -1,6 +1,10 @@
+
 /*
  * File: Contest_Run.java
  * ------------------------------
+ * This is the main class file for the game.
+ * This is a parody ;) to the runaway game "Flappy bird".
+ * Player uses the mouse to control the bird from falling or hitting the blocks (chimneys).
  * 
  */
 
@@ -20,7 +24,6 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
 	private PairComp comp = new PairComp();
-	
 
 	public void init() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -33,39 +36,33 @@ public class Contest_Run extends Program implements Constants {
 		blockPairs1 = sky.addBlockPairs(BLOCK_START_POINT);
 		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + BLOCK_INTERVAL);
 
-		
-
 		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
-			
-			
-			if (blockPairs1.getX() + blockPairs1.getWidth() <= - BLOCK_INTERVAL){
+
+			if (blockPairs1.getX() + blockPairs1.getWidth() <= -BLOCK_INTERVAL) {
 				sky.remove(blockPairs1);
 				blockPairs1 = blockPairs2;
-				blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + + BLOCK_INTERVAL);
+				blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + +BLOCK_INTERVAL);
 			} else {
 				blockPairs1.moveLeft();
-				
-			}			
+
+			}
 			pause(DELAY);
-			
+
 			blockPairs2.moveLeft();
 			pause(DELAY);
 
-/*			if (sky.pairArray.get(0).getX() + BLOCK_WIDTH < 200){
-				blockPairs = null;
-				for (int i = 1; i < sky.pairArray.size(); i ++){
-					blockPairs.add(sky.pairArray.get(i));
-				}
-				sky.remove(sky.pairArray.get(0));
-			}*/
-			
-			
+			/*
+			 * if (sky.pairArray.get(0).getX() + BLOCK_WIDTH < 200){ blockPairs
+			 * = null; for (int i = 1; i < sky.pairArray.size(); i ++){
+			 * blockPairs.add(sky.pairArray.get(i)); }
+			 * sky.remove(sky.pairArray.get(0)); }
+			 */
+
 		}
 
 	}
-
 
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
