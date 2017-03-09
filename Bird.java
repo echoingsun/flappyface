@@ -31,13 +31,10 @@ public class Bird implements Constants {
 	}
 	
 	public void flip(){
-		int i = 0;
-		if (i == 0){
+		if (this.img == img01){
 			this.img = img02;
-			i = 1;
 		} else {
 			this.img = img01;
-			i = 0;
 		}
 	}
 	
