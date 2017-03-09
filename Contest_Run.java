@@ -99,6 +99,7 @@ public class Contest_Run extends Program implements Constants {
 		
 		sky.remove(blockPairs1);
 		sky.remove(blockPairs2);
+		sky.remove(sky.getElementAt(5, 356));
 		
 		centerBird();
 		titleMusic.loop();
