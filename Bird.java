@@ -12,6 +12,12 @@ public class Bird implements Constants {
 	private GImage[] imgArray = new GImage[4];
 
 	public Bird() {
+		
+		setImageSize();
+		this.img = img01;
+	}
+
+	private void setImageSize() {
 		imgArray[0] = img01;
 		imgArray[1] = img02;
 		imgArray[2] = img03;
@@ -20,8 +26,7 @@ public class Bird implements Constants {
 		for (int i = 0; i < imgArray.length; i ++){
 			imgArray[i].setSize(BIRD_WIDTH, BIRD_HEIGHT);
 		}
-
-		this.img = img01;
+		
 	}
 
 	public GImage getImg() {
