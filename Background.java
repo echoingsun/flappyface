@@ -39,7 +39,14 @@ public class Background extends GCanvas implements Constants{
 		this.add(pairs, x, 0);
 		return pairs;
 	}
-	
+
+	public void addDisplay(String str, Displays ds){
+		if (str.equals("Title")) {
+			double x = this.getWidth() * 0.5 - ds.getImg().getWidth() * 0.5;
+			double y = this.getHeight() * 0.5 - ds.getImg().getHeight() * 0.5;		
+			this.add (ds.getImg(), x, y);
+		}
+	}
 	public GImage getImg() {
 		return img;
 	}
