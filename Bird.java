@@ -25,6 +25,7 @@ public class Bird implements Constants {
 		double vy = rg.nextDouble(FALL_MIN_SPEED, FALL_MAX_SPEED);
 		this.img.move(vx, vy);
 	}
+	
 
 	public boolean notHit(Background sky){
 
