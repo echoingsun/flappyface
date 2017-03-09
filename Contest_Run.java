@@ -44,6 +44,7 @@ public class Contest_Run extends Program implements Constants {
 		loadBlocks();
 		
 		while (bird.notHit(sky)) {
+			bird.flip();
 			bird.freeMove();
 			pause(DELAY);
 
