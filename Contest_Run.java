@@ -70,10 +70,8 @@ public class Contest_Run extends Program implements Constants {
 				count ++;
 				pts = count / 3;
 				updatePoints(ptsOnScreen,pts);
-				if (pts == 100){
-
+				if (pts % 100 == 0){
 					bird.flip();
-
 				}
 			}
 
@@ -94,8 +92,6 @@ public class Contest_Run extends Program implements Constants {
 		theme.stop();
 		
 		sky.removeMouseListener(myListener);
-		
-		//pts = pts + count / (BLOCK_INTERVAL / PTS_DELTA);
 		
 		bird.changeImg();
 		pause(GAMEOVER_DELAY);
