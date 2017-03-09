@@ -110,11 +110,11 @@ public class Contest_Run extends Program implements Constants {
 	private void centerBird() {
 
 		double cy = sky.getHeight() * 0.5;
-		while (bird.getImg().getY() + bird.getImg().getHeight() * 0.5 <= cy){
+		while (bird.getImg().getY() + bird.getImg().getHeight() * 0.5 < cy){
 			bird.getImg().move(0, MOVE_SPEED);
 			pause(DELAY);
 		}
-		while (bird.getImg().getY() + bird.getImg().getHeight() * 0.5 >= cy){
+		while (bird.getImg().getY() + bird.getImg().getHeight() * 0.5 > cy){
 			bird.getImg().move(0, -MOVE_SPEED);
 			pause(DELAY);
 		} 
