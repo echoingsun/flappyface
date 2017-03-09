@@ -13,6 +13,7 @@ public class Contest_Run extends Program implements Constants {
 	private Bird bird = new Bird();
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
+	private PairComp comp = new PairComp();
 	
 
 	public void init() {
@@ -26,6 +27,8 @@ public class Contest_Run extends Program implements Constants {
 		blockPairs1 = sky.addBlockPairs(BLOCK_START_POINT);
 		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + BLOCK_INTERVAL);
 		
+		comp.add(blockPairs1);
+		comp.add(blockPairs2);
 		
 
 		while (bird.notHit(sky)) {
@@ -38,21 +41,15 @@ public class Contest_Run extends Program implements Constants {
 				blockPairs1 = blockPairs2;
 				blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + + BLOCK_INTERVAL);
 			} else {
-				blockPairs1.moveLeft();
+				//blockPairs1.moveLeft();
+				comp.move(-1.5, 0);
 				
 			}			
 			pause(DELAY);
 			
-			blockPairs2.moveLeft();
-			pause(DELAY);
+/*			blockPairs2.moveLeft();
+			pause(DELAY);*/
 
-/*			if (sky.pairArray.get(0).getX() + BLOCK_WIDTH < 200){
-				blockPairs = null;
-				for (int i = 1; i < sky.pairArray.size(); i ++){
-					blockPairs.add(sky.pairArray.get(i));
-				}
-				sky.remove(sky.pairArray.get(0));
-			}*/
 			
 			
 		}
