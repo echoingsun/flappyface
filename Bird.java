@@ -12,7 +12,6 @@ public class Bird implements Constants {
 	private boolean isFlipped = false;
 	
 	public String[] fileNames = new String[4];
-	fileNames[0] = "face_01.png";
 	
 
 	public Bird() {
