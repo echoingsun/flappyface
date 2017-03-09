@@ -48,12 +48,13 @@ public class Contest_Run extends Program implements Constants {
 		loadTitle();
 		
 		loadBird();
-		theme.loop();
+		
 		enableBirdMove();
 		
 		loadBlocks();
 		
 		while (bird.notHit(sky)) {
+			theme.loop();
 			bird.freeMove();
 			pause(DELAY);
 			
