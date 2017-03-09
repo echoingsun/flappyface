@@ -4,8 +4,7 @@ import acm.util.RandomGenerator;
 public class Pairs extends GCompound implements Constants {
 
 	RandomGenerator rg = new RandomGenerator();
-	double vx = rg.nextDouble(-MOVE_MAX_SPEED, -MOVE_MIN_SPEED);
-	double moveSpeed = vx;
+
 
 	public Pairs() {
 
@@ -24,7 +23,7 @@ public class Pairs extends GCompound implements Constants {
 	}
 
 	public void moveLeft() {
-		this.move(moveSpeed, 0);
+		this.move(-1.5, 0);
 
 	}
 }
