@@ -45,6 +45,10 @@ public class Background extends GCanvas implements Constants{
 			double x = this.getWidth() * 0.5 - ds.getImg().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 - ds.getImg().getHeight() * 0.5;		
 			this.add (ds.getImg(), x, y);
+		} else if (str.equals("ClickToStart")){
+			double x = this.getWidth() * 0.5 - ds.getImg().getWidth() * 0.5;
+			double y = this.getHeight() * 0.5 + ds.getImg().getWidth();
+			this.add (ds.getImg(), x, y);
 		}
 	}
 	public GImage getImg() {
