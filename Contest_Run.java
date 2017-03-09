@@ -107,6 +107,10 @@ public class Contest_Run extends Program implements Constants {
 
 		
 	}
+	
+	private void updatePoints(Displays points, int pts){
+		points.getLbl().setLabel(Integer.toString(pts));
+	}
 
 	private void showGameOver() {
 		
