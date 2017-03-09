@@ -12,6 +12,7 @@ public class Displays implements Constants {
 		case "Title" : img = new GImage ("FlappyFaceTitle.png"); break;
 		case "ClickToStart" : img = new GImage ("clicktostart.png"); break;
 		case "GameOver" : img = new GImage ("gameover.png"); break;
+		case "Score" : img = new GImage("score.png"); break;
 		case "Points" : lbl = new GLabel( Integer.toString(pts));
 
 		}
