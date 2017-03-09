@@ -23,7 +23,7 @@ public interface Constants {
 	public static final double MOVE_SPEED = 1.5;
 	
 	public static final int DELAY = 4;
-	public static final int TITLE_SHAKE = 40;
+	public static final int TITLE_SHAKE = 60;
 	
 	public static final int PAIR_NUM = 3;
 	
