@@ -78,6 +78,8 @@ public class Contest_Run extends Program implements Constants {
 			}
 		}
 		
+		sky.remove(title.getImg());
+		
 	}
 
 	private void replaceBlockPairs() {
