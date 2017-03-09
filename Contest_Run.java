@@ -83,6 +83,8 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void gameOver() {
+		theme.stop();
+		lose.play();
 		sky.removeMouseListener(myListener);
 		
 		pts = pts + count / (BLOCK_INTERVAL / PTS_DELTA);
