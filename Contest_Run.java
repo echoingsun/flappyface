@@ -73,6 +73,8 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void gameOver() {
+		sky.removeMouseListener(l);
+		
 		bird.changeImg();
 		pause(GAMEOVER_DELAY);
 		sky.remove(blockPairs1);
@@ -154,12 +156,13 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void enableBirdMove() {
-		sky.addMouseListener(new MouseAdapter() {
+		MouseAdapter myListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				
 				bird.moveUp();
 			}
-		});
+		};
+		sky.addMouseListener(myListener);
 	}
 	
 	private void loadBird() {
