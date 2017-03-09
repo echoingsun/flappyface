@@ -79,7 +79,7 @@ public class Background extends GCanvas implements Constants{
 			return pointsOnScreen;
 		} else if (str.equals("InstructionLabel")){
 			Displays instructionLabel = new Displays("InstructionLabel", 0);
-			double x = this.getWidth() * 0.5 - instructionLabel.getLbl().getWidth() * 0.5;
+			double x = this.getWidth() * 0.5 - instructionLabel.getImg().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 + 200;
 			this.add (instructionLabel.getLbl(), x, y);
 			return instructionLabel;
