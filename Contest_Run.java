@@ -79,8 +79,8 @@ public class Contest_Run extends Program implements Constants {
 		sky.remove(blockPairs2);
 		
 		centerBird();
-		Displays gameOver = new Displays("GameOver", "",0);
-		sky.addDisplay("GameOver", gameOver);
+	
+		Displays gameOver = sky.addDisplay("GameOver");
 		println(count);
 		println(pts);
 		
@@ -100,10 +100,9 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void loadTitle() {
-		Displays title = new Displays ("Title", "", 0);
-		Displays clickToStart = new Displays ("ClickToStart", "", 0);
-		sky.addDisplay("Title", title);
-		sky.addDisplay("ClickToStart", clickToStart);
+
+		Displays title = sky.addDisplay("Title");
+		Displays clickToStart = sky.addDisplay("ClickToStart");
 		
 		while (mouseClicked == false){
 			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
