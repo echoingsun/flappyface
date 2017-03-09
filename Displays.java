@@ -1,9 +1,9 @@
 import acm.graphics.GLabel;
 
-public class Instructions implements Constants {
+public class Displays implements Constants {
 
 	private GLabel lbl;
-	public Instructions (String str, String content, int pts){
+	public Displays (String str, String content, int pts){
 		
 		lbl = new GLabel("");
 		
