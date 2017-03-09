@@ -88,12 +88,14 @@ public class Contest_Run extends Program implements Constants {
 		
 		
 		
-/*		println(count);
-		println(pts);*/
+
 		
 	}
 
 	private void showGameOver() {
+				println(count);
+		println(pts);
+		
 		Displays gameOver = sky.addDisplay("GameOver" , 0);
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
