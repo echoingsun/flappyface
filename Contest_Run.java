@@ -22,6 +22,8 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
 	
+	private boolean mouseClicked = false;
+	
 	private double count = 0;
 
 	public void init() {
@@ -33,7 +35,7 @@ public class Contest_Run extends Program implements Constants {
 		
 		loadCanvas();
 		
-		//loadTitle();
+		loadTitle();
 		
 		loadBird();
 		enableMouse();
@@ -64,6 +66,15 @@ public class Contest_Run extends Program implements Constants {
 		Displays title = new Displays ("Title", "", 0);
 		sky.addDisplay("Title", title);
 		
+		while (mouseClicked == false){
+			while (title.getImg().getY() >= 20){
+				title.getImg().move(0, -VY_DELTA);
+			}
+			while (title.getImg().getY() <= 300){
+				title.getImg().move(0, VY_DELTA);
+			}
+		}
+		
 	}
 
 	private void replaceBlockPairs() {
@@ -80,6 +91,7 @@ public class Contest_Run extends Program implements Constants {
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
+				mouseClicked = true;
 				bird.moveUp();
 			}
 		});
