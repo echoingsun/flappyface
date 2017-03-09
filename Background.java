@@ -74,7 +74,7 @@ public class Background extends GCanvas implements Constants{
 		} else if (str.equals("PointsOnScreen")){
 			Displays pointsOnScreen = new Displays("PointsOnScreen", pts);
 			double x = 5;
-			double y = pointsOnScreen.getLbl().getAscent();
+			double y = this.getHeight() * 0.5 + pointsOnScreen.getLbl().getAscent() * 0.5;
 			this.add (pointsOnScreen.getLbl(), x, y);
 			return pointsOnScreen;
 		}
