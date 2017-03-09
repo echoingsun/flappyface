@@ -57,7 +57,7 @@ public class Contest_Run extends Program implements Constants {
 				if (count == 300){
 					count = 0;
 					pts = pts + PTS_DELTA;
-					bird.flip();
+					//bird.flip();
 
 				}
 			}
@@ -67,6 +67,8 @@ public class Contest_Run extends Program implements Constants {
 
 		}
 		bird.changeImg();
+		sky.remove(blockPairs1);
+		sky.remove(blockPairs2);
 		println(count);
 		println(pts);
 
