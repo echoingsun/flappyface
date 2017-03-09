@@ -30,8 +30,8 @@ public interface Constants {
 	public static final int TITLE_UPPER_BORDER = 200;
 	public static final int TITLE_LOWER_BORDER = 206;
 	
-	public static final int GAMEOVER_UPPER_BORDER = 250;
-	public static final int GAMEOVER_LOWER_BORDER = 256;
+	public static final int GAMEOVER_UPPER_BORDER = 240;
+	public static final int GAMEOVER_LOWER_BORDER = 246;
 
 	
 	public static final int PAIR_NUM = 3;
