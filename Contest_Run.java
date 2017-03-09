@@ -65,8 +65,9 @@ public class Contest_Run extends Program implements Constants {
 
 	private void loadTitle() {
 		Displays title = new Displays ("Title", "", 0);
+		Displays clickToStart = new Displays ("ClickToStart", "", 0);
 		sky.addDisplay("Title", title);
-		
+		sky.addDisplay("ClickToStart", clickToStart);
 		while (mouseClicked == false){
 			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
 				title.getImg().move(0, -TITLE_MOVE_AMT);
