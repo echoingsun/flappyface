@@ -10,6 +10,10 @@ public class Bird implements Constants {
 	private GImage img04 = new GImage("face_04.png");
 	
 	private boolean isFlipped = false;
+	
+	public String[] fileNames = new String[4];
+	fileNames[0] = "face_01.png";
+	
 
 	public Bird() {
 		this.img = img01;
