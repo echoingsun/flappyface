@@ -89,9 +89,11 @@ public class Contest_Run extends Program implements Constants {
 		double cy = sky.getHeight() * 0.5;
 		while (bird.getImg().getY() + bird.getImg().getHeight() * 0.5 <= cy){
 			bird.getImg().move(0, MOVE_SPEED);
+			pause(DELAY);
 		}
 		while (bird.getImg().getY() >= cy){
 			bird.getImg().move(0, -MOVE_SPEED);
+			pause(DELAY);
 		} 
 	}
 
