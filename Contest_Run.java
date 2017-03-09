@@ -69,11 +69,11 @@ public class Contest_Run extends Program implements Constants {
 		
 		while (mouseClicked == false){
 			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
-				title.getImg().move(0, -VY_DELTA);
+				title.getImg().move(0, -TITLE_MOVE_AMT);
 				pause(TITLE_SHAKE);
 			}
 			while (title.getImg().getY() <= TITLE_LOWER_BORDER){
-				title.getImg().move(0, VY_DELTA);
+				title.getImg().move(0, TITLE_MOVE_AMT);
 				pause(TITLE_SHAKE);
 			}
 		}
