@@ -4,10 +4,7 @@ import acm.util.RandomGenerator;
 public class Bird implements Constants {
 
 	private GImage img;
-	private GImage img01 = new GImage("face_01.png");
-	private GImage img02 = new GImage("face_02.png");
-	private GImage img03 = new GImage("face_03.png");
-	private GImage img04 = new GImage("face_04.png");
+
 	
 	private boolean isFlipped = false;
 	
@@ -15,7 +12,7 @@ public class Bird implements Constants {
 
 	public Bird() {
 		initializeArray();
-		this.img = img01;
+		this.img = new GImage(fileNames[0]);
 	}
 
 
