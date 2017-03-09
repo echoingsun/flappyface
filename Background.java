@@ -42,25 +42,31 @@ public class Background extends GCanvas implements Constants{
 
 	public Displays addDisplay(String str){
 		if (str.equals("Title")) {
-			Displays title = new Displays ("Title", "", 0);
+			Displays title = new Displays ("Title", 0);
 			double x = this.getWidth() * 0.5 - title.getImg().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 - title.getImg().getHeight() * 0.5;		
 			this.add (title.getImg(), x, y);
 			return title;
 		} else if (str.equals("ClickToStart")){
-			Displays clickToStart = new Displays ("ClickToStart", "", 0);
+			Displays clickToStart = new Displays ("ClickToStart", 0);
 			double x = this.getWidth() * 0.5 - clickToStart.getImg().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 + clickToStart.getImg().getHeight() * 0.6;
 			this.add (clickToStart.getImg(), x, y);
 			return clickToStart;
 		} else if (str.equals("GameOver")){
-			Displays gameOver = new Displays("GameOver", "",0);
+			Displays gameOver = new Displays("GameOver", 0);
 			double x = this.getWidth() * 0.5 - gameOver.getImg().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 - gameOver.getImg().getHeight();
 			this.add (gameOver.getImg(), x, y);
 			return gameOver;
 		} else if (str.equals("Score")){
-			Displays youVeScored = new Displays("Score", "",0);
+			Displays youVeScored = new Displays("Score",0);
+			double x = this.getWidth() * 0.5 - youVeScored.getImg().getWidth() * 0.5;
+			double y = this.getHeight() * 0.5 + youVeScored.getImg().getHeight();
+			this.add (youVeScored.getImg(), x, y);
+			return youVeScored;
+		} else if (str.equals("Pts")){
+			Displays points = new Displays("Points", );
 			double x = this.getWidth() * 0.5 - youVeScored.getImg().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 + youVeScored.getImg().getHeight();
 			this.add (youVeScored.getImg(), x, y);
