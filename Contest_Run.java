@@ -25,6 +25,7 @@ public class Contest_Run extends Program implements Constants {
 	private Bird bird = new Bird();
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
+	private Displays ptsOnScreen;
 	
 	private MouseAdapter myListener;
 	AudioClip theme = MediaTools.loadAudioClip("theme.au");
@@ -56,7 +57,7 @@ public class Contest_Run extends Program implements Constants {
 		
 		
 		loadBlocks();
-		Displays ptsOnScreen = sky.addDisplay("PointsOnScreen", pts);
+		ptsOnScreen = sky.addDisplay("PointsOnScreen", pts);
 		
 		while (bird.notHit(sky)) {
 			//updatePoints(ptsOnScreen, pts);
@@ -99,7 +100,7 @@ public class Contest_Run extends Program implements Constants {
 		
 		sky.remove(blockPairs1);
 		sky.remove(blockPairs2);
-		sky.remove(sky.getElementAt(5, 356));
+		sky.remove(ptsOnScreen.getLbl());
 		
 		centerBird();
 		titleMusic.loop();
