@@ -53,9 +53,10 @@ public class Contest_Run extends Program implements Constants {
 		theme.loop();
 		enableBirdMove();
 		
-		Displays ptsOnScreen = sky.addDisplay("PointsOnScreen", pts);
+		
 		
 		loadBlocks();
+		Displays ptsOnScreen = sky.addDisplay("PointsOnScreen", pts);
 		
 		while (bird.notHit(sky)) {
 			//updatePoints(ptsOnScreen, pts);
