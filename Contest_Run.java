@@ -40,11 +40,9 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 
 			if (blockPairs1.getX() + blockPairs1.getWidth() <= -BLOCK_INTERVAL) {
-				replaceBlockPairs();
-				
+				replaceBlockPairs();				
 			} else {
 				blockPairs1.moveLeft();
-
 			}
 			pause(DELAY);
 
