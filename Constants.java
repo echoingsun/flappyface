@@ -24,8 +24,8 @@ public interface Constants {
 	
 	public static final int DELAY = 4;
 	
-	public static final int TITLE_SHAKE = 200;
-	public static final int TITLE_MOVE_AMT = 3;
+	public static final int TITLE_SHAKE = 100;
+	public static final int TITLE_MOVE_AMT = 1.5;
 	public static final int TITLE_UPPER_BORDER = 200;
 	public static final int TITLE_LOWER_BORDER = 206;
 	
