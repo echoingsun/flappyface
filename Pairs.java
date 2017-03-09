@@ -4,7 +4,7 @@ import acm.util.RandomGenerator;
 public class Pairs extends GCompound implements Constants {
 
 	RandomGenerator rg = new RandomGenerator();
-	//double vx = rg.nextDouble(-MOVE_MAX_SPEED, -MOVE_MIN_SPEED);
+	double vx = rg.nextDouble(-MOVE_MAX_SPEED, -MOVE_MIN_SPEED);
 
 	public Pairs() {
 
@@ -16,16 +16,14 @@ public class Pairs extends GCompound implements Constants {
 			double upperY = bottomY - rg.nextDouble(0.3 * APPLICATION_HEIGHT, 0.6 * APPLICATION_HEIGHT)
 					- upper.getImg().getHeight();
 
-			this.add(upper.getImg(), 0, upperY);
-			this.add(bottom.getImg(), 0, bottomY);
+			this.add(upper.getImg(), BLOCK_START_POINT + BLOCK_INTERVAL, upperY);
+			this.add(bottom.getImg(), BLOCK_START_POINT + BLOCK_INTERVAL, bottomY);
 
 
 	}
 
-/*	public void moveLeft() {
+	public void moveLeft() {
 		this.move(vx, 0);
 
-	}*/
-	
-	
+	}
 }
