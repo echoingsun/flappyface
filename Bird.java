@@ -13,7 +13,6 @@ public class Bird implements Constants {
 
 	public Bird() {
 		
-		img01.setSize(BIRD_WIDTH, BIRD_HEIGHT);
 		this.img = img01;
 	}
 
@@ -36,8 +35,12 @@ public class Bird implements Constants {
 	
 
 	public void changeImg(){
-		img03.setSize(BIRD_WIDTH, BIRD_HEIGHT);
+		
 		this.img.setImage(img03.getImage());
+	}
+	
+	public void flip() {
+		this.img.setImage(img02.getImage());
 	}
 	
 
