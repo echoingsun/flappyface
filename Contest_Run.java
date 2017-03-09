@@ -157,12 +157,14 @@ public class Contest_Run extends Program implements Constants {
 
 		Displays title = sky.addDisplay("Title",0);
 		Displays clickToStart = sky.addDisplay("ClickToStart",0);
+		Displays instructionLabel = sky.addDisplay("InstructionLabel", 0);
 		
 		while (mouseClicked == false){
 			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
 		
 		sky.remove(clickToStart.getImg());
+		sky.remove(instructionLabel.getImg());
 		while (title.getImg().getY() + title.getImg().getHeight() >=0){
 			title.getImg().move(0, - VY_DELTA);
 			pause(TITLE_FLOAT);
