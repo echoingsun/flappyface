@@ -185,6 +185,7 @@ public class Contest_Run extends Program implements Constants {
 		myListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				bird.moveUp();
+				clickSound.play();
 			}
 		};
 		sky.addMouseListener(myListener);
