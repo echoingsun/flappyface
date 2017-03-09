@@ -67,6 +67,7 @@ public class Contest_Run extends Program implements Constants {
 
 		}
 		bird.changeImg();
+		pause(2000);
 		sky.remove(blockPairs1);
 		sky.remove(blockPairs2);
 		println(count);
