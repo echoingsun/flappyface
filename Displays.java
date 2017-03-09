@@ -9,7 +9,7 @@ public class Displays implements Constants {
 	public Displays (String str, String content, int pts){
 		
 		switch (str){
-		case "Title" : img = new GImage ("title.png"); break;
+		case "Title" : img = new GImage ("FlappyFaceTitle.png"); break;
 		case "Instructions" : lbl = new GLabel (content); break;
 		case "Points" : lbl = new GLabel( Integer.toString(pts));
 
