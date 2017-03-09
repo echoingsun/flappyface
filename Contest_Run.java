@@ -79,6 +79,8 @@ public class Contest_Run extends Program implements Constants {
 		sky.remove(blockPairs2);
 		
 		centerBird();
+		Displays gameOver = new Displays("GameOver", "",0);
+		sky.addDisplay("GameOver", gameOver);
 		println(count);
 		println(pts);
 		
