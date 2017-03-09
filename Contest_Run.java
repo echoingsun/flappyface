@@ -94,8 +94,8 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void showGameOver() {
-		Displays gameOver = sky.addDisplay("GameOver");
-		sky.addDisplay("Score");
+		Displays gameOver = sky.addDisplay("GameOver" , 0);
+		sky.addDisplay("Score", 0);
 		while(true){
 			floatDisplay(gameOver,GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
@@ -128,8 +128,8 @@ public class Contest_Run extends Program implements Constants {
 	
 	private void loadTitle() {
 
-		Displays title = sky.addDisplay("Title");
-		Displays clickToStart = sky.addDisplay("ClickToStart");
+		Displays title = sky.addDisplay("Title",0);
+		Displays clickToStart = sky.addDisplay("ClickToStart",0);
 		
 		while (mouseClicked == false){
 			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
