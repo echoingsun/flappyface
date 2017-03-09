@@ -56,7 +56,7 @@ public class Background extends GCanvas implements Constants{
 		} else if (str.equals("GameOver")){
 			Displays gameOver = new Displays("GameOver", 0);
 			double x = this.getWidth() * 0.5 - gameOver.getImg().getWidth() * 0.5;
-			double y = this.getHeight() * 0.5 - gameOver.getImg().getHeight();
+			double y = this.getHeight() * 0.5 - gameOver.getImg().getHeight() * 1.2;
 			this.add (gameOver.getImg(), x, y);
 			return gameOver;
 		} else if (str.equals("Score")){
