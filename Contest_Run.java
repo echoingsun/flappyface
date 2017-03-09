@@ -53,10 +53,12 @@ public class Contest_Run extends Program implements Constants {
 		theme.loop();
 		enableBirdMove();
 		
+		Displays ptsOnScreen = sky.addDisplay("Points", pts);
+		
 		loadBlocks();
 		
 		while (bird.notHit(sky)) {
-			
+		
 			bird.freeMove();
 			pause(DELAY);
 			
@@ -66,6 +68,7 @@ public class Contest_Run extends Program implements Constants {
 				blockPairs1.moveLeft();
 				pause(DELAY);
 				count ++;
+				updatePoints(ptsOnScreen, pts);
 				if (count == 300){
 					count = 0;
 					pts = pts + PTS_DELTA;
@@ -83,6 +86,8 @@ public class Contest_Run extends Program implements Constants {
 
 
 	}
+
+
 
 	private void gameOver() {
 		lose.play();
