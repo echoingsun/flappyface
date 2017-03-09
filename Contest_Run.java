@@ -65,6 +65,7 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 
 		}
+		bird.changeImg();
 		println(count);
 		println(pts);
 
