@@ -23,7 +23,7 @@ public class Pairs extends GCompound implements Constants {
 	}
 
 	public void moveLeft() {
-		this.move(1.5, 0);
+		this.move(-1.5, 0);
 
 	}
 }
