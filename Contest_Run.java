@@ -22,7 +22,7 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
 	
-	private int mouseClicked = false;
+	private boolean mouseClicked = false;
 	
 	private double count = 0;
 
