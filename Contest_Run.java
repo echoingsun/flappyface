@@ -27,8 +27,8 @@ public class Contest_Run extends Program implements Constants {
 		blockPairs1 = sky.addBlockPairs(BLOCK_START_POINT);
 		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + BLOCK_INTERVAL);
 		
-		comp.add(blockPairs1);
-		comp.add(blockPairs2);
+		comp.add(blockPairs1, 0,0);
+		comp.add(blockPairs2, blockPairs1.getX() + blockPairs1.getWidth() + BLOCK_INTERVAL, 0);
 		
 
 		while (bird.notHit(sky)) {
