@@ -18,7 +18,7 @@ public class Background extends GCanvas implements Constants{
 
 	private void addBackground() {		
 		img = new GImage ("bckgrnd.png");
-		img.setSize(BCKGRND_WIDTH,BCKGRND_HEIGHT);
+		img.setSize(APPLICATION_WIDTH,APPLICATION_HEIGHT);
 		add(img);
 	}
 
