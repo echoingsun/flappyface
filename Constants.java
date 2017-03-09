@@ -33,6 +33,7 @@ public interface Constants {
 	public static final int GAMEOVER_UPPER_BORDER = 240;
 	public static final int GAMEOVER_LOWER_BORDER = 246;
 
+	public static final int PTS_HEIGHT = APPLICATION_HEIGHT / 2 + 200;
 	
 	public static final int PAIR_NUM = 3;
 	
