@@ -79,18 +79,24 @@ public class Contest_Run extends Program implements Constants {
 		
 		bird.changeImg();
 		pause(GAMEOVER_DELAY);
+		
 		sky.remove(blockPairs1);
 		sky.remove(blockPairs2);
 		
 		centerBird();
-	
+		showGameOver();
+		
+		
+/*		println(count);
+		println(pts);*/
+		
+	}
+
+	private void showGameOver() {
 		Displays gameOver = sky.addDisplay("GameOver");
 		while(true){
 			floatDisplay(gameOver,TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
-		
-/*		println(count);
-		println(pts);*/
 		
 	}
 
