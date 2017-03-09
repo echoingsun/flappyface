@@ -25,6 +25,7 @@ public class Contest_Run extends Program implements Constants {
 	private boolean mouseClicked = false;
 	
 	private double count = 0;
+	private int pts = 0;
 
 	public void init() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -52,14 +53,19 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				blockPairs1.moveLeft();
 				pause(DELAY);
-				//count += 0.00000000000000000000000000000001;
+				count += 0.000000000000000000000000000000000000000000000000000000000001;
+				if (count == Math.pow(10, 10)){
+					count = 0;
+					pts = 1;
+				}
 			}
 
 			blockPairs2.moveLeft();
 			pause(DELAY);
 
 		}
-		//println(count);
+		println(count);
+		println(pts);
 
 	}
 
