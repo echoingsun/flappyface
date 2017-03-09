@@ -40,20 +40,27 @@ public class Background extends GCanvas implements Constants{
 		return pairs;
 	}
 
-	public void addDisplay(String str, Displays ds){
+	public Display addDisplay(String str){
 		if (str.equals("Title")) {
-			double x = this.getWidth() * 0.5 - ds.getImg().getWidth() * 0.5;
-			double y = this.getHeight() * 0.5 - ds.getImg().getHeight() * 0.5;		
-			this.add (ds.getImg(), x, y);
+			Displays title = new Displays ("Title", "", 0);
+			double x = this.getWidth() * 0.5 - title.getImg().getWidth() * 0.5;
+			double y = this.getHeight() * 0.5 - title.getImg().getHeight() * 0.5;		
+			this.add (title.getImg(), x, y);
+			return title;
 		} else if (str.equals("ClickToStart")){
-			double x = this.getWidth() * 0.5 - ds.getImg().getWidth() * 0.5;
-			double y = this.getHeight() * 0.5 + ds.getImg().getHeight() * 0.6;
-			this.add (ds.getImg(), x, y);
+			Displays clickToStart = new Displays ("ClickToStart", "", 0);
+			double x = this.getWidth() * 0.5 - clickToStart.getImg().getWidth() * 0.5;
+			double y = this.getHeight() * 0.5 + clickToStart.getImg().getHeight() * 0.6;
+			this.add (clickToStart.getImg(), x, y);
+			return clickToStart;
 		} else if (str.equals("GameOver")){
-			double x = this.getWidth() * 0.5 - ds.getImg().getWidth() * 0.5;
-			double y = this.getHeight() * 0.5 - ds.getImg().getHeight();
-			this.add (ds.getImg(), x, y);
+			Displays gameOver = new Displays("GameOver", "",0);
+			double x = this.getWidth() * 0.5 - gameOver.getImg().getWidth() * 0.5;
+			double y = this.getHeight() * 0.5 - gameOver.getImg().getHeight();
+			this.add (gameOver.getImg(), x, y);
+			return gameOver;
 		}
+		return null;
 	}
 	public GImage getImg() {
 		return img;
