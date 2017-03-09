@@ -10,7 +10,7 @@ public class Background extends GCanvas implements Constants{
 
 	private GImage img;
 	RandomGenerator rg = new RandomGenerator();
-	ArrayList<Pairs> pairArray = new ArrayList <Pairs>();
+	
 	
 	public void init (){
 		addBackground();
