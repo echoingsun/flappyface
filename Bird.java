@@ -11,11 +11,20 @@ public class Bird implements Constants {
 	
 	private boolean isFlipped = false;
 	
-	public String[] fileNames = new String[4];
-	
+	public String[] fileNames = new String[4];	
 
 	public Bird() {
+		initializeArray();
 		this.img = img01;
+	}
+
+
+	private void initializeArray() {
+		fileNames[0] = "face_01.png";
+		fileNames[1] = "face_02.png";
+		fileNames[2] = "face_03.png";
+		fileNames[3] = "face_04.png";
+		
 	}
 
 
