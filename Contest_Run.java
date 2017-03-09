@@ -24,6 +24,7 @@ public class Contest_Run extends Program implements Constants {
 		enableMouse();
 		Pairs blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
 		comp.add(blockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
+		println(comp.getBounds());
 		sky.pairArray.add(blockPairs);
 		
 		
