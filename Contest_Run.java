@@ -194,6 +194,7 @@ public class Contest_Run extends Program implements Constants {
 	private void loadCanvas() {
 		add(sky);
 		sky.init();
+		titleMusic.loop();
 	}
 
 }
