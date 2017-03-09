@@ -11,7 +11,8 @@ public class Contest_Run extends Program implements Constants {
 
 	private Background sky = new Background();
 	private Bird bird = new Bird();
-	private Pairs blockPairs = new Pairs();
+	private Pairs blockPairs1 = new Pairs();
+	private Pairs blockPairs2 = new Pairs();
 	
 
 	public void init() {
@@ -22,26 +23,27 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
-		sky.pairArray.add(blockPairs);
+		blockPairs1 = sky.addBlockPairs(BLOCK_START_POINT);
+		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth());
 		
 		
-		double distance = 0;
+
 		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
 			
-			blockPairs.moveLeft();
-			if (distance <= BLOCK_INTERVAL + BLOCK_WIDTH){
-				distance += Math.abs(blockPairs.vx);
+			
+			if (blockPairs1.getX() + blockPairs1.getWidth() <=0){
+				sky.remove(blockPairs1);
+				blockPairs1 = blockPairs2;
+				blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth());
 			} else {
-				distance = 0;
-				
-				Pairs newBlockPairs = sky.addBlockPairs(0);
-				sky.pairArray.add(newBlockPairs);
-				blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
+				blockPairs1.moveLeft();
 				
 			}			
+			pause(DELAY);
+			
+			blockPairs2.moveLeft();
 			pause(DELAY);
 
 /*			if (sky.pairArray.get(0).getX() + BLOCK_WIDTH < 200){
