@@ -9,6 +9,10 @@ public class Instructions extends GLabel implements Constants {
 			lbl = new GLabel (content);
 			
 		}
+		
+		if (str.equals("Points")){
+			lbl = new GLabel( Integer.toString(pts));
+		}
 	}
 	
 	public GLabel getLbl (){
