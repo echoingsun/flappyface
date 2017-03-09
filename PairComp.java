@@ -1,4 +1,5 @@
 import acm.graphics.GCompound;
+import acm.util.RandomGenerator;
 
 public class PairComp extends GCompound implements Constants{
 	
