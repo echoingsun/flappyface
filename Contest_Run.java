@@ -78,6 +78,11 @@ public class Contest_Run extends Program implements Constants {
 			}
 		}
 		
+		while (title.getImg().getY() + title.getImg().getHeight() >=0){
+			title.getImg().move(0, - VY_DELTA);
+			pause(TITLE_SHAKE);
+		}
+		
 		sky.remove(title.getImg());
 		
 	}
