@@ -8,7 +8,7 @@ public class Pairs extends GCompound implements Constants {
 
 	public Pairs() {
 
-
+		for (int i = 0; i < PAIR_NUM; i++) {
 			Blocks bottom = new Blocks(false);
 			Blocks upper = new Blocks(true);
 
@@ -16,9 +16,9 @@ public class Pairs extends GCompound implements Constants {
 			double upperY = bottomY - rg.nextDouble(0.3 * APPLICATION_HEIGHT, 0.6 * APPLICATION_HEIGHT)
 					- upper.getImg().getHeight();
 
-			this.add(upper.getImg(), BLOCK_START_POINT + BLOCK_INTERVAL, upperY);
-			this.add(bottom.getImg(), BLOCK_START_POINT + BLOCK_INTERVAL, bottomY);
-
+			this.add(upper.getImg(), BLOCK_START_POINT + BLOCK_INTERVAL * i, upperY);
+			this.add(bottom.getImg(), BLOCK_START_POINT + BLOCK_INTERVAL * i, bottomY);
+		}
 
 	}
 
