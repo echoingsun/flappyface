@@ -34,6 +34,7 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		
 		loadTitle();
+		
 		loadBird();
 		enableMouse();
 		
