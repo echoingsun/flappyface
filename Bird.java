@@ -43,7 +43,7 @@ public class Bird implements Constants {
 		if (this.img.getImage() == img01.getImage()){
 			this.img.setImage(img02.getImage());
 		
-		} else {
+		} else if (this.img.getImage() == img02.getImage()){
 			this.img.setImage(img01.getImage());
 		}
 		
