@@ -82,7 +82,7 @@ public class Contest_Run extends Program implements Constants {
 	
 		Displays gameOver = sky.addDisplay("GameOver");
 		while(true){
-			floatDisplay(gameOver,GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
+			floatDisplay(gameOver,TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
 		
 /*		println(count);
