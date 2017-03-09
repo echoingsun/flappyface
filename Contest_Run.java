@@ -54,9 +54,9 @@ public class Contest_Run extends Program implements Constants {
 				blockPairs1.moveLeft();
 				pause(DELAY);
 				count += 0.000000000000000000000000000000000000000000000000000000000001;
-				if (count == Math.pow(10, 10)){
+				if (count == Math.pow(10, 5)){
 					count = 0;
-					pts = 1;
+					pts ++;
 				}
 			}
 
