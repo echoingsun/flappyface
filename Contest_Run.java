@@ -87,6 +87,7 @@ public class Contest_Run extends Program implements Constants {
 		showGameOver();
 		
 		
+		
 /*		println(count);
 		println(pts);*/
 		
@@ -94,6 +95,7 @@ public class Contest_Run extends Program implements Constants {
 
 	private void showGameOver() {
 		Displays gameOver = sky.addDisplay("GameOver");
+		sky.addDisplay("Score");
 		while(true){
 			floatDisplay(gameOver,TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
