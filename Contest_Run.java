@@ -33,7 +33,7 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 			
 			
-			if (blockPairs1.getX() + blockPairs1.getWidth() <=0){
+			if (blockPairs1.getX() + blockPairs1.getWidth() <= - BLOCK_INTERVAL){
 				sky.remove(blockPairs1);
 				blockPairs1 = blockPairs2;
 				blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + + BLOCK_INTERVAL);
