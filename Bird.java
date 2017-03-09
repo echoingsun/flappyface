@@ -46,6 +46,10 @@ public class Bird implements Constants {
 		this.img.setImage(fileNames[2]);
 	}
 	
+	public void faceLoop(int i){
+		this.img.setImage(fileNames[i]);
+	}
+	
 	public void flip() {
 		if (isFlipped == false){
 			this.img.setImage(fileNames[1]);
