@@ -9,7 +9,7 @@ public class Bird implements Constants {
 	private GImage img03 = new GImage("face_03.png");
 	private GImage img04 = new GImage("face_04.png");
 	
-	private GImage[] imgArray = new GImage[4];
+
 
 	public Bird() {
 		
