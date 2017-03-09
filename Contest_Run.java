@@ -44,7 +44,7 @@ public class Contest_Run extends Program implements Constants {
 				Pairs newBlockPairs = sky.addBlockPairs(0);
 				sky.pairArray.add(newBlockPairs);
 				//blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
-				comp.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
+				comp.add(newBlockPairs, comp.getWidth() + BLOCK_INTERVAL, 0);
 			}			
 			pause(DELAY);
 
