@@ -16,8 +16,8 @@ public class Pairs extends GCompound implements Constants {
 			double upperY = bottomY - rg.nextDouble(0.3 * APPLICATION_HEIGHT, 0.6 * APPLICATION_HEIGHT)
 					- upper.getImg().getHeight();
 
-			this.add(upper.getImg(), BLOCK_INTERVAL * i, upperY);
-			this.add(bottom.getImg(), BLOCK_INTERVAL * i, bottomY);
+			this.add(upper.getImg(), BLOCK_INTERVAL + (BLOCK_INTERVAL + BLOCK_WIDTH)* i, upperY);
+			this.add(bottom.getImg(), BLOCK_INTERVAL + (BLOCK_INTERVAL + BLOCK_WIDTH)* i, bottomY);
 		}
 
 	}
