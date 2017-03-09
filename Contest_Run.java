@@ -76,6 +76,7 @@ public class Contest_Run extends Program implements Constants {
 
 	private void loadBird() {
 		sky.addBird(bird);
+		
 	}
 
 	private void loadCanvas() {
