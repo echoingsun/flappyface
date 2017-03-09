@@ -48,6 +48,7 @@ public class Contest_Run extends Program implements Constants {
 		loadTitle();
 		
 		loadBird();
+		theme.loop();
 		enableBirdMove();
 		
 		loadBlocks();
