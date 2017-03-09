@@ -41,9 +41,11 @@ public class Bird implements Constants {
 	public void flip() {
 		if (isFlipped == false){
 			this.img.setImage("face_02.png");
+			isFlipped = true;
 		
 		} else {
 			this.img.setImage("face_01.png");
+			isFlipped = false;
 		}
 		
 	}
