@@ -114,7 +114,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
 		while(true){
-			bird.faceLoop(rg.nextInt(0,bird.fileNames.length));
+			bird.faceLoop(rg.nextInt(0,bird.fileNames.length-1));
 			floatDisplay(gameOver,GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
 		
