@@ -29,7 +29,11 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	public void run() {
+		
+		
 		loadCanvas();
+		
+		loadTitle();
 		loadBird();
 		enableMouse();
 		
@@ -53,6 +57,12 @@ public class Contest_Run extends Program implements Constants {
 		}
 		//println(count);
 
+	}
+
+	private void loadTitle() {
+		Displays title = new Displays ("Title", "", 0);
+		sky.addDisplay("Title", title);
+		
 	}
 
 	private void replaceBlockPairs() {
