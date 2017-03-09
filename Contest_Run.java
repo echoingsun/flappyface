@@ -16,9 +16,11 @@ import java.awt.event.MouseEvent;
 
 import acm.program.*;
 import acm.util.MediaTools;
+import acm.util.RandomGenerator;
 
 public class Contest_Run extends Program implements Constants {
 
+	private RandomGenerator rg = new RandomGenerator();
 	private Background sky = new Background();
 	private Bird bird = new Bird();
 	private Pairs blockPairs1 = new Pairs();
@@ -112,6 +114,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
 		while(true){
+			bird.faceLoop(rg.nextInt(0,bird.fileNames.length - 1));
 			floatDisplay(gameOver,GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
 		}
 		
