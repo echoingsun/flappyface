@@ -46,7 +46,7 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				blockPairs1.moveLeft();
 				pause(DELAY);
-				count += 0.0000000000001;
+				
 			}
 
 			blockPairs2.moveLeft();
