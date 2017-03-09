@@ -68,11 +68,11 @@ public class Contest_Run extends Program implements Constants {
 		sky.addDisplay("Title", title);
 		
 		while (mouseClicked == false){
-			while (title.getImg().getY() >= 20){
+			while (title.getImg().getY() >= TITLE_UPPER_BORDER){
 				title.getImg().move(0, -VY_DELTA);
 				pause(TITLE_SHAKE);
 			}
-			while (title.getImg().getY() <= 300){
+			while (title.getImg().getY() <= TITLE_LOWER_BORDER){
 				title.getImg().move(0, VY_DELTA);
 				pause(TITLE_SHAKE);
 			}
