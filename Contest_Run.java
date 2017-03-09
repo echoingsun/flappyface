@@ -68,9 +68,10 @@ public class Contest_Run extends Program implements Constants {
 				blockPairs1.moveLeft();
 				pause(DELAY);
 				count ++;
-				pts = count / 3;
+				pts = pts + count / 3;
 				updatePoints(ptsOnScreen,pts);
 				if (count == 300){
+		
 					count = 0;
 					//pts = pts + PTS_DELTA;
 					bird.flip();
