@@ -11,8 +11,8 @@ public class Contest_Run extends Program implements Constants {
 
 	private Background sky = new Background();
 	private Bird bird = new Bird();
-	private Pairs blockPairs = new Pairs();
-	
+	//private Pairs blockPairs = new Pairs();
+	private PairComp comp = new PairComp();
 
 	public void init() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -22,7 +22,9 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadBird();
 		enableMouse();
-		blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
+		//blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
+		Pairs blockPairs = sky.addBlockPairs(BLOCK_START_POINT);
+		comp.add(blockPairs, blockPairs.getWidth() + BLOCK_INTERVAL,0);
 		sky.pairArray.add(blockPairs);
 		
 		
@@ -31,16 +33,18 @@ public class Contest_Run extends Program implements Constants {
 			bird.freeMove();
 			pause(DELAY);
 			
-			blockPairs.moveLeft();
+			//blockPairs.moveLeft();
+			comp.moveLeft();
 			if (distance <= BLOCK_INTERVAL + BLOCK_WIDTH){
-				distance += Math.abs(blockPairs.vx);
+				//distance += Math.abs(blockPairs.vx);
+				distance += Math.abs(comp.vx);
 			} else {
 				distance = 0;
 				
 				Pairs newBlockPairs = sky.addBlockPairs(0);
 				sky.pairArray.add(newBlockPairs);
-				blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
-				
+				//blockPairs.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
+				comp.add(newBlockPairs, blockPairs.getWidth() + BLOCK_INTERVAL, 0);
 			}			
 			pause(DELAY);
 
