@@ -12,8 +12,8 @@ public interface Constants {
 	public static final int BLOCK_START_POINT = 500;
 	public static final int BLOCK_INTERVAL = 162;
 	
-	public static final int BIRD_WIDTH = 50;
-	public static final int BIRD_HEIGHT = 50;
+	public static final int BIRD_WIDTH = 100;
+	public static final int BIRD_HEIGHT = 100;
 	
 	public static final int VY_DELTA = 20;
 	
