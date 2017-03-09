@@ -23,6 +23,8 @@ public class Contest_Run extends Program implements Constants {
 	private Bird bird = new Bird();
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
+	
+	private double count = 0;
 
 	public void init() {
 		setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -44,12 +46,15 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				blockPairs1.moveLeft();
 				pause(DELAY);
+				count += 0.0000000000001;
 			}
 
 			blockPairs2.moveLeft();
 			pause(DELAY);
 
 		}
+		
+		println(count);
 
 	}
 
