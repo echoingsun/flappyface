@@ -169,6 +169,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				mouseClicked = true;
+				titleMusic.stop();
 				
 			}
 		});
