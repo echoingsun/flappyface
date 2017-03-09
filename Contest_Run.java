@@ -43,8 +43,9 @@ public class Contest_Run extends Program implements Constants {
 				replaceBlockPairs();				
 			} else {
 				blockPairs1.moveLeft();
+				pause(DELAY);
 			}
-			pause(DELAY);
+			
 
 			blockPairs2.moveLeft();
 			pause(DELAY);
