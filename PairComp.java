@@ -17,6 +17,6 @@ public class PairComp extends GCompound implements Constants{
 	}
 	
 	public void add(Pairs pairs, double x, double y){
-		comp.add(comp,x,y);
+		comp.add(pairs,x,y);
 	}
 }
