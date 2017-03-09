@@ -1,5 +1,6 @@
 /*
  * Class: Pairs.java
+ * -------------------------
  * "Pairs" is a GCompound that includes PAIR_NUM of blocks of random heights.
  * It also has a method to move these blocks together.
  */
