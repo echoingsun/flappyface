@@ -23,8 +23,7 @@ public class Bird implements Constants {
 		fileNames[0] = "face_01.png";
 		fileNames[1] = "face_02.png";
 		fileNames[2] = "face_03.png";
-		fileNames[3] = "face_04.png";
-		
+		fileNames[3] = "face_04.png";		
 	}
 
 
@@ -47,16 +46,16 @@ public class Bird implements Constants {
 
 	public void changeImg(){
 		
-		this.img.setImage(img03.getImage());
+		this.img.setImage(fileNames[2]);
 	}
 	
 	public void flip() {
 		if (isFlipped == false){
-			this.img.setImage("face_02.png");
+			this.img.setImage(fileNames[1]);
 			isFlipped = true;
 		
 		} else {
-			this.img.setImage("face_01.png");
+			this.img.setImage(fileNames[0]);
 			isFlipped = false;
 		}
 		
