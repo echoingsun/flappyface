@@ -56,7 +56,7 @@ public class Contest_Run extends Program implements Constants {
 				count ++;
 				if (count == 300){
 					count = 0;
-					pts = pts + 100;
+					pts = pts + PTS+DELTA;
 				}
 			}
 
