@@ -22,6 +22,8 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
 	
+	private MouseAdapter myListener;
+	
 	private boolean mouseClicked = false;
 	
 	private int count = 0;
@@ -73,7 +75,7 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void gameOver() {
-		//sky.removeMouseListener(l);
+		sky.removeMouseListener(myListener);
 		
 		bird.changeImg();
 		pause(GAMEOVER_DELAY);
@@ -155,10 +157,12 @@ public class Contest_Run extends Program implements Constants {
 		});
 	}
 
+	/*
+	 * http://stackoverflow.com/questions/16360004/removing-mouselistener-when-something-happens
+	 */
 	private void enableBirdMove() {
-		MouseAdapter myListener = new MouseAdapter() {
+		myListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
-				
 				bird.moveUp();
 			}
 		};
