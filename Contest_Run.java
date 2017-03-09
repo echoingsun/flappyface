@@ -12,9 +12,7 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import acm.graphics.GImage;
-import acm.graphics.GObject;
-import acm.graphics.GOval;
+
 import acm.program.*;
 
 public class Contest_Run extends Program implements Constants {
@@ -46,13 +44,14 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				blockPairs1.moveLeft();
 				pause(DELAY);
-				
+				count += 0.00000000000000000000000000000001;
 			}
 
 			blockPairs2.moveLeft();
 			pause(DELAY);
 
 		}
+		println(count);
 
 	}
 
