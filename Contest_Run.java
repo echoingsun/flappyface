@@ -53,8 +53,6 @@ public class Contest_Run extends Program implements Constants {
 			pause(DELAY);
 
 		}
-		
-		println(count);
 
 	}
 
