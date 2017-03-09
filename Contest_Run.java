@@ -45,7 +45,7 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		enableMouse();
 		
-		loadTitle();
+		
 		
 		loadBird();
 		enableBirdMove();
@@ -195,6 +195,7 @@ public class Contest_Run extends Program implements Constants {
 		add(sky);
 		sky.init();
 		titleMusic.loop();
+		loadTitle();
 	}
 
 }
