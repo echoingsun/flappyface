@@ -4,10 +4,14 @@ import acm.util.RandomGenerator;
 public class Bird implements Constants {
 
 	private GImage img;
+	private GImage img01 = new GImage("face01.png");
+	private GImage img02 = new GImage("face02.png");
 
 	public Bird() {
-		img = new GImage("face01.png");
-		img.setSize(BIRD_WIDTH, BIRD_HEIGHT);
+		img01.setSize(BIRD_WIDTH, BIRD_HEIGHT);
+		img02.setSize(BIRD_WIDTH, BIRD_HEIGHT);
+		//this.img = new GImage("face01.png");
+		this.img = img01;
 	}
 
 	public GImage getImg() {
@@ -15,7 +19,7 @@ public class Bird implements Constants {
 	}
 
 	public void moveUp() {
-		img.move(0, -VY_DELTA);
+		this.img.move(0, -VY_DELTA);
 		
 	}
 	
@@ -24,6 +28,17 @@ public class Bird implements Constants {
 		double vx = 0;
 		double vy = rg.nextDouble(FALL_MIN_SPEED, FALL_MAX_SPEED);
 		this.img.move(vx, vy);
+	}
+	
+	public void flip(){
+		int i = 0;
+		if (i == 0){
+			this.img = img02;
+			i = 1;
+		} else {
+			this.img = img01;
+			i = 0;
+		}
 	}
 	
 
