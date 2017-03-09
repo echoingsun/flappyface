@@ -8,12 +8,14 @@
  * 
  */
 
+import java.applet.AudioClip;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
 import acm.program.*;
+import acm.util.MediaTools;
 
 public class Contest_Run extends Program implements Constants {
 
@@ -23,6 +25,10 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs2 = new Pairs();
 	
 	private MouseAdapter myListener;
+	AudioClip theme = MediaTools.loadAudioClip("theme.au");
+	AudioClip titleMusic = MediaTools.loadAudioClip("title.au");
+	AudioClip clickSound = MediaTools.loadAudioClip("clickSound.au");
+	AudioClip lose = MediaTools.loadAudioClip("lose.au");
 	
 	private boolean mouseClicked = false;
 	
