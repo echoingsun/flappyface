@@ -65,7 +65,7 @@ public class Background extends GCanvas implements Constants{
 			double y = this.getHeight() * 0.5 + youVeScored.getImg().getHeight();
 			this.add (youVeScored.getImg(), x, y);
 			return youVeScored;
-		} else if (str.equals("Pts")){
+		} else if (str.equals("Points")){
 			Displays points = new Displays("Points", pts);
 			double x = this.getWidth() * 0.5 - points.getLbl().getWidth() * 0.5;
 			double y = this.getHeight() * 0.5 + points.getLbl().getAscent();
