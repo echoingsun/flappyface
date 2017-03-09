@@ -46,8 +46,7 @@ public class Contest_Run extends Program implements Constants {
 		while (bird.notHit(sky)) {
 			bird.freeMove();
 			pause(DELAY);
-			bird.flip();
-
+			
 			if (blockPairs1.getX() + blockPairs1.getWidth() <= -BLOCK_INTERVAL) {
 				replaceBlockPairs();				
 			} else {
