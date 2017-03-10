@@ -19,6 +19,9 @@ public interface Constants {
 	public static final int BLOCK_START_POINT = 500;
 	public static final int BLOCK_INTERVAL = 162;
 	
+	/** BLOCKPAIRS: number of pairs */
+	public static final int PAIR_NUM = 3;
+	
 	/** BLOCKPAIRS: speed of moving left */
 	public static final double MOVE_SPEED = 1.5;
 	
@@ -48,23 +51,13 @@ public interface Constants {
 	public static final int CLICK_START_HEIGHT = 370;
 	public static final int CLICK_QUIT_HEIGHT = 550;
 	public static final int INFO_LABEL_HEIGHT = 430;
+	public static final int SCORELABEL_HEIGHT = 410;
+	public static final int PTS_HEIGHT = 469;
 	public static final int INFO_X = 215;
 	public static final int INFO_Y = 455;
-
 	public static final int POINTS_SCREEN_X = 160;
 	
-
-	
-	
-
-	public static final int SCORELABEL_HEIGHT = 410;
-	
-	public static final int PTS_HEIGHT = 469;
-	
-	
-
-	public static final int PAIR_NUM = 3;
-	
+	/** FILENAME: strings */
 	public static final String CVS_FILENAME = "bckgrnd.png";
 	public static final String PIPE_FILENAME = "pipe.png";
 	public static final String PIPEFLIP_FILENAME = "pipeFlip.png";
