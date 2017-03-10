@@ -31,7 +31,7 @@ public class Displays implements Constants {
 			img = new GImage(GAMEOVER_FILENAME);
 			break;
 		case "Score":
-			img = new GImage("score.png");
+			img = new GImage(SCOREMSG_FILENAME);
 			break;
 		case "Points":
 			lbl = new GLabel(Integer.toString(pts));
