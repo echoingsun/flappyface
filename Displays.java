@@ -45,7 +45,7 @@ public class Displays implements Constants {
 		case "InstructionLabel":
 			img = new GImage(INFOLABEL_FILENAME);
 			break;
-		case "ClickToQuit" :
+		case "ClickToQuit":
 			img = new GImage(CLICK_QUIT_FILENAME);
 			break;
 		default:
