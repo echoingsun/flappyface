@@ -197,7 +197,6 @@ public class Contest_Run extends Program implements Constants {
 			face.faceLoop(rg.nextInt(0, face.fileNames.length - 1));
 			floatDisplay(gameOver, GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER, TITLE_MOVE_AMT, TITLE_FLOAT_DELAY);
 		}
-
 	}
 
 	private void centerFace() {
