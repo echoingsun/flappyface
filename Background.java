@@ -10,12 +10,12 @@ import acm.graphics.GImage;
 import acm.util.RandomGenerator;
 
 public class Background extends GCanvas implements Constants {
-	
+
 	RandomGenerator rg = new RandomGenerator();
 
 	// The background will have an image to it.
 	private GImage img;
-	
+
 	public void init() {
 		addBackground();
 	}
@@ -37,8 +37,8 @@ public class Background extends GCanvas implements Constants {
 	}
 
 	/*
-	 * Method addBlockPairs puts a GCompound pair onto the screen.
-	 * The position will vary, therefore a parameter is passed into this method.
+	 * Method addBlockPairs puts a GCompound pair onto the screen. The position
+	 * will vary, therefore a parameter is passed into this method.
 	 */
 	public Pairs addBlockPairs(double x) {
 		Pairs pairs = new Pairs();
@@ -46,6 +46,10 @@ public class Background extends GCanvas implements Constants {
 		return pairs;
 	}
 
+	/*
+	 * Method addDisplay gets a certain type of Displays object and add them
+	 * onto the screen.
+	 */
 	public Displays addDisplay(String str, int pts) {
 
 		switch (str) {
@@ -56,53 +60,53 @@ public class Background extends GCanvas implements Constants {
 			return title;
 		}
 		case "ClickToStart": {
-			Displays clickToStart = new Displays ("ClickToStart", 0); 
+			Displays clickToStart = new Displays("ClickToStart", 0);
 			double x = this.getWidth() * 0.5 - clickToStart.getImg().getWidth() * 0.5;
-			this.add (clickToStart.getImg(), x, CLICK_START_HEIGHT); 
+			this.add(clickToStart.getImg(), x, CLICK_START_HEIGHT);
 			return clickToStart;
 		}
 		case "GameOver": {
-			Displays gameOver = new Displays("GameOver", 0); 
+			Displays gameOver = new Displays("GameOver", 0);
 			double x = this.getWidth() * 0.5 - gameOver.getImg().getWidth() * 0.5;
-			this.add (gameOver.getImg(), x, GAMEOVER_HEIGHT); 
+			this.add(gameOver.getImg(), x, GAMEOVER_HEIGHT);
 			return gameOver;
 		}
 		case "Score": {
-			Displays youVeScored = new Displays("Score",0); 
-			double x = this.getWidth() * 0.5 -youVeScored.getImg().getWidth() * 0.5; 
-			this.add (youVeScored.getImg(), x, SCORELABEL_HEIGHT); 
-			return youVeScored; 
+			Displays youVeScored = new Displays("Score", 0);
+			double x = this.getWidth() * 0.5 - youVeScored.getImg().getWidth() * 0.5;
+			this.add(youVeScored.getImg(), x, SCORELABEL_HEIGHT);
+			return youVeScored;
 		}
 		case "Points": {
-			Displays points = new Displays("Points",pts); 
-			double x = this.getWidth() * 0.5 - points.getLbl().getWidth() * 0.5; 
-			this.add (points.getLbl(), x, PTS_HEIGHT); 
+			Displays points = new Displays("Points", pts);
+			double x = this.getWidth() * 0.5 - points.getLbl().getWidth() * 0.5;
+			this.add(points.getLbl(), x, PTS_HEIGHT);
 			return points;
 		}
 		case "PointsOnScreen": {
-			Displays pointsOnScreen = new Displays("PointsOnScreen", pts); 
-			double x = this.getWidth() * 0.5 - 150; 
-			double y = this.getHeight() * 0.5 + pointsOnScreen.getLbl().getAscent() * 0.5; 
-			this.add (pointsOnScreen.getLbl(), x, y); 
+			Displays pointsOnScreen = new Displays("PointsOnScreen", pts);
+			double x = this.getWidth() * 0.5 - 150;
+			double y = this.getHeight() * 0.5 + pointsOnScreen.getLbl().getAscent() * 0.5;
+			this.add(pointsOnScreen.getLbl(), x, y);
 			return pointsOnScreen;
 		}
 		case "InstructionLabel": {
 			Displays instructionLabel = new Displays("InstructionLabel", 0);
 			double x = this.getWidth() * 0.5 - instructionLabel.getImg().getWidth() * 0.5;
-			this.add (instructionLabel.getImg(), x, INFO_LABEL_HEIGHT); 
-			return instructionLabel; 
+			this.add(instructionLabel.getImg(), x, INFO_LABEL_HEIGHT);
+			return instructionLabel;
 		}
 		case "Instructions": {
-			Displays instruction = new Displays("Instructions", 0); 
-			this.add (instruction.getImg(), INFO_X, INFO_Y); 
-			return instruction; 
+			Displays instruction = new Displays("Instructions", 0);
+			this.add(instruction.getImg(), INFO_X, INFO_Y);
+			return instruction;
 		}
 		}
 		return null;
 	}
 
+	// Image getter.
 	public GImage getImg() {
 		return img;
 	}
-
 }
