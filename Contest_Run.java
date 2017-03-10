@@ -249,7 +249,8 @@ public class Contest_Run extends Program implements Constants {
 			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER, TITLE_MOVE_AMT, TITLE_FLOAT_DELAY);
 		}
 
-		// Once mouse is clicked, remove (or, move) the components out of the canvas.
+		// Once mouse is clicked, remove (or, move) the components out of the
+		// canvas.
 		sky.remove(clickToStart.getImg());
 		sky.remove(instructionLabel.getImg());
 		while (title.getImg().getY() + title.getImg().getHeight() >= 0) {
@@ -261,30 +262,45 @@ public class Contest_Run extends Program implements Constants {
 		titleMusic.stop();
 	}
 
+	/*
+	 * Method addMouseHover enables the display of a "pop-up" when user hovers
+	 * the mouse over the label showing "more info". This is achieved through
+	 * adding mouseEntered and mouseExited events. The usage of the mouseAdapter
+	 * referenced:
+	 * http://stackoverflow.com/questions/16360004/removing-mouselistener-when-
+	 * something-happens
+	 */
 	private void addMouseHover(Displays instructionLabel) {
-
 		instructionLabel.getImg().addMouseListener(new MouseAdapter() {
 
 			Displays instructions = new Displays("Instrutions", 0);
 
 			public void mouseEntered(MouseEvent e) {
 				instructions = sky.addDisplay("Instructions", 0);
-
 			}
 
 			public void mouseExited(MouseEvent e) {
 				sky.remove(instructions.getImg());
 			}
 		});
-
 	}
 
+	/*
+	 * Method replaceBlockPairs
+	 * (1) removes a blockPair that has gone out of the screen,
+	 * (2) makes the second blockPair that has been following the first, the first one.
+	 * (3) generate a new blockPair that comes as second after the newly-replaced first.
+	 */
 	private void replaceBlockPairs() {
 		sky.remove(blockPairs1);
 		blockPairs1 = blockPairs2;
 		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + +BLOCK_INTERVAL);
 	}
 
+	/*
+	 * Method loadBlocks puts two blocks on the canvas.
+	 * They will later be replaced by calling replaceBlockPairs.
+	 */
 	private void loadBlocks() {
 		blockPairs1 = sky.addBlockPairs(BLOCK_START_POINT);
 		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + BLOCK_INTERVAL);
