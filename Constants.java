@@ -11,8 +11,8 @@ public interface Constants {
 	
 	public static final int VY_DELTA = 20;
 	
-	public static final double FALL_MIN_SPEED = 0.2;
-	public static final double FALL_MAX_SPEED = 0.4;
+	public static final double FALL_MIN_SPEED = 0.3;
+	public static final double FALL_MAX_SPEED = 0.5;
 	
 	public static final double MOVE_SPEED = 1.5;
 	
