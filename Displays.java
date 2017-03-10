@@ -22,13 +22,13 @@ public class Displays implements Constants {
 	public Displays(String str, int pts) {
 		switch (str) {
 		case "Title":
-			img = new GImage("FlappyFaceTitle.png");
+			img = new GImage(TITLEIMG_FILENAME);
 			break;
 		case "ClickToStart":
-			img = new GImage("clicktostart.png");
+			img = new GImage(CLICK_START_FILENAME);
 			break;
 		case "GameOver":
-			img = new GImage("gameover.png");
+			img = new GImage(GAMEOVER_FILENAME);
 			break;
 		case "Score":
 			img = new GImage("score.png");
