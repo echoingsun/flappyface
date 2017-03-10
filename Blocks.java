@@ -18,8 +18,8 @@ public class Blocks implements Constants {
 	// There're bottom blocks and upper blocks, and each has a different image.
 	// By passing a boolean value, there can be upper and bottom blocks.
 	public Blocks(boolean isFlip) {
-		GImage upperBlock = new GImage("pipeFlip.png");
-		GImage bottomBlock = new GImage("pipe.png");
+		GImage upperBlock = new GImage(PIPEFLIP_FILENAME);
+		GImage bottomBlock = new GImage(PIPE_FILENAME);
 
 		if (isFlip == true) {
 			img = upperBlock;
