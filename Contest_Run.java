@@ -236,14 +236,14 @@ public class Contest_Run extends Program implements Constants {
 	private void loadTitle() {
 
 		Displays title = sky.addDisplay("Title", 0);
-		
+		Displays clickToStart = sky.addDisplay("ClickToStart", 0);
 		Displays instructionLabel = sky.addDisplay("InstructionLabel", 0);
 
 		// This will display instruction when player hovers the mouse over
 		// the instruction label.
 		addMouseHover(instructionLabel);
 
-		enableMouse();
+		enableMouse(clickToStart);
 		
 		// When player hasn't started the game by clicking the canvas, do the
 		// following: float title.
@@ -313,8 +313,7 @@ public class Contest_Run extends Program implements Constants {
 	 * mouseClicked will change to true after the click, which means player
 	 * officially starts the game.
 	 */
-	private void enableMouse() {
-		Displays clickToStart = sky.addDisplay("ClickToStart", 0);
+	private void enableMouse(Displays clickToStart) {
 		clickToStart.getLbl().addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				mouseClicked = true;
