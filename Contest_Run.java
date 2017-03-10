@@ -179,20 +179,15 @@ public class Contest_Run extends Program implements Constants {
 	private void addMouseHover(Displays instructionLabel) {
 		
 		instructionLabel.getImg().addMouseListener(new MouseAdapter() {
+		
+			Displays instructions = new Displays ("Instrutions", 0);
+			
 			public void mouseEntered(MouseEvent e) {
-				boolean instructionDisplayed = false;
-				Displays instructions = new Displays ("Instructions", 0);
-/*				
+				instructions = sky.addDisplay("Instructions" , 0);
 				
-				if (sky.getElementAt(e.getX(), e.getY()) == instructionLabel.getImg()){
-					instructions = sky.addDisplay("Instructions", 0);
-					instructionDisplayed = true;
-				} else {
-					sky.remove(instructions.getImg());
-					instructionDisplayed = false;
-				}*/
-				
-				
+			}
+			public void mouseExited(MouseEvent e){
+				sky.remove(instructions.getImg());
 			}
 		});
 		
