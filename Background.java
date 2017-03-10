@@ -36,6 +36,10 @@ public class Background extends GCanvas implements Constants {
 		this.add(face.getImg(), x, y);
 	}
 
+	/*
+	 * Method addBlockPairs puts a GCompound pair onto the screen.
+	 * The position will vary, therefore a parameter is passed into this method.
+	 */
 	public Pairs addBlockPairs(double x) {
 		Pairs pairs = new Pairs();
 		this.add(pairs, x, 0);
