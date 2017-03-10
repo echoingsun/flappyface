@@ -29,6 +29,9 @@ public interface Constants {
 	public static final double FALL_MIN_SPEED = 0.3;
 	public static final double FALL_MAX_SPEED = 0.5;
 	
+	/** FACE: position of centered face */
+	public static final int CENTER_FACE = 346;
+	
 	/** TITLE: measurements */
 	public static final int TITLE_HEIGHT = 144;
 	public static final int TITLE_UPPER_BORDER = 138;
@@ -36,24 +39,29 @@ public interface Constants {
 	public static final int TITLE_FLOAT_DELAY = 100;
 	public static final double TITLE_MOVE_AMT = 1.5;
 	
+	/** GAMEOVER: measurements */
+	public static final int GAMEOVER_HEIGHT = 216;
+	public static final int GAMEOVER_UPPER_BORDER = 210;
+	public static final int GAMEOVER_LOWER_BORDER = 216;
+	
+	/** OTHER DISPLAYS: positions and measurements*/
 	public static final int CLICK_START_HEIGHT = 370;
+	public static final int CLICK_QUIT_HEIGHT = 550;
 	public static final int INFO_LABEL_HEIGHT = 430;
 	public static final int INFO_X = 215;
 	public static final int INFO_Y = 455;
 
 	public static final int POINTS_SCREEN_X = 160;
 	
-	public static final int GAMEOVER_HEIGHT = 216;
-	public static final int GAMEOVER_UPPER_BORDER = 210;
-	public static final int GAMEOVER_LOWER_BORDER = 216;
+
 	
-	public static final int CENTER_FACE = 346;
+	
 
 	public static final int SCORELABEL_HEIGHT = 410;
 	
 	public static final int PTS_HEIGHT = 469;
 	
-	public static final int CLICK_QUIT_HEIGHT = 550;
+	
 
 	public static final int PAIR_NUM = 3;
 	
