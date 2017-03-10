@@ -28,6 +28,8 @@ public interface Constants {
 	
 	public static final int CLICK_START_HEIGHT = 370;
 	public static final int INFO_LABEL_HEIGHT = 430;
+	public static final int INFO_X = 233;
+	public static final int INFO_Y = 470;
 
 	
 	public static final int GAMEOVER_UPPER_BORDER = 210;
