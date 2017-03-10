@@ -12,7 +12,7 @@ public interface Constants {
 	/** PROGRAM: value of main types of pauses */
 	public static final int DELAY = 4;
 	public static final int GAMEOVER_DELAY = 2000;
-	public static final double OFFSET = 0.2;
+	public static final double OFFSET = 0.51;
 	
 	/** BLOCKS: measurements */
 	public static final int BLOCK_HEIGHT = 793;
