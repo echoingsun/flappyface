@@ -97,12 +97,16 @@ public class Face implements Constants {
 	/*
 	 * Boolean notHit defines when it is considered game over. Face should not
 	 * bump into any blocks. This check is performed through examining the four
-	 * corners of the image. Often it might look like the face hasn't hit the
-	 * blocks yet, but since the border lies outside the image, this is more or
-	 * less inevitable.
+	 * corners of the image. 
+	 * ****************************** 
+	 * Often it might look like the face hasn't hit the blocks yet, 
+	 * but the game ends. Since the border lies outside the image, 
+	 * this is more or less inevitable.
+	 * ******************************
 	 */
 	public boolean notHit(Background sky) {
 
+		// The upper left corner of the image
 		boolean upperLeft = sky.getElementAt(this.getImg().getX() - 1, this.getImg().getY() - 1) == null
 				|| sky.getElementAt(this.getImg().getX() - 1, this.getImg().getY() - 1) == sky.getImg();
 		boolean bottomLeft = sky.getElementAt(this.getImg().getX() - 1,
