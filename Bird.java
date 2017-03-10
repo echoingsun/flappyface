@@ -1,3 +1,7 @@
+/*
+ * File: 
+ */
+
 import acm.graphics.*;
 import acm.util.RandomGenerator;
 
