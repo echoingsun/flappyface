@@ -1,20 +1,26 @@
-import java.util.ArrayList;
+/*
+ * File: Background.java
+ * ------------------------------
+ * This class defines the background, and its related methods,
+ * particularly, adding other classes of objects to the canvas.
+ */
 
 import acm.graphics.GCanvas;
-import acm.graphics.GCompound;
 import acm.graphics.GImage;
-import acm.program.*;
 import acm.util.RandomGenerator;
 
 public class Background extends GCanvas implements Constants {
-
-	private GImage img;
+	
 	RandomGenerator rg = new RandomGenerator();
 
+	// The background will have an image to it.
+	private GImage img;
+	
 	public void init() {
 		addBackground();
 	}
 
+	// Set the background.
 	private void addBackground() {
 		img = new GImage("bckgrnd.png");
 		img.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
@@ -22,14 +28,12 @@ public class Background extends GCanvas implements Constants {
 	}
 
 	/*
-	 * Method addBird puts the flying object onto the screen at a random
-	 * position at the left, on the upper part of the screen.
+	 * Method addBird puts the flying object onto the center of the screen.
 	 */
-	public void addBird(Face bird) {
-
-		double x = this.getWidth() * 0.5 - bird.getImg().getWidth() * 0.5;
-		double y = this.getHeight() * 0.5 - bird.getImg().getHeight() * 0.5;
-		this.add(bird.getImg(), x, y);
+	public void addBird(Face face) {
+		double x = this.getWidth() * 0.5 - face.getImg().getWidth() * 0.5;
+		double y = this.getHeight() * 0.5 - face.getImg().getHeight() * 0.5;
+		this.add(face.getImg(), x, y);
 	}
 
 	public Pairs addBlockPairs(double x) {
