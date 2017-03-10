@@ -100,6 +100,12 @@ public class Background extends GCanvas implements Constants {
 			this.add(instruction.getImg(), INFO_X, INFO_Y);
 			return instruction;
 		}
+		case "ClickToQuit": {
+			Displays clickToQuit = new Displays("ClickToQuit", 0);
+			double x = this.getWidth() * 0.5 - clickToQuit.getImg().getWidth() * 0.5;
+			this.add(clickToQuit.getImg(),x,CLICK_QUIT_HEIGHT);
+			return clickToQuit.getImg();
+		}
 		}
 		return null;
 	}
