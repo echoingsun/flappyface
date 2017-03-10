@@ -50,7 +50,7 @@ public class Background extends GCanvas implements Constants{
 		} else if (str.equals("ClickToStart")){
 			Displays clickToStart = new Displays ("ClickToStart", 0);
 			double x = this.getWidth() * 0.5 - clickToStart.getImg().getWidth() * 0.5;
-			double y = this.getHeight() * 0.5 + clickToStart.getImg().getHeight() * 0.6;
+			double y = CLICK_START_HEIGHT;
 			this.add (clickToStart.getImg(), x, y);
 			return clickToStart;
 		} else if (str.equals("GameOver")){
