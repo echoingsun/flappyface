@@ -27,6 +27,11 @@ public class Contest_Run extends Program implements Constants {
 
 	private RandomGenerator rg = new RandomGenerator();
 	private MouseAdapter myListener;
+	
+	private AudioClip theme = MediaTools.loadAudioClip(THEME_FILENAME);
+	private AudioClip titleMusic = MediaTools.loadAudioClip(TITLEMSC_FILENAME);
+	private AudioClip clickSound = MediaTools.loadAudioClip(CLICKSND_FILENAME);
+	private AudioClip lose = MediaTools.loadAudioClip(LOSEMSC_FILENAME);
 
 	/*
 	 * Instance variables for the program. Since general classes do not seem to
@@ -39,10 +44,6 @@ public class Contest_Run extends Program implements Constants {
 	private Pairs blockPairs2 = new Pairs();
 	private Displays ptsOnScreen;
 
-	private AudioClip theme = MediaTools.loadAudioClip("theme.au");
-	private AudioClip titleMusic = MediaTools.loadAudioClip("title.au");
-	private AudioClip clickSound = MediaTools.loadAudioClip("clickSound.au");
-	private AudioClip lose = MediaTools.loadAudioClip("lose.au");
 
 	// Used to record whether mouse has been clicked for a certain event to
 	// happen.
