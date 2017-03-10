@@ -13,6 +13,9 @@
  * (3) Audio clips enabled.
  * (4) Interaction between classes;
  * (5) Keep the player score up-to-date on the screen.
+ * *****************************************************
+ * THE FACE CAN APPEAR TO HAVE HIT THE BLOCKS AT A DISTANCE FROM THE BLOCKS.
+ * THIS IS BECAUSE THE HIT CHECK IS PERFORMED BASED ON 
  */
 
 import java.applet.AudioClip;
