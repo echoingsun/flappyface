@@ -22,7 +22,7 @@ public class Contest_Run extends Program implements Constants {
 
 	private RandomGenerator rg = new RandomGenerator();
 	private Background sky = new Background();
-	private Bird bird = new Bird();
+	private Face bird = new Face();
 	private Pairs blockPairs1 = new Pairs();
 	private Pairs blockPairs2 = new Pairs();
 	private Displays ptsOnScreen;

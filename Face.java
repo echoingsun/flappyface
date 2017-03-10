@@ -5,7 +5,7 @@
 import acm.graphics.*;
 import acm.util.RandomGenerator;
 
-public class Bird implements Constants {
+public class Face implements Constants {
 
 	private GImage img;
 
@@ -14,7 +14,7 @@ public class Bird implements Constants {
 	
 	public String[] fileNames = new String[4];	
 
-	public Bird() {
+	public Face() {
 		initializeArray();
 		this.img = new GImage(fileNames[0]);
 	}
