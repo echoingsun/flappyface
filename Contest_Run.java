@@ -337,10 +337,16 @@ public class Contest_Run extends Program implements Constants {
 		sky.addMouseListener(myListener);
 	}
 
+	/*
+	 * Method loadFace adds the face to the center of the canvas.
+	 */
 	private void loadFace() {
 		sky.addFace(face);
 	}
 
+	/*
+	 * Method loadCanvas adds the canvas sky, and start to loop the music.
+	 */
 	private void loadCanvas() {
 		add(sky);
 		sky.init();
