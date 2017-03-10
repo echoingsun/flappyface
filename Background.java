@@ -28,7 +28,7 @@ public class Background extends GCanvas implements Constants {
 	}
 
 	/*
-	 * Method addBird puts the flying object onto the center of the screen.
+	 * Method addFace puts the flying object onto the center of the screen.
 	 */
 	public void addFace(Face face) {
 		double x = this.getWidth() * 0.5 - face.getImg().getWidth() * 0.5;
