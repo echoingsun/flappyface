@@ -19,6 +19,14 @@ public interface Constants {
 	public static final int DELAY = 4;
 	public static final int GAMEOVER_DELAY = 2000;
 	
+	
+	public static final int TITLE_HEIGHT = 144;
+	
+	
+	
+	
+	
+	
 	public static final int TITLE_FLOAT = 100;
 	public static final double TITLE_MOVE_AMT = 1.5;
 	public static final int TITLE_UPPER_BORDER = 200;
