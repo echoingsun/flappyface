@@ -57,5 +57,6 @@ public interface Constants {
 	public static final String SCOREMSG_FILENAME = "score.png";
 	public static final String INFOLABEL_FILENAME = "InstructionLabel.png";
 	public static final String INFO_FILENAME = "Instructions.png";
+	public static final String CLICK_QUIT_FILENAME = "clicktoquit.png";
 
 }
