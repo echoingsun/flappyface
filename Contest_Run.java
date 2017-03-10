@@ -199,6 +199,10 @@ public class Contest_Run extends Program implements Constants {
 		}
 	}
 
+	/*
+	 * Method enableQuit takes in the clickToQuit image and 
+	 * add a mouse clicked event to it: if clicked, exit the program.
+	 */
 	private void enableQuit(Displays clickToQuit) {
 		clickToQuit.getImg().addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
