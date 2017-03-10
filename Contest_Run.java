@@ -254,7 +254,7 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	private void loadFace() {
-		sky.addBird(face);
+		sky.addFace(face);
 
 	}
 
