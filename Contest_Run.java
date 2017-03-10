@@ -169,16 +169,30 @@ public class Contest_Run extends Program implements Constants {
 		showGameOver();
 	}
 
+	/*
+	 * Method updatePoints takes in the object points, the value of points,
+	 * and the XY position of the score label.
+	 * Based on these parameters, it resets the value and position of
+	 * the object "points".
+	 */
 	private void updatePoints(Displays points, int pts, double x, double y) {
 		points.getLbl().setLabel(Integer.toString(pts));
 		points.getLbl().setLocation(x, y);
 	}
 
+	/*
+	 * Method showGameOver does the following:
+	 * (1) display a game over message
+	 * (2) concludes the game by showing how much the player has scored
+	 * (3) graphics improvement: let the title float
+	 */
 	private void showGameOver() {
-
 		Displays gameOver = sky.addDisplay("GameOver", 0);
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
+		
+		// Float the "gameover" title while looping the face images
+		// among the 4 images.
 		while (true) {
 			face.faceLoop(rg.nextInt(0, face.fileNames.length - 1));
 			floatDisplay(gameOver, GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER, TITLE_MOVE_AMT, TITLE_FLOAT_DELAY);
