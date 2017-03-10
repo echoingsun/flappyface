@@ -131,7 +131,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.remove(blockPairs2);
 		sky.remove(ptsOnScreen.getLbl());
 
-		centerBird();
+		centerFace();
 		titleMusic.loop();
 		showGameOver();
 
@@ -154,7 +154,7 @@ public class Contest_Run extends Program implements Constants {
 
 	}
 
-	private void centerBird() {
+	private void centerFace() {
 
 		double cy = sky.getHeight() * 0.5;
 		while (face.getImg().getY() + face.getImg().getHeight() * 0.5 < cy) {
