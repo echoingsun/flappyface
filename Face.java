@@ -1,5 +1,8 @@
 /*
- * File: 
+ * File: Face.java
+ * ------------------------
+ * This class defines the face. It controls some images to be
+ * replaced under certain circumstances.
  */
 
 import acm.graphics.*;
@@ -7,34 +10,46 @@ import acm.util.RandomGenerator;
 
 public class Face implements Constants {
 
+	// Face will have an image.
 	private GImage img;
-
 	
+	// isFlipped detects if it's time to swap face.
 	private boolean isFlipped = false;
 	
+	// An array that stores all filenames to be used by the Face class.
 	public String[] fileNames = new String[4];	
 
+	// Constructor: set the image of the object Face to a certain image.
 	public Face() {
+		
+		// Put all filenames into the array.
 		initializeArray();
+		
+		// Assign an image.
 		this.img = new GImage(fileNames[0]);
 	}
 
-
+	/*
+	 * Method initializeArray puts all the filenames to be used into the array.
+	 */
 	private void initializeArray() {
-		fileNames[0] = "face_01.png";
-		fileNames[1] = "face_02.png";
-		fileNames[2] = "face_03.png";
-		fileNames[3] = "face_04.png";		
+		fileNames[0] = "face_01.png"; // An exciting face.
+		fileNames[1] = "face_02.png"; // A grinning face.
+		fileNames[2] = "face_03.png"; // A confused face.
+		fileNames[3] = "face_04.png"; // An annoyed face.
 	}
 
-
+	// Image getter.
 	public GImage getImg() {
 		return img;
 	}
 
+	/*
+	 * Method moveUp defines the distance the face will move once
+	 * mouseClicked is activated.
+	 */
 	public void moveUp() {
-		this.img.move(0, -VY_DELTA);
-		
+		this.img.move(0, -VY_DELTA);		
 	}
 	
 	public void freeMove(){
