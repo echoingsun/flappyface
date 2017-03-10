@@ -19,7 +19,6 @@ public interface Constants {
 	public static final int DELAY = 4;
 	public static final int GAMEOVER_DELAY = 2000;
 	
-	
 	public static final int TITLE_HEIGHT = 144;
 	public static final int TITLE_UPPER_BORDER = 138;
 	public static final int TITLE_LOWER_BORDER = 144;
@@ -39,9 +38,8 @@ public interface Constants {
 
 	public static final int SCORELABEL_HEIGHT = 410;
 	
-	public static final int PTS_HEIGHT = 468;
+	public static final int PTS_HEIGHT = 469;
 
-	
 	public static final int PAIR_NUM = 3;
 	
 
