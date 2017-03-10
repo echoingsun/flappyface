@@ -286,10 +286,10 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	/*
-	 * Method replaceBlockPairs
-	 * (1) removes a blockPair that has gone out of the screen,
-	 * (2) makes the second blockPair that has been following the first, the first one.
-	 * (3) generate a new blockPair that comes as second after the newly-replaced first.
+	 * Method replaceBlockPairs (1) removes a blockPair that has gone out of the
+	 * screen, (2) makes the second blockPair that has been following the first,
+	 * the first one. (3) generate a new blockPair that comes as second after
+	 * the newly-replaced first.
 	 */
 	private void replaceBlockPairs() {
 		sky.remove(blockPairs1);
@@ -298,24 +298,32 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	/*
-	 * Method loadBlocks puts two blocks on the canvas.
-	 * They will later be replaced by calling replaceBlockPairs.
+	 * Method loadBlocks puts two blocks on the canvas. They will later be
+	 * replaced by calling replaceBlockPairs.
 	 */
 	private void loadBlocks() {
 		blockPairs1 = sky.addBlockPairs(BLOCK_START_POINT);
 		blockPairs2 = sky.addBlockPairs(blockPairs1.getX() + blockPairs1.getWidth() + BLOCK_INTERVAL);
 	}
 
+	/*
+	 * Method enableMouse only enables player to "click to start". boolean
+	 * mouseClicked will change to true after the click, which means player
+	 * officially starts the game.
+	 */
 	private void enableMouse() {
 		sky.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				mouseClicked = true;
-
 			}
 		});
 	}
 
 	/*
+	 * Method enableFaceMove renews the value of mouseAdapter myListener. It
+	 * carries a mouseClicked event. For each click, move the face upwards as
+	 * dictated by the face.moveUp method. Also, plays a sound effect with each
+	 * click. The use of mouseAdapter referenced:
 	 * http://stackoverflow.com/questions/16360004/removing-mouselistener-when-
 	 * something-happens
 	 */
