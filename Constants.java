@@ -39,7 +39,7 @@ public interface Constants {
 
 	public static final int SCORELABEL_HEIGHT = 410;
 	
-	public static final int PTS_HEIGHT = 470;
+	public static final int PTS_HEIGHT = 465;
 
 	
 	public static final int PAIR_NUM = 3;
