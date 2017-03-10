@@ -51,5 +51,11 @@ public interface Constants {
 	public static final String TITLEMSC_FILENAME = "title.au";
 	public static final String CLICKSND_FILENAME = "clickSound.au";
 	public static final String LOSEMSC_FILENAME = "lose.au";
+	public static final String TITLEIMG_FILENAME = "FlappyFaceTitle.png";
+	public static final String CLICK_START_FILENAME = "clicktostart.png";
+	public static final String GAMEOVER_FILENAME = "gameover.png";
+	public static final String SCOREMSG_FILENAME = "score.png";
+	public static final String
+	public static final String
 
 }
