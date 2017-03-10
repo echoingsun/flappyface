@@ -34,6 +34,8 @@ public interface Constants {
 	public static final int GAMEOVER_HEIGHT = 216;
 	public static final int GAMEOVER_UPPER_BORDER = 210;
 	public static final int GAMEOVER_LOWER_BORDER = 216;
+	
+	public static final int CENTER_FACE = 346;
 
 	public static final int PTS_HEIGHT = APPLICATION_HEIGHT / 2 + 103;
 	
