@@ -139,23 +139,34 @@ public class Contest_Run extends Program implements Constants {
 		
 	}
 
+	/*
+	 * Method gameOver list a number of actions that happens after
+	 * the player loses, including:
+	 * (1) switch the music
+	 * (2) disable the mouselistener that helps move the face
+	 * (3) re-arrange the graphics of the close screen
+	 */
 	private void gameOver() {
 		lose.play();
 		theme.stop();
 
+		// Once the player loses, he/she cannot click the mouse
+		// to lift the face.
 		sky.removeMouseListener(myListener);
 
+		// Change the face image to an unhappy one.
 		face.changeImg();
 		pause(GAMEOVER_DELAY);
 
+		// Remove the blockPairs and the simultaneous display of the score.
 		sky.remove(blockPairs1);
 		sky.remove(blockPairs2);
 		sky.remove(ptsOnScreen.getLbl());
 
+		// Rearrange the graphics.
 		centerFace();
 		titleMusic.loop();
 		showGameOver();
-
 	}
 
 	private void updatePoints(Displays points, int pts, double x, double y) {
