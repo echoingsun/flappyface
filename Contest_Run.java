@@ -89,17 +89,17 @@ public class Contest_Run extends Program implements Constants {
 	 * yet).
 	 */
 	private void gameRun() {
-		
+
 		// face.notHit(sky) is the condition that ensures the game runs.
 		while (face.notHit(sky)) {
-			
+
 			// Move the face.
 			face.freeMove();
 			pause(DELAY);
 
 			// This program makes two block pairs regenerating and replacing
 			// each other to enable the visual effect of "infinite blocks".
-			// If blockPair1 completely passes the screen, remove it, 
+			// If blockPair1 completely passes the screen, remove it,
 			// and remake it to the rightmost of the screen.
 			// Otherwise keep it moving.
 			if (blockPairs1.getX() + blockPairs1.getWidth() <= -BLOCK_INTERVAL) {
@@ -107,9 +107,9 @@ public class Contest_Run extends Program implements Constants {
 			} else {
 				blockPairs1.moveLeft();
 				pause(DELAY);
-				
+
 				calculateScore();
-				
+
 				// For every 100 points user scores,
 				// flip the face once.
 				if (pts % 100 == 0) {
@@ -121,30 +121,27 @@ public class Contest_Run extends Program implements Constants {
 			blockPairs2.moveLeft();
 			pause(DELAY);
 		}
-	
+
 	}
 
 	/*
-	 * Method calculateScore generates the score player sees on screen.
-	 * For each move, let count add by 1.
-	 * Since the number is going to be large, let the actual score
-	 * be a third of the count number.
-	 * For each move, also updated the label that shows the score.
+	 * Method calculateScore generates the score player sees on screen. For each
+	 * move, let count add by 1. Since the number is going to be large, let the
+	 * actual score be a third of the count number. For each move, also updated
+	 * the label that shows the score.
 	 */
 	private void calculateScore() {
 		count++;
 		pts = count / 3;
 		updatePoints(ptsOnScreen, pts, face.getImg().getX() - ptsOnScreen.getLbl().getWidth(),
 				face.getImg().getY() + face.getImg().getHeight() * 0.5);
-		
+
 	}
 
 	/*
-	 * Method gameOver list a number of actions that happens after
-	 * the player loses, including:
-	 * (1) switch the music
-	 * (2) disable the mouselistener that helps move the face
-	 * (3) re-arrange the graphics of the close screen
+	 * Method gameOver list a number of actions that happens after the player
+	 * loses, including: (1) switch the music (2) disable the mouselistener that
+	 * helps move the face (3) re-arrange the graphics of the close screen
 	 */
 	private void gameOver() {
 		lose.play();
@@ -170,10 +167,9 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	/*
-	 * Method updatePoints takes in the object points, the value of points,
-	 * and the XY position of the score label.
-	 * Based on these parameters, it resets the value and position of
-	 * the object "points".
+	 * Method updatePoints takes in the object points, the value of points, and
+	 * the XY position of the score label. Based on these parameters, it resets
+	 * the value and position of the object "points".
 	 */
 	private void updatePoints(Displays points, int pts, double x, double y) {
 		points.getLbl().setLabel(Integer.toString(pts));
@@ -181,16 +177,15 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	/*
-	 * Method showGameOver does the following:
-	 * (1) display a game over message
-	 * (2) concludes the game by showing how much the player has scored
-	 * (3) graphics improvement: let the title float
+	 * Method showGameOver does the following: (1) display a game over message
+	 * (2) concludes the game by showing how much the player has scored (3)
+	 * graphics improvement: let the title float
 	 */
 	private void showGameOver() {
 		Displays gameOver = sky.addDisplay("GameOver", 0);
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
-		
+
 		// Float the "gameover" title while looping the face images
 		// among the 4 images.
 		while (true) {
@@ -200,11 +195,10 @@ public class Contest_Run extends Program implements Constants {
 	}
 
 	/*
-	 * Method centerFace moves the face to the center of the screen wherever
-	 * the face is, after the player loses the game.
+	 * Method centerFace moves the face to the center of the screen wherever the
+	 * face is, after the player loses the game.
 	 */
 	private void centerFace() {
-
 		double cy = sky.getHeight() * 0.5;
 		while (face.getImg().getY() + face.getImg().getHeight() * 0.5 < cy) {
 			face.getImg().move(0, MOVE_SPEED);
@@ -216,6 +210,11 @@ public class Contest_Run extends Program implements Constants {
 		}
 	}
 
+	/*
+	 * Method floatDisplay takes in a display object and some parameters that
+	 * defines the floating movement of the object. The object would look like
+	 * floating in the air with two while loops and these parameters.
+	 */
 	private void floatDisplay(Displays ds, int upperBorder, int lowerBorder, double moveAmt, int delayTime) {
 		while (ds.getImg().getY() >= upperBorder) {
 			ds.getImg().move(0, -moveAmt);
@@ -227,17 +226,30 @@ public class Contest_Run extends Program implements Constants {
 		}
 	}
 
+	/*
+	 * Method loadTitle basically shows the welcome screen. It does the
+	 * following: (1) places some display images (2) add mouse events to some of
+	 * the images. (3) float the title before player clicks the screen to start
+	 * the game. (4) after player clicks, remove the ojbects on this welcome
+	 * screen.
+	 */
 	private void loadTitle() {
 
 		Displays title = sky.addDisplay("Title", 0);
 		Displays clickToStart = sky.addDisplay("ClickToStart", 0);
 		Displays instructionLabel = sky.addDisplay("InstructionLabel", 0);
+
+		// This will display instruction when player hovers the mouse over
+		// the instruction label.
 		addMouseHover(instructionLabel);
 
+		// When player hasn't started the game by clicking the canvas, do the
+		// following: float title.
 		while (mouseClicked == false) {
 			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER, TITLE_MOVE_AMT, TITLE_FLOAT_DELAY);
 		}
 
+		// Once mouse is clicked, remove (or, move) the components out of the canvas.
 		sky.remove(clickToStart.getImg());
 		sky.remove(instructionLabel.getImg());
 		while (title.getImg().getY() + title.getImg().getHeight() >= 0) {
@@ -247,7 +259,6 @@ public class Contest_Run extends Program implements Constants {
 
 		sky.remove(title.getImg());
 		titleMusic.stop();
-
 	}
 
 	private void addMouseHover(Displays instructionLabel) {
