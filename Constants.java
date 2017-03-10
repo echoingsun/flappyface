@@ -41,6 +41,8 @@ public interface Constants {
 	public static final int SCORELABEL_HEIGHT = 410;
 	
 	public static final int PTS_HEIGHT = 469;
+	
+	public static final int CLICK_QUIT_HEIGHT = 500;
 
 	public static final int PAIR_NUM = 3;
 	
