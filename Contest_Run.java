@@ -314,7 +314,7 @@ public class Contest_Run extends Program implements Constants {
 	 * officially starts the game.
 	 */
 	private void enableMouse(Displays clickToStart) {
-		clickToStart.getLbl().addMouseListener(new MouseAdapter() {
+		clickToStart.getImg().addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				mouseClicked = true;
 			}
