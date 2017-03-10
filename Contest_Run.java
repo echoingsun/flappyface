@@ -182,11 +182,14 @@ public class Contest_Run extends Program implements Constants {
 			public void mouseMoved(MouseEvent e) {
 				boolean instructionDisplayed = false;
 				Displays instructions = new Displays ("Instructions", 0);
+				
+				
 				if (sky.getElementAt(e.getX(), e.getY()) == instructionLabel.getImg()){
 					instructions = sky.addDisplay("Instructions", 0);
 					instructionDisplayed = true;
 				} else {
 					sky.remove(instructions.getImg());
+					instructionDisplayed = false;
 				}
 				
 				
