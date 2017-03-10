@@ -85,9 +85,8 @@ public class Background extends GCanvas implements Constants {
 		}
 		case "PointsOnScreen": {
 			Displays pointsOnScreen = new Displays("PointsOnScreen", pts);
-			double x = POINTS_SCREEN_X;
 			double y = this.getHeight() * 0.5 + pointsOnScreen.getLbl().getAscent() * 0.5;
-			this.add(pointsOnScreen.getLbl(), x, y);
+			this.add(pointsOnScreen.getLbl(), POINTS_SCREEN_X, y);
 			return pointsOnScreen;
 		}
 		case "InstructionLabel": {
