@@ -53,34 +53,42 @@ public class Background extends GCanvas implements Constants {
 			this.add (clickToStart.getImg(), x, CLICK_START_HEIGHT); 
 			return clickToStart;
 		}
+		case "GameOver": {
+			Displays gameOver = new Displays("GameOver", 0); 
+			double x = this.getWidth() * 0.5 - gameOver.getImg().getWidth() * 0.5;
+			this.add (gameOver.getImg(), x, GAMEOVER_HEIGHT); 
+			return gameOver;
+		}
+		case "Score": {
+			Displays youVeScored = new Displays("Score",0); 
+			double x = this.getWidth() * 0.5 -youVeScored.getImg().getWidth() * 0.5; 
+			this.add (youVeScored.getImg(), x, SCORELABEL_HEIGHT); 
+			return youVeScored; 
+		}
+		case "Points": {
+			Displays points = new Displays("Points",pts); 
+			double x = this.getWidth() * 0.5 - points.getLbl().getWidth() * 0.5; 
+			this.add (points.getLbl(), x, PTS_HEIGHT); 
+			return points;
+		}
+		case "PointsOnScreen": {
+			Displays pointsOnScreen = new Displays("PointsOnScreen", pts); 
+			double x = this.getWidth() * 0.5 - 150; 
+			double y = this.getHeight() * 0.5 + pointsOnScreen.getLbl().getAscent() * 0.5; 
+			this.add (pointsOnScreen.getLbl(), x, y); 
+			return pointsOnScreen;
+		}
+		case "InstructionLabel": {
+			Displays instructionLabel = new Displays("InstructionLabel", 0);
+			double x = this.getWidth() * 0.5 - instructionLabel.getImg().getWidth() * 0.5;
+			this.add (instructionLabel.getImg(), x, INFO_LABEL_HEIGHT); 
+			return instructionLabel; 
+		}
 		}
 
 		/*
-		 * str.equals("ClickToStart")){ Displays clickToStart
-		 * = new Displays ("ClickToStart", 0); double x = this.getWidth() * 0.5
-		 * - clickToStart.getImg().getWidth() * 0.5; double y =
-		 * CLICK_START_HEIGHT; this.add (clickToStart.getImg(), x, y); return
-		 * clickToStart; } else if (str.equals("GameOver")){ Displays gameOver =
-		 * new Displays("GameOver", 0); double x = this.getWidth() * 0.5 -
-		 * gameOver.getImg().getWidth() * 0.5; double y = GAMEOVER_HEIGHT;
-		 * this.add (gameOver.getImg(), x, y); return gameOver; } else if
-		 * (str.equals("Score")){ Displays youVeScored = new
-		 * Displays("Score",0); double x = this.getWidth() * 0.5 -
-		 * youVeScored.getImg().getWidth() * 0.5; double y = SCORELABEL_HEIGHT;
-		 * this.add (youVeScored.getImg(), x, y); return youVeScored; } else if
-		 * (str.equals("Points")){ Displays points = new Displays("Points",
-		 * pts); double x = this.getWidth() * 0.5 - points.getLbl().getWidth() *
-		 * 0.5; double y = PTS_HEIGHT; this.add (points.getLbl(), x, y); return
-		 * points; } else if (str.equals("PointsOnScreen")){ Displays
-		 * pointsOnScreen = new Displays("PointsOnScreen", pts); double x =
-		 * this.getWidth() * 0.5 - 150; double y = this.getHeight() * 0.5 +
-		 * pointsOnScreen.getLbl().getAscent() * 0.5; this.add
-		 * (pointsOnScreen.getLbl(), x, y); return pointsOnScreen; } else if
-		 * (str.equals("InstructionLabel")){ Displays instructionLabel = new
-		 * Displays("InstructionLabel", 0); double x = this.getWidth() * 0.5 -
-		 * instructionLabel.getImg().getWidth() * 0.5; double y =
-		 * INFO_LABEL_HEIGHT; this.add (instructionLabel.getImg(), x, y); return
-		 * instructionLabel; } else if (str.equals("Instructions")){ Displays
+(str.equals("PointsOnScreen")){ D } else if
+		 * (str.equals("InstructionLabel")){ } else if (str.equals("Instructions")){ Displays
 		 * instruction = new Displays("Instructions", 0); double x = INFO_X;
 		 * double y = INFO_Y; this.add (instruction.getImg(), x, y); return
 		 * instruction; }
