@@ -109,6 +109,9 @@ public class Contest_Run extends Program implements Constants {
 				pause(DELAY);
 				
 				calculateScore();
+				
+				// For every 100 points user scores,
+				// flip the face once.
 				if (pts % 100 == 0) {
 					face.flip();
 				}
@@ -117,9 +120,8 @@ public class Contest_Run extends Program implements Constants {
 			// The second blockPair also needs to move along.
 			blockPairs2.moveLeft();
 			pause(DELAY);
-
 		}
-
+	
 	}
 
 	/*
