@@ -1,3 +1,4 @@
+
 /*
  * Class: Pairs.java
  * -------------------------
@@ -33,8 +34,8 @@ public class Pairs extends GCompound implements Constants {
 	}
 
 	/*
-	 * Method moveLeft enables the GCompound Pairs to move left.
-	 * This makes the blocks look like they move together in one.
+	 * Method moveLeft enables the GCompound Pairs to move left. This makes the
+	 * blocks look like they move together in one.
 	 */
 	public void moveLeft() {
 		this.move(-MOVE_SPEED, 0);
