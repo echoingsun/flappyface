@@ -179,7 +179,7 @@ public class Contest_Run extends Program implements Constants {
 	private void addMouseHover(Displays instructionLabel) {
 		
 		instructionLabel.getImg().addMouseListener(new MouseAdapter() {
-			public void mouseMoved(MouseEvent e) {
+			public void mouseClicked(MouseEvent e) {
 				boolean instructionDisplayed = false;
 				Displays instructions = new Displays ("Instructions", 0);
 				
