@@ -44,6 +44,7 @@ public interface Constants {
 
 	public static final int PAIR_NUM = 3;
 	
-	public static final String CVS_FILE_NAME = "bckgrnd.png";
+	public static final String CVS_FILENAME = "bckgrnd.png";
+	public static final String PIPE_FILE
 
 }
