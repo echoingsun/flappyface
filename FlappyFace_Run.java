@@ -27,7 +27,7 @@ import acm.program.*;
 import acm.util.MediaTools;
 import acm.util.RandomGenerator;
 
-public class FlappyFace extends Program implements Constants {
+public class FlappyFace_Run extends Program implements Constants {
 
 	private RandomGenerator rg = new RandomGenerator();
 	private MouseAdapter myListener;
