@@ -86,15 +86,10 @@ public class Background extends GCanvas implements Constants {
 		}
 		case "Instructions": {
 			Displays instruction = new Displays("Instructions", 0); 
-			this.add (instruction.getImg(), INFO_X, INFO_Y); return instruction; 
+			this.add (instruction.getImg(), INFO_X, INFO_Y); 
+			return instruction; 
 		}
 		}
-
-		/*
-(str.equals("PointsOnScreen")){ D } else if
-		 * (str.equals("InstructionLabel")){ } else if (str.equals("Instructions")){ }
-		 */
-
 		return null;
 	}
 
