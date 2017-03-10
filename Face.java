@@ -51,12 +51,15 @@ public class Face implements Constants {
 	public void moveUp() {
 		this.img.move(0, -VY_DELTA);		
 	}
-	
+
+	/*
+	 * Method freeMove defines the distance the face will fall when 
+	 * no mouseAction is performed. This distance is random for every game.
+	 */
 	public void freeMove(){
 		RandomGenerator rg = new RandomGenerator ();
-		double vx = 0;
 		double vy = rg.nextDouble(FALL_MIN_SPEED, FALL_MAX_SPEED);
-		this.img.move(vx, vy);
+		this.img.move(0, vy);
 	}
 	
 
