@@ -47,5 +47,9 @@ public interface Constants {
 	public static final String CVS_FILENAME = "bckgrnd.png";
 	public static final String PIPE_FILENAME = "pipe.png";
 	public static final String PIPEFLIP_FILENAME = "pipeFlip.png";
+	public static final String THEME_FILENAME = "theme.au";
+	public static final String TITLEMSC_FILENAME = "title.au";
+	public static final String CLICKSND_FILENAME = "clickSound.au";
+	public static final String LOSEMSC_FILENAME = "lose.au";
 
 }
