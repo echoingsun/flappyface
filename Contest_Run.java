@@ -66,7 +66,7 @@ public class Contest_Run extends Program implements Constants {
 
 		loadBird();
 		theme.loop();
-		enableBirdMove();
+		enableFaceMove();
 
 		loadBlocks();
 		loadPoints();
@@ -243,7 +243,7 @@ public class Contest_Run extends Program implements Constants {
 	 * http://stackoverflow.com/questions/16360004/removing-mouselistener-when-
 	 * something-happens
 	 */
-	private void enableBirdMove() {
+	private void enableFaceMove() {
 		myListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				face.moveUp();
