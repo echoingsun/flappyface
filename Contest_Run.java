@@ -185,6 +185,7 @@ public class Contest_Run extends Program implements Constants {
 		Displays gameOver = sky.addDisplay("GameOver", 0);
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
+		sky.addDisplay("ClickToQuit", 0);
 
 		// Float the "gameover" title while looping the face images
 		// among the 4 images.
