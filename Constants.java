@@ -26,8 +26,8 @@ public interface Constants {
 	public static final int TITLE_FLOAT_DELAY = 100;
 	public static final double TITLE_MOVE_AMT = 1.5;
 	
-	public static final int CLICK_START_HEIGHT = 360;
-	public static final int INFO_LABEL_HEIGHT = 420;
+	public static final int CLICK_START_HEIGHT = 370;
+	public static final int INFO_LABEL_HEIGHT = 430;
 
 	
 	public static final int GAMEOVER_UPPER_BORDER = 210;
