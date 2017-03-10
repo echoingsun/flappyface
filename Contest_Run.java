@@ -64,7 +64,7 @@ public class Contest_Run extends Program implements Constants {
 
 		loadTitle();
 
-		loadBird();
+		loadFace();
 		theme.loop();
 		enableFaceMove();
 
@@ -253,7 +253,7 @@ public class Contest_Run extends Program implements Constants {
 		sky.addMouseListener(myListener);
 	}
 
-	private void loadBird() {
+	private void loadFace() {
 		sky.addBird(face);
 
 	}
