@@ -199,6 +199,10 @@ public class Contest_Run extends Program implements Constants {
 		}
 	}
 
+	/*
+	 * Method centerFace moves the face to the center of the screen wherever
+	 * the face is, after the player loses the game.
+	 */
 	private void centerFace() {
 
 		double cy = sky.getHeight() * 0.5;
