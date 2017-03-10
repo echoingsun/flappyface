@@ -328,8 +328,8 @@ public class Contest_Run extends Program implements Constants {
 
 	/*
 	 * Method enableMouse only enables player to "click to start". boolean
-	 * mouseClicked will change to true after the click, which means player
-	 * officially starts the game.
+	 * mouseClicked will change to true after the click on "clickToStart",
+	 * which means player officially starts the game.
 	 */
 	private void enableMouse(Displays clickToStart) {
 		clickToStart.getImg().addMouseListener(new MouseAdapter() {
