@@ -31,7 +31,5 @@ public interface Constants {
 	
 	public static final int PAIR_NUM = 3;
 	
-	public static final int PTS_DELTA = 100;
-	
 
 }
