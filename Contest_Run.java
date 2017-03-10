@@ -182,17 +182,30 @@ public class Contest_Run extends Program implements Constants {
 	 * graphics improvement: let the title float
 	 */
 	private void showGameOver() {
+		
 		Displays gameOver = sky.addDisplay("GameOver", 0);
 		sky.addDisplay("Score", 0);
 		sky.addDisplay("Points", pts);
-		sky.addDisplay("ClickToQuit", 0);
-
+		Displays clickToQuit = sky.addDisplay("ClickToQuit", 0);
+		
+		// Add mouseClick event to "ClickToQuit".
+		enableQuit(clickToQuit);
+		
 		// Float the "gameover" title while looping the face images
 		// among the 4 images.
 		while (true) {
 			face.faceLoop(rg.nextInt(0, face.fileNames.length - 1));
 			floatDisplay(gameOver, GAMEOVER_UPPER_BORDER, GAMEOVER_LOWER_BORDER, TITLE_MOVE_AMT, TITLE_FLOAT_DELAY);
 		}
+	}
+
+	private void enableQuit(Displays clickToQuit) {
+		clickToQuit.getImg().addMouseListener(new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				exit();
+			}
+		});
+		
 	}
 
 	/*
