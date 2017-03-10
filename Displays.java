@@ -1,3 +1,4 @@
+
 /*
  * File: Displays.java
  * ------------------------
@@ -44,7 +45,8 @@ public class Displays implements Constants {
 		case "InstructionLabel":
 			img = new GImage("InstructionLabel.png");
 			break;
-			default: img = null;
+		default:
+			img = null;
 		}
 	}
 
