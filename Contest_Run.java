@@ -1,10 +1,11 @@
-
 /*
  * File: Contest_Run.java
  * ------------------------------
  * This is the main class file for the game.
  * This is a parody ;) to the runaway game "Flappy bird".
- * Player uses the mouse to control the bird from falling or hitting the blocks (chimneys).
+ * Player uses the mouse to control the bird from falling or hitting the blocks.
+ * -------------------------------
+ * 
  * 
  */
 
