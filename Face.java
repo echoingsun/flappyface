@@ -105,20 +105,25 @@ public class Face implements Constants {
 	 * ******************************
 	 */
 	public boolean notHit(Background sky) {
+		
+		// Get the coordinates for the four corners of the face image.
+		// Here an extra pixel is applied because otherwise getelementat
+		// will return the face itself.
+		// upper left -> (x1,y1)
+		// bottom left -> (x1,y2)
+		// upper right -> (x2,y1)
+		// bottom right -> (x2,y2)
+		double x1 = this.getImg().getX() - 1;
+		double x2 = this.getImg().getX() + this.getImg().getWidth() + 1;
+		double y1 = this.getImg().getY() - 1;
+		double y2 = this.getImg().getY() + this.getImg().getHeight() + 1;
 
-		// The upper left corner of the image
-		boolean upperLeft = sky.getElementAt(this.getImg().getX() - 1, this.getImg().getY() - 1) == null
-				|| sky.getElementAt(this.getImg().getX() - 1, this.getImg().getY() - 1) == sky.getImg();
-		boolean bottomLeft = sky.getElementAt(this.getImg().getX() - 1,
-				this.getImg().getY() + this.getImg().getHeight() + 1) == null
-				|| sky.getElementAt(this.getImg().getX() - 1,
-						this.getImg().getY() + this.getImg().getHeight() + 1) == sky.getImg();
-		boolean upperRight = sky.getElementAt(this.getImg().getX() + this.getImg().getWidth() + 1,
-				this.getImg().getY() - 1) == sky.getImg();
-		boolean bottomRight = sky.getElementAt(this.getImg().getX() + this.getImg().getWidth() + 1,
-				this.getImg().getY() + this.getImg().getHeight() + 1) == sky.getImg();
-		boolean top = this.getImg().getY() - 1 <= 0;
-		boolean bottom = this.getImg().getY() + this.getImg().getHeight() + 1 >= sky.getHeight();
+		boolean upperLeft = sky.getElementAt(x1, y1) == sky.getImg();
+		boolean bottomLeft = sky.getElementAt(x1,y2) == sky.getImg();
+		boolean upperRight = sky.getElementAt(x2,y1) == sky.getImg();
+		boolean bottomRight = sky.getElementAt(x2,y2) == sky.getImg();
+		boolean top = y1 <= 0;
+		boolean bottom = y2 >= sky.getHeight();
 
 		if (upperLeft && bottomLeft && upperRight && bottomRight && !top && !bottom) {
 			return true;
