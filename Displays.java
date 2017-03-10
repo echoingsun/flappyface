@@ -40,10 +40,10 @@ public class Displays implements Constants {
 			lbl = new GLabel(Integer.toString(pts));
 			lbl.setFont("Chalkboard-24");
 		case "Instructions":
-			img = new GImage("Instructions.png");
+			img = new GImage(INFO_FILENAME);
 			break;
 		case "InstructionLabel":
-			img = new GImage("InstructionLabel.png");
+			img = new GImage(INFOLABEL_FILENAME);
 			break;
 		default:
 			img = null;
