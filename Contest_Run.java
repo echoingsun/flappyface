@@ -259,6 +259,8 @@ public class Contest_Run extends Program implements Constants {
 		// the instruction label.
 		addMouseHover(instructionLabel);
 
+		// This will let the user to start the game by clicking on the
+		// "clickToStart" image.
 		enableMouse(clickToStart);
 		
 		// When player hasn't started the game by clicking the canvas, do the
