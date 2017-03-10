@@ -37,9 +37,9 @@ public interface Constants {
 	
 	public static final int CENTER_FACE = 346;
 
-	public static final int SCORELABEL_HEIGHT = 430;
+	public static final int SCORELABEL_HEIGHT = 420;
 	
-	public static final int PTS_HEIGHT = 460;
+	public static final int PTS_HEIGHT = 440;
 
 	
 	public static final int PAIR_NUM = 3;
