@@ -14,6 +14,7 @@ public class Pairs extends GCompound implements Constants {
 	// Used to generate random heights for blocks.
 	RandomGenerator rg = new RandomGenerator();
 
+	// Constructor: build pairs with blocks.
 	public Pairs() {
 
 		// Generate PAIR_NUM of block pairs (upper and bottom).
@@ -23,10 +24,14 @@ public class Pairs extends GCompound implements Constants {
 			Blocks bottom = new Blocks(false);
 			Blocks upper = new Blocks(true);
 
+			// Each bottom block will have a range of its height.
+			// The distance between each bottom and upper block ranges from 20% to 40%
+			// of the application height.
 			double bottomY = rg.nextDouble(0.6 * APPLICATION_HEIGHT, 0.8 * APPLICATION_HEIGHT);
 			double upperY = bottomY - rg.nextDouble(0.2 * APPLICATION_HEIGHT, 0.4 * APPLICATION_HEIGHT)
 					- upper.getImg().getHeight();
 
+			// Add the blocks to this GCompound pair.
 			this.add(upper.getImg(), BLOCK_INTERVAL + (BLOCK_INTERVAL + BLOCK_WIDTH) * i, upperY);
 			this.add(bottom.getImg(), BLOCK_INTERVAL + (BLOCK_INTERVAL + BLOCK_WIDTH) * i, bottomY);
 		}
