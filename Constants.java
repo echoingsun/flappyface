@@ -37,7 +37,7 @@ public interface Constants {
 	
 	public static final int CENTER_FACE = 346;
 
-	public static final int PTS_HEIGHT = APPLICATION_HEIGHT / 2 + 103;
+	public static final int PTS_HEIGHT = 440;
 	
 	public static final int PAIR_NUM = 3;
 	
