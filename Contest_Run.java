@@ -93,29 +93,48 @@ public class Contest_Run extends Program implements Constants {
 		// face.notHit(sky) is the condition that ensures the game runs.
 		while (face.notHit(sky)) {
 			
-			// 
+			// Move the face.
 			face.freeMove();
 			pause(DELAY);
 
+			// This program makes two block pairs regenerating and replacing
+			// each other to enable the visual effect of "infinite blocks".
+			// If blockPair1 completely passes the screen, remove it, 
+			// and remake it to the rightmost of the screen.
+			// Otherwise keep it moving.
 			if (blockPairs1.getX() + blockPairs1.getWidth() <= -BLOCK_INTERVAL) {
 				replaceBlockPairs();
 			} else {
 				blockPairs1.moveLeft();
 				pause(DELAY);
-				count++;
-				pts = count / 3;
-				updatePoints(ptsOnScreen, pts, face.getImg().getX() - ptsOnScreen.getLbl().getWidth(),
-						face.getImg().getY() + face.getImg().getHeight() * 0.5);
+				
+				calculateScore();
 				if (pts % 100 == 0) {
 					face.flip();
 				}
 			}
 
+			// The second blockPair also needs to move along.
 			blockPairs2.moveLeft();
 			pause(DELAY);
 
 		}
 
+	}
+
+	/*
+	 * Method calculateScore generates the score player sees on screen.
+	 * For each move, let count add by 1.
+	 * Since the number is going to be large, let the actual score
+	 * be a third of the count number.
+	 * For each move, also updated the label that shows the score.
+	 */
+	private void calculateScore() {
+		count++;
+		pts = count / 3;
+		updatePoints(ptsOnScreen, pts, face.getImg().getX() - ptsOnScreen.getLbl().getWidth(),
+				face.getImg().getY() + face.getImg().getHeight() * 0.5);
+		
 	}
 
 	private void gameOver() {
@@ -255,7 +274,6 @@ public class Contest_Run extends Program implements Constants {
 
 	private void loadFace() {
 		sky.addFace(face);
-
 	}
 
 	private void loadCanvas() {
