@@ -56,7 +56,7 @@ public interface Constants {
 	public static final int PTS_HEIGHT = 469;
 	public static final int INFO_X = 215;
 	public static final int INFO_Y = 455;
-	public static final int POINTS_SCREEN_X = 150;
+	public static final int POINTS_SCREEN_X = 100;
 	
 	/** FILENAME: strings */
 	public static final String CVS_FILENAME = "bckgrnd.png";
