@@ -158,6 +158,7 @@ public class Contest_Run extends Program implements Constants {
 		Displays title = sky.addDisplay("Title",0);
 		Displays clickToStart = sky.addDisplay("ClickToStart",0);
 		Displays instructionLabel = sky.addDisplay("InstructionLabel", 0);
+		addMouseHover(instructionLabel);
 		
 		while (mouseClicked == false){
 			floatDisplay(title, TITLE_UPPER_BORDER, TITLE_LOWER_BORDER,TITLE_MOVE_AMT,TITLE_FLOAT);
@@ -172,6 +173,26 @@ public class Contest_Run extends Program implements Constants {
 		
 		sky.remove(title.getImg());
 		titleMusic.stop();
+		
+	}
+
+	private void addMouseHover(Displays instructionLabel) {
+		
+		instructionLabel.getImg().addMouseListener(new MouseAdapter() {
+			public void mouseMoved(MouseEvent e) {
+				boolean instructionDisplayed = false;
+				Displays instructions = new Displays ("Instructions", 0);
+				if (sky.getElementAt(e.getX(), e.getY()) == instructionLabel.getImg()){
+					instructions = sky.addDisplay("Instructions", 0);
+					instructionDisplayed = true;
+				} else {
+					sky.remove(instructions.getImg());
+				}
+				
+				
+			}
+		});
+		
 		
 	}
 
