@@ -22,7 +22,7 @@ public class Background extends GCanvas implements Constants {
 
 	// Set the background.
 	private void addBackground() {
-		img = new GImage(CVS_FILE_NAME);
+		img = new GImage(CVS_FILENAME);
 		img.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		add(img);
 	}
