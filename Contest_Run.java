@@ -19,7 +19,7 @@ import acm.program.*;
 import acm.util.MediaTools;
 import acm.util.RandomGenerator;
 
-public class Contest_Run extends GraphicsProgram implements Constants {
+public class Contest_Run extends Program implements Constants {
 
 	private RandomGenerator rg = new RandomGenerator();
 	private Background sky = new Background();
