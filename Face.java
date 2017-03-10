@@ -113,10 +113,10 @@ public class Face implements Constants {
 		// bottom left -> (x1,y2)
 		// upper right -> (x2,y1)
 		// bottom right -> (x2,y2)
-		double x1 = this.getImg().getX() - 1;
-		double x2 = this.getImg().getX() + this.getImg().getWidth() + 1;
-		double y1 = this.getImg().getY() - 1;
-		double y2 = this.getImg().getY() + this.getImg().getHeight() + 1;
+		double x1 = this.getImg().getX() - OFFSET;
+		double x2 = this.getImg().getX() + this.getImg().getWidth() + OFFSET;
+		double y1 = this.getImg().getY() - OFFSET;
+		double y2 = this.getImg().getY() + this.getImg().getHeight() + OFFSET;
 
 		boolean upperLeft = sky.getElementAt(x1, y1) == sky.getImg();
 		boolean bottomLeft = sky.getElementAt(x1,y2) == sky.getImg();
