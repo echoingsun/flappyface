@@ -62,8 +62,6 @@ public class Contest_Run extends Program implements Constants {
 		loadCanvas();
 		loadTitle();
 		
-		
-
 		loadFace();
 		theme.loop();
 		enableFaceMove();
@@ -179,7 +177,8 @@ public class Contest_Run extends Program implements Constants {
 	/*
 	 * Method showGameOver does the following: (1) display a game over message
 	 * (2) concludes the game by showing how much the player has scored (3)
-	 * graphics improvement: let the title float
+	 * graphics improvement: let the title float (4) click on "clickToQuit"
+	 * exits the program.
 	 */
 	private void showGameOver() {
 		
@@ -247,8 +246,8 @@ public class Contest_Run extends Program implements Constants {
 	/*
 	 * Method loadTitle basically shows the welcome screen. It does the
 	 * following: (1) places some display images (2) add mouse events to some of
-	 * the images. (3) float the title before player clicks the screen to start
-	 * the game. (4) after player clicks, remove the ojbects on this welcome
+	 * the images. (3) float the title before player clicks "clickstoStart" to start
+	 * the game. (4) after player clicks, remove the objects on this welcome
 	 * screen.
 	 */
 	private void loadTitle() {
