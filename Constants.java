@@ -21,7 +21,8 @@ public interface Constants {
 	
 	
 	public static final int TITLE_HEIGHT = 144;
-	
+	public static final int TITLE_UPPER_BORDER = 138;
+	public static final int TITLE_LOWER_BORDER = 144;
 	
 	
 	
@@ -29,8 +30,7 @@ public interface Constants {
 	
 	public static final int TITLE_FLOAT_DELAY = 100;
 	public static final double TITLE_MOVE_AMT = 1.5;
-	public static final int TITLE_UPPER_BORDER = 200;
-	public static final int TITLE_LOWER_BORDER = 206;
+
 	
 	public static final int GAMEOVER_UPPER_BORDER = 210;
 	public static final int GAMEOVER_LOWER_BORDER = 216;
