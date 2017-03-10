@@ -104,7 +104,7 @@ public class Background extends GCanvas implements Constants {
 			Displays clickToQuit = new Displays("ClickToQuit", 0);
 			double x = this.getWidth() * 0.5 - clickToQuit.getImg().getWidth() * 0.5;
 			this.add(clickToQuit.getImg(),x,CLICK_QUIT_HEIGHT);
-			return clickToQuit.getImg();
+			return clickToQuit;
 		}
 		}
 		return null;
