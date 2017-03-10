@@ -27,7 +27,7 @@ public interface Constants {
 	
 	
 	
-	public static final int TITLE_FLOAT = 100;
+	public static final int TITLE_FLOAT_DELAY = 100;
 	public static final double TITLE_MOVE_AMT = 1.5;
 	public static final int TITLE_UPPER_BORDER = 200;
 	public static final int TITLE_LOWER_BORDER = 206;
