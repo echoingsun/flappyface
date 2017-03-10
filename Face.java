@@ -1,3 +1,4 @@
+
 /*
  * File: Face.java
  * ------------------------
@@ -71,16 +72,16 @@ public class Face implements Constants {
 	}
 
 	/*
-	 * Method faceLoop randomly gets a face in the array and sets face
-	 * to that image.
+	 * Method faceLoop randomly gets a face in the array and sets face to that
+	 * image.
 	 */
 	public void faceLoop(int i) {
 		this.img.setImage(fileNames[i]);
 	}
 
 	/*
-	 * Method flip changes the image of the face every time player scores
-	 * a certain amount of points.
+	 * Method flip changes the image of the face every time player scores a
+	 * certain amount of points.
 	 */
 	public void flip() {
 		if (isFlipped == false) {
@@ -94,11 +95,11 @@ public class Face implements Constants {
 	}
 
 	/*
-	 * Boolean notHit defines when it is considered game over.
-	 * Face should not bump into any blocks.
-	 * This check is performed through examining the four corners of the image.
-	 * Often it might look like the face hasn't hit the blocks yet,
-	 * but since the border lies outside the image, this is more or less inevitable.
+	 * Boolean notHit defines when it is considered game over. Face should not
+	 * bump into any blocks. This check is performed through examining the four
+	 * corners of the image. Often it might look like the face hasn't hit the
+	 * blocks yet, but since the border lies outside the image, this is more or
+	 * less inevitable.
 	 */
 	public boolean notHit(Background sky) {
 
