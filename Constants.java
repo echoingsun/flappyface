@@ -2,18 +2,12 @@
 public interface Constants {
 	public static final int APPLICATION_WIDTH = 450;
 	public static final int APPLICATION_HEIGHT = 712;
-	
-	public static final int BCKGRND_WIDTH = 1200;
-	public static final int BCKGRND_HEIGHT = 712;
 		
 	public static final int BLOCK_HEIGHT = 793;
 	public static final int BLOCK_WIDTH = 138;
 	
 	public static final int BLOCK_START_POINT = 500;
 	public static final int BLOCK_INTERVAL = 162;
-	
-	public static final int BIRD_WIDTH = 80;
-	public static final int BIRD_HEIGHT = 80;
 	
 	public static final int VY_DELTA = 20;
 	
