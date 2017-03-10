@@ -1,24 +1,35 @@
-
+/*
+ * File: Constants.java
+ * -------------------------
+ * This file defines the constants for the progrma.
+ */
 public interface Constants {
+	
+	/** PROGRAM: sizes of the application */
 	public static final int APPLICATION_WIDTH = 420;
-	public static final int APPLICATION_HEIGHT = 712;
-		
-	public static final int BLOCK_HEIGHT = 793;
-	public static final int BLOCK_WIDTH = 138;
+	public static final int APPLICATION_HEIGHT = 712;	
 	
-	public static final int BLOCK_START_POINT = 500;
-	public static final int BLOCK_INTERVAL = 162;
-	
-	public static final int VY_DELTA = 20;
-	
-	public static final double FALL_MIN_SPEED = 0.3;
-	public static final double FALL_MAX_SPEED = 0.5;
-	
-	public static final double MOVE_SPEED = 1.5;
-	
+	/** PROGRAM: value of main types of pauses */
 	public static final int DELAY = 4;
 	public static final int GAMEOVER_DELAY = 2000;
 	
+	/** BLOCKS: measurements */
+	public static final int BLOCK_HEIGHT = 793;
+	public static final int BLOCK_WIDTH = 138;
+	public static final int BLOCK_START_POINT = 500;
+	public static final int BLOCK_INTERVAL = 162;
+	
+	/** BLOCKPAIRS: speed of moving left */
+	public static final double MOVE_SPEED = 1.5;
+	
+	/** FACE: distance of upward movement */
+	public static final int VY_DELTA = 20;
+	
+	/** FACE: range of free fall speed */
+	public static final double FALL_MIN_SPEED = 0.3;
+	public static final double FALL_MAX_SPEED = 0.5;
+	
+	/** TITLE: measurements */
 	public static final int TITLE_HEIGHT = 144;
 	public static final int TITLE_UPPER_BORDER = 138;
 	public static final int TITLE_LOWER_BORDER = 144;
